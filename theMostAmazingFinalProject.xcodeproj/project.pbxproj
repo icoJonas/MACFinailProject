@@ -15,6 +15,7 @@
 		DD9668D01B16CD02007D0A98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9668CF1B16CD02007D0A98 /* Images.xcassets */; };
 		DD9668D31B16CD02007D0A98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9668D11B16CD02007D0A98 /* LaunchScreen.xib */; };
 		DD9668DF1B16CD02007D0A98 /* theMostAmazingFinalProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668DE1B16CD02007D0A98 /* theMostAmazingFinalProjectTests.m */; };
+		DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		DD9668D81B16CD02007D0A98 /* theMostAmazingFinalProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = theMostAmazingFinalProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9668DD1B16CD02007D0A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD9668DE1B16CD02007D0A98 /* theMostAmazingFinalProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = theMostAmazingFinalProjectTests.m; sourceTree = "<group>"; };
+		DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = finalProject.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		DD9668C21B16CD02007D0A98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */,
 				DD9668C31B16CD02007D0A98 /* Info.plist */,
 				DD9668C41B16CD02007D0A98 /* main.m */,
 			);
@@ -226,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */,
 				DD9668CE1B16CD02007D0A98 /* Main.storyboard in Resources */,
 				DD9668D31B16CD02007D0A98 /* LaunchScreen.xib in Resources */,
 				DD9668D01B16CD02007D0A98 /* Images.xcassets in Resources */,
