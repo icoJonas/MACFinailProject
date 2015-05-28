@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04DBD2908F76F6076DCEC72E /* Pods_theMostAmazingFinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DD9668C51B16CD02007D0A98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668C41B16CD02007D0A98 /* main.m */; };
 		DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668C71B16CD02007D0A98 /* AppDelegate.m */; };
 		DD9668CB1B16CD02007D0A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668CA1B16CD02007D0A98 /* ViewController.m */; };
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theMostAmazingFinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89DBD165123099ACEA721E6B /* Pods-theMostAmazingFinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.release.xcconfig"; sourceTree = "<group>"; };
+		DA98994CB1C351E6C135A6DF /* Pods-theMostAmazingFinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		DD9668BF1B16CD02007D0A98 /* theMostAmazingFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theMostAmazingFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9668C31B16CD02007D0A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD9668C41B16CD02007D0A98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DBD2908F76F6076DCEC72E /* Pods_theMostAmazingFinalProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88CD1549ECC427BCC89A6590 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF392EAC894D05AA4EF8115F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA98994CB1C351E6C135A6DF /* Pods-theMostAmazingFinalProject.debug.xcconfig */,
+				89DBD165123099ACEA721E6B /* Pods-theMostAmazingFinalProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DD9668B61B16CD01007D0A98 = {
 			isa = PBXGroup;
 			children = (
 				DD9668C11B16CD02007D0A98 /* theMostAmazingFinalProject */,
 				DD9668DB1B16CD02007D0A98 /* theMostAmazingFinalProjectTests */,
 				DD9668C01B16CD02007D0A98 /* Products */,
+				AF392EAC894D05AA4EF8115F /* Pods */,
+				88CD1549ECC427BCC89A6590 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD9668E21B16CD02007D0A98 /* Build configuration list for PBXNativeTarget "theMostAmazingFinalProject" */;
 			buildPhases = (
+				F28F4E52BBC5EDD65F935410 /* Check Pods Manifest.lock */,
 				DD9668BB1B16CD02007D0A98 /* Sources */,
 				DD9668BC1B16CD02007D0A98 /* Frameworks */,
 				DD9668BD1B16CD02007D0A98 /* Resources */,
+				8857F99191B6EE52196782A6 /* Embed Pods Frameworks */,
+				DF46388E005D4C4DAE55E0B7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +240,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8857F99191B6EE52196782A6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF46388E005D4C4DAE55E0B7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F28F4E52BBC5EDD65F935410 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD9668BB1B16CD02007D0A98 /* Sources */ = {
@@ -345,6 +420,7 @@
 		};
 		DD9668E31B16CD02007D0A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA98994CB1C351E6C135A6DF /* Pods-theMostAmazingFinalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = theMostAmazingFinalProject/Info.plist;
@@ -355,6 +431,7 @@
 		};
 		DD9668E41B16CD02007D0A98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89DBD165123099ACEA721E6B /* Pods-theMostAmazingFinalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = theMostAmazingFinalProject/Info.plist;
@@ -416,6 +493,7 @@
 				DD9668E41B16CD02007D0A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD9668E51B16CD02007D0A98 /* Build configuration list for PBXNativeTarget "theMostAmazingFinalProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +502,7 @@
 				DD9668E71B16CD02007D0A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
