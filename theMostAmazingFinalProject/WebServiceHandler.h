@@ -8,9 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WebServiceHandler : NSObject
+@protocol WebServiceHandlerDelegate <NSURLConnectionDelegate>
 
--(void)getCode;
--(void)getToken:(NSString *)CODE;
+-(void)webServiceCallFinished:(id)data;
+-(void)webServiceCallError:(NSError *)error;
+
+@end
+
+@interface WebServiceHandler : NSObject
+{
+    
+    id<WebServiceHandlerDelegate> delegate;
+}
+
+-(id)initWithDelegate:(id <WebServiceHandlerDelegate>)del;
+
+-(void)doRequest:(NSString *)urlSite andHeaders:(NSDictionary *)headers andHTTPMethod:(NSString *)method;
 
 @end

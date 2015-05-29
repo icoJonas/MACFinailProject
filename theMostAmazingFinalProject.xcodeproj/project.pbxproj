@@ -17,6 +17,7 @@
 		DD9668D31B16CD02007D0A98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9668D11B16CD02007D0A98 /* LaunchScreen.xib */; };
 		DD9668DF1B16CD02007D0A98 /* theMostAmazingFinalProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668DE1B16CD02007D0A98 /* theMostAmazingFinalProjectTests.m */; };
 		DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */; };
+		DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA9E91B1B180CB900E422DA /* RunKeeperDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		DD9668DD1B16CD02007D0A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD9668DE1B16CD02007D0A98 /* theMostAmazingFinalProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = theMostAmazingFinalProjectTests.m; sourceTree = "<group>"; };
 		DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = finalProject.sqlite; sourceTree = "<group>"; };
+		DDA9E91A1B180CB900E422DA /* RunKeeperDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunKeeperDataSource.h; sourceTree = "<group>"; };
+		DDA9E91B1B180CB900E422DA /* RunKeeperDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunKeeperDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +117,7 @@
 				DD9668C71B16CD02007D0A98 /* AppDelegate.m */,
 				DD9668C91B16CD02007D0A98 /* ViewController.h */,
 				DD9668CA1B16CD02007D0A98 /* ViewController.m */,
-				04341F311B17D40D0002785A /* WebServiceHandler.h */,
-				04341F321B17D40D0002785A /* WebServiceHandler.m */,
+				DDA9E9191B180B4F00E422DA /* WebServiceDataSource */,
 				DD9668CC1B16CD02007D0A98 /* Main.storyboard */,
 				DD9668CF1B16CD02007D0A98 /* Images.xcassets */,
 				DD9668D11B16CD02007D0A98 /* LaunchScreen.xib */,
@@ -149,6 +151,25 @@
 				DD9668DD1B16CD02007D0A98 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDA9E9181B180B3B00E422DA /* RunKeeperDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				DDA9E91A1B180CB900E422DA /* RunKeeperDataSource.h */,
+				DDA9E91B1B180CB900E422DA /* RunKeeperDataSource.m */,
+			);
+			name = RunKeeperDataSource;
+			sourceTree = "<group>";
+		};
+		DDA9E9191B180B4F00E422DA /* WebServiceDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				04341F311B17D40D0002785A /* WebServiceHandler.h */,
+				04341F321B17D40D0002785A /* WebServiceHandler.m */,
+				DDA9E9181B180B3B00E422DA /* RunKeeperDataSource */,
+			);
+			name = WebServiceDataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD9668CB1B16CD02007D0A98 /* ViewController.m in Sources */,
+				DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */,
 				DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */,
 				DD9668C51B16CD02007D0A98 /* main.m in Sources */,
 				04341F331B17D40D0002785A /* WebServiceHandler.m in Sources */,
