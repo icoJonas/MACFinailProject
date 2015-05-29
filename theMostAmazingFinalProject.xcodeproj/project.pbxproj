@@ -18,6 +18,7 @@
 		DD9668DF1B16CD02007D0A98 /* theMostAmazingFinalProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668DE1B16CD02007D0A98 /* theMostAmazingFinalProjectTests.m */; };
 		DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */; };
 		DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA9E91B1B180CB900E422DA /* RunKeeperDataSource.m */; };
+		DDA9E91F1B18171600E422DA /* KeychainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA9E91E1B18171600E422DA /* KeychainHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = finalProject.sqlite; sourceTree = "<group>"; };
 		DDA9E91A1B180CB900E422DA /* RunKeeperDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunKeeperDataSource.h; sourceTree = "<group>"; };
 		DDA9E91B1B180CB900E422DA /* RunKeeperDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunKeeperDataSource.m; sourceTree = "<group>"; };
+		DDA9E91D1B18171600E422DA /* KeychainHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainHelper.h; sourceTree = "<group>"; };
+		DDA9E91E1B18171600E422DA /* KeychainHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				DD9668CF1B16CD02007D0A98 /* Images.xcassets */,
 				DD9668D11B16CD02007D0A98 /* LaunchScreen.xib */,
 				DD9668C21B16CD02007D0A98 /* Supporting Files */,
+				DDA9E91D1B18171600E422DA /* KeychainHelper.h */,
+				DDA9E91E1B18171600E422DA /* KeychainHelper.m */,
 			);
 			path = theMostAmazingFinalProject;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */,
 				DD9668C51B16CD02007D0A98 /* main.m in Sources */,
 				04341F331B17D40D0002785A /* WebServiceHandler.m in Sources */,
+				DDA9E91F1B18171600E422DA /* KeychainHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

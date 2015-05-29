@@ -7,6 +7,7 @@
 //
 
 #import "RunKeeperDataSource.h"
+#import "KeychainHelper.h"
 
 static NSString * const AUTH_REQUEST_URL = @"https://runkeeper.com/apps/authorize?response_type=code&client_id=21d211d3e8d04362bf4056eca118cca6&redirect_uri=http%3A%2F%2Fwww.google.com";
 
@@ -32,6 +33,7 @@ static NSString * const CLIENT_SECRET = @"0951b34bcd594bf59f9ce64092b8ab67";
     NSString *ACCESS_TOKEN = [jsonObject objectForKey:@"access_token"];
     NSLog(@"%@",tokenType);
     NSLog(@"%@",ACCESS_TOKEN);
+    [KeychainHelper storeTheToken:ACCESS_TOKEN];
 }
 
 -(void)webServiceCallError:(NSError *)error{
