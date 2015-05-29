@@ -57,6 +57,8 @@ enum OPERATIONS {
         NSLog(@"%@",tokenType);
         NSLog(@"%@",ACCESS_TOKEN);
         [KeychainHelper storeTheToken:ACCESS_TOKEN];
+        
+        NSLog(@"The token is: %@", [KeychainHelper getToken]);
     }
 }
 

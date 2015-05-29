@@ -12,7 +12,6 @@
 
 +(void)storeTheToken:(NSString *)token
 {
-#warning Try implementing the keychain using UUID and second layer encryption.
     //Encrypt the token
     NSData *tokenData = [token dataUsingEncoding:NSUTF8StringEncoding];
     NSData *encryptedTokenData = [tokenData base64EncodedDataWithOptions:NSDataBase64Encoding64CharacterLineLength];
