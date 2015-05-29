@@ -34,6 +34,8 @@ static NSString * const CLIENT_SECRET = @"0951b34bcd594bf59f9ce64092b8ab67";
     NSLog(@"%@",tokenType);
     NSLog(@"%@",ACCESS_TOKEN);
     [KeychainHelper storeTheToken:ACCESS_TOKEN];
+    
+    NSLog(@"The decrypted token is: %@", [KeychainHelper getToken]);
 }
 
 -(void)webServiceCallError:(NSError *)error{
