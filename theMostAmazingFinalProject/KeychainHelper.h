@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KeychainItemWrapper.h"
 
 @interface KeychainHelper : NSObject
 
