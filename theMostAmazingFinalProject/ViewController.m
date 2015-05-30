@@ -50,8 +50,8 @@ static NSString * const AUTH_REQUEST_URL = @"https://runkeeper.com/apps/authoriz
         NSRange needleRange = NSMakeRange(prefix.length, haystack.length - prefix.length - suffix.length);
         
         NSString *code = [haystack substringWithRange:needleRange];
-//        [self.dataSource getToken:code];
-        [self.dataSource getFitnessActivities];
+        [self.dataSource getToken:code];
+//        [self.dataSource getFitnessActivities];
         [webView removeFromSuperview];
     }
 }
