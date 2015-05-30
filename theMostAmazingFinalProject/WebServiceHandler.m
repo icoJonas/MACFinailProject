@@ -26,7 +26,8 @@
 #pragma mark
 #pragma mark  Public Methods
 
--(void)doRequest:(NSString *)urlSite andHeaders:(NSDictionary *)headers andHTTPMethod:(NSString *)method{
+-(void)doRequest:(NSString *)urlSite andHeaders:(NSDictionary *)headers andHTTPMethod:(NSString *)method
+{
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlSite]];
     if (headers) {
         [self setHeaders:headers forRequest:request];
@@ -45,7 +46,8 @@
      }];
 }
 
--(void)setHeaders:(NSDictionary *)headers forRequest:(NSMutableURLRequest *)resquest{
+-(void)setHeaders:(NSDictionary *)headers forRequest:(NSMutableURLRequest *)resquest
+{
     for (NSString *key in headers.allKeys) {
         [resquest setValue:[headers objectForKey:key] forHTTPHeaderField:key];
     }
