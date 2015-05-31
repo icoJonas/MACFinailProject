@@ -23,6 +23,10 @@
 		DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */; };
 		DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA9E91B1B180CB900E422DA /* RunKeeperDataSource.m */; };
 		DDA9E91F1B18171600E422DA /* KeychainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA9E91E1B18171600E422DA /* KeychainHelper.m */; };
+		DDECCC2E1B1A5FCF0047BA5C /* SQLiteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC2D1B1A5FCF0047BA5C /* SQLiteDataSource.m */; };
+		DDECCC321B1A62620047BA5C /* WorkoutManagerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC311B1A62620047BA5C /* WorkoutManagerDataSource.m */; };
+		DDECCC361B1A63120047BA5C /* wgerSQLiteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC351B1A63120047BA5C /* wgerSQLiteDataSource.m */; };
+		DDECCC3A1B1ACD0C0047BA5C /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC391B1ACD0C0047BA5C /* ImageHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,14 @@
 		DDA9E91B1B180CB900E422DA /* RunKeeperDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunKeeperDataSource.m; sourceTree = "<group>"; };
 		DDA9E91D1B18171600E422DA /* KeychainHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainHelper.h; sourceTree = "<group>"; };
 		DDA9E91E1B18171600E422DA /* KeychainHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainHelper.m; sourceTree = "<group>"; };
+		DDECCC2C1B1A5FCF0047BA5C /* SQLiteDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteDataSource.h; sourceTree = "<group>"; };
+		DDECCC2D1B1A5FCF0047BA5C /* SQLiteDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteDataSource.m; sourceTree = "<group>"; };
+		DDECCC301B1A62620047BA5C /* WorkoutManagerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutManagerDataSource.h; sourceTree = "<group>"; };
+		DDECCC311B1A62620047BA5C /* WorkoutManagerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutManagerDataSource.m; sourceTree = "<group>"; };
+		DDECCC341B1A63120047BA5C /* wgerSQLiteDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wgerSQLiteDataSource.h; sourceTree = "<group>"; };
+		DDECCC351B1A63120047BA5C /* wgerSQLiteDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wgerSQLiteDataSource.m; sourceTree = "<group>"; };
+		DDECCC381B1ACD0C0047BA5C /* ImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
+		DDECCC391B1ACD0C0047BA5C /* ImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +168,7 @@
 				DD9668D11B16CD02007D0A98 /* LaunchScreen.xib */,
 				04CF1E071B19CBA600AB4F99 /* Objects */,
 				DDA9E9191B180B4F00E422DA /* WebServiceDataSource */,
+				DDECCC2F1B1A60B00047BA5C /* SQLiteDataSource */,
 				DDA9E9201B181D1C00E422DA /* Helpers */,
 				DD9668CF1B16CD02007D0A98 /* Images.xcassets */,
 				DD9668C21B16CD02007D0A98 /* Supporting Files */,
@@ -206,6 +219,7 @@
 				04341F321B17D40D0002785A /* WebServiceHandler.m */,
 				04CF1E031B19AAEA00AB4F99 /* BigOvenDataSource */,
 				DDA9E9181B180B3B00E422DA /* RunKeeperDataSource */,
+				DDECCC331B1A62730047BA5C /* WorkoutManagerDataSource */,
 			);
 			name = WebServiceDataSource;
 			sourceTree = "<group>";
@@ -214,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA9E9211B181D2600E422DA /* Data */,
+				DDECCC3B1B1ACD490047BA5C /* UI */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -227,6 +242,43 @@
 				DDA9E91E1B18171600E422DA /* KeychainHelper.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		DDECCC2F1B1A60B00047BA5C /* SQLiteDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				DDECCC2C1B1A5FCF0047BA5C /* SQLiteDataSource.h */,
+				DDECCC2D1B1A5FCF0047BA5C /* SQLiteDataSource.m */,
+				DDECCC371B1A631E0047BA5C /* wgerSQLiteDataSource */,
+			);
+			name = SQLiteDataSource;
+			sourceTree = "<group>";
+		};
+		DDECCC331B1A62730047BA5C /* WorkoutManagerDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				DDECCC301B1A62620047BA5C /* WorkoutManagerDataSource.h */,
+				DDECCC311B1A62620047BA5C /* WorkoutManagerDataSource.m */,
+			);
+			name = WorkoutManagerDataSource;
+			sourceTree = "<group>";
+		};
+		DDECCC371B1A631E0047BA5C /* wgerSQLiteDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				DDECCC341B1A63120047BA5C /* wgerSQLiteDataSource.h */,
+				DDECCC351B1A63120047BA5C /* wgerSQLiteDataSource.m */,
+			);
+			name = wgerSQLiteDataSource;
+			sourceTree = "<group>";
+		};
+		DDECCC3B1B1ACD490047BA5C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DDECCC381B1ACD0C0047BA5C /* ImageHelper.h */,
+				DDECCC391B1ACD0C0047BA5C /* ImageHelper.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +435,7 @@
 			files = (
 				DD9668CB1B16CD02007D0A98 /* ViewController.m in Sources */,
 				04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */,
+				DDECCC2E1B1A5FCF0047BA5C /* SQLiteDataSource.m in Sources */,
 				DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */,
 				DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */,
 				04CF1E061B19AB1300AB4F99 /* BigOvenDataSource.m in Sources */,
@@ -390,7 +443,10 @@
 				046E79D91B1828BF00E23F88 /* KeychainItemWrapper.m in Sources */,
 				04341F331B17D40D0002785A /* WebServiceHandler.m in Sources */,
 				04CF1E0E1B1A15CD00AB4F99 /* RecipeSearchResult.m in Sources */,
+				DDECCC321B1A62620047BA5C /* WorkoutManagerDataSource.m in Sources */,
+				DDECCC3A1B1ACD0C0047BA5C /* ImageHelper.m in Sources */,
 				DDA9E91F1B18171600E422DA /* KeychainHelper.m in Sources */,
+				DDECCC361B1A63120047BA5C /* wgerSQLiteDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

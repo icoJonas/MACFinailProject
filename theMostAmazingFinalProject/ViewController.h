@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RunKeeperDataSource.h"
 #import "BigOvenDataSource.h"
+#import "WorkoutManagerDataSource.h"
 
 @interface ViewController : UIViewController
 
