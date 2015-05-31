@@ -12,6 +12,9 @@
 		04CF1E061B19AB1300AB4F99 /* BigOvenDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E051B19AB1300AB4F99 /* BigOvenDataSource.m */; };
 		04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E091B19CBB800AB4F99 /* Recipe.m */; };
 		04CF1E0E1B1A15CD00AB4F99 /* RecipeSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E0D1B1A15CD00AB4F99 /* RecipeSearchResult.m */; };
+		04CF1E111B1A955F00AB4F99 /* FitnessActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E101B1A955F00AB4F99 /* FitnessActivity.m */; };
+		04CF1E141B1B66DC00AB4F99 /* RunKeeperUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E131B1B66DC00AB4F99 /* RunKeeperUser.m */; };
+		04CF1E171B1B6DEA00AB4F99 /* RunKeeperProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E161B1B6DEA00AB4F99 /* RunKeeperProfile.m */; };
 		04DBD2908F76F6076DCEC72E /* Pods_theMostAmazingFinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DD9668C51B16CD02007D0A98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668C41B16CD02007D0A98 /* main.m */; };
 		DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668C71B16CD02007D0A98 /* AppDelegate.m */; };
@@ -50,6 +53,12 @@
 		04CF1E091B19CBB800AB4F99 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		04CF1E0C1B1A15CD00AB4F99 /* RecipeSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeSearchResult.h; sourceTree = "<group>"; };
 		04CF1E0D1B1A15CD00AB4F99 /* RecipeSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeSearchResult.m; sourceTree = "<group>"; };
+		04CF1E0F1B1A955F00AB4F99 /* FitnessActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FitnessActivity.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		04CF1E101B1A955F00AB4F99 /* FitnessActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitnessActivity.m; sourceTree = "<group>"; };
+		04CF1E121B1B66DC00AB4F99 /* RunKeeperUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RunKeeperUser.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		04CF1E131B1B66DC00AB4F99 /* RunKeeperUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RunKeeperUser.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		04CF1E151B1B6DEA00AB4F99 /* RunKeeperProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunKeeperProfile.h; sourceTree = "<group>"; };
+		04CF1E161B1B6DEA00AB4F99 /* RunKeeperProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunKeeperProfile.m; sourceTree = "<group>"; };
 		17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theMostAmazingFinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DBD165123099ACEA721E6B /* Pods-theMostAmazingFinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		DA98994CB1C351E6C135A6DF /* Pods-theMostAmazingFinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,12 +121,34 @@
 		04CF1E071B19CBA600AB4F99 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				04CF1E191B1B6F2400AB4F99 /* BigOven Objects */,
+				04CF1E181B1B6F1200AB4F99 /* RunKeeper Objects */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		04CF1E181B1B6F1200AB4F99 /* RunKeeper Objects */ = {
+			isa = PBXGroup;
+			children = (
+				04CF1E0F1B1A955F00AB4F99 /* FitnessActivity.h */,
+				04CF1E101B1A955F00AB4F99 /* FitnessActivity.m */,
+				04CF1E121B1B66DC00AB4F99 /* RunKeeperUser.h */,
+				04CF1E131B1B66DC00AB4F99 /* RunKeeperUser.m */,
+				04CF1E151B1B6DEA00AB4F99 /* RunKeeperProfile.h */,
+				04CF1E161B1B6DEA00AB4F99 /* RunKeeperProfile.m */,
+			);
+			name = "RunKeeper Objects";
+			sourceTree = "<group>";
+		};
+		04CF1E191B1B6F2400AB4F99 /* BigOven Objects */ = {
+			isa = PBXGroup;
+			children = (
 				04CF1E081B19CBB800AB4F99 /* Recipe.h */,
 				04CF1E091B19CBB800AB4F99 /* Recipe.m */,
 				04CF1E0C1B1A15CD00AB4F99 /* RecipeSearchResult.h */,
 				04CF1E0D1B1A15CD00AB4F99 /* RecipeSearchResult.m */,
 			);
-			name = Objects;
+			name = "BigOven Objects";
 			sourceTree = "<group>";
 		};
 		88CD1549ECC427BCC89A6590 /* Frameworks */ = {
@@ -435,10 +466,12 @@
 			files = (
 				DD9668CB1B16CD02007D0A98 /* ViewController.m in Sources */,
 				04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */,
-				DDECCC2E1B1A5FCF0047BA5C /* SQLiteDataSource.m in Sources */,
+				04CF1E111B1A955F00AB4F99 /* FitnessActivity.m in Sources */,
 				DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */,
 				DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */,
+				04CF1E171B1B6DEA00AB4F99 /* RunKeeperProfile.m in Sources */,
 				04CF1E061B19AB1300AB4F99 /* BigOvenDataSource.m in Sources */,
+				04CF1E141B1B66DC00AB4F99 /* RunKeeperUser.m in Sources */,
 				DD9668C51B16CD02007D0A98 /* main.m in Sources */,
 				046E79D91B1828BF00E23F88 /* KeychainItemWrapper.m in Sources */,
 				04341F331B17D40D0002785A /* WebServiceHandler.m in Sources */,

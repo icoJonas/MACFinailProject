@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "WebServiceHandler.h"
+#import "FitnessActivity.h"
+#import "RunKeeperUser.h"
+#import "RunKeeperProfile.h"
 
 @interface RunKeeperDataSource : NSObject <WebServiceHandlerDelegate> {
     int currentOperation;
@@ -16,5 +19,9 @@
 
 -(void)getToken:(NSString *)CODE;
 -(void)getFitnessActivities;
+-(void)getUser;
+-(void)getProfile;
+
+
 
 @end

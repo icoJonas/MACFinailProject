@@ -32,7 +32,6 @@ static NSString * const AUTH_REQUEST_URL = @"https://runkeeper.com/apps/authoriz
 //    [self.bigOvenDataSource getRecipe:recipeNumber];
     
 //    [self.bigOvenDataSource getRecipeSearch:@"shrimp"];
-    [self.wgerDataSource getCatalogs];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +42,7 @@ static NSString * const AUTH_REQUEST_URL = @"https://runkeeper.com/apps/authoriz
 -(void)viewDidAppear:(BOOL)animated
 {
     //Comment out to disable RunKeeper authorization page from showing
-//    [self.wvWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:AUTH_REQUEST_URL]]];
+    [self.wvWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:AUTH_REQUEST_URL]]];
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
@@ -62,8 +61,11 @@ static NSString * const AUTH_REQUEST_URL = @"https://runkeeper.com/apps/authoriz
         NSRange needleRange = NSMakeRange(prefix.length, haystack.length - prefix.length - suffix.length);
         
         NSString *code = [haystack substringWithRange:needleRange];
-        [self.runKeeperDataSource getToken:code];
-//        [self.dataSource getFitnessActivities];
+//        [self.runKeeperDataSource getToken:code];
+//        [self.runKeeperDataSource getFitnessActivities];
+//        [self.runKeeperDataSource getUser];
+        [self.runKeeperDataSource getProfile];
+        
         [webView removeFromSuperview];
     }
 }
