@@ -1,0 +1,21 @@
+//
+//  wgerSQLiteDataSource.h
+//  theMostAmazingFinalProject
+//
+//  Created by Luis Jonathan Godoy Marín on 30/05/15.
+//  Copyright (c) 2015 MAC. All rights reserved.
+//
+
+#import "SQLiteDataSource.h"
+
+@interface wgerSQLiteDataSource : SQLiteDataSource
+
+-(void)insertAllNewCategories:(NSArray *)categories;
+-(void)insertAllNewEquipments:(NSArray *)equipments;
+-(void)insertAllNewMuscles:(NSArray *)muscles;
+-(void)insertAllNewExercises:(NSArray *)exercises;
+-(void)insertMuscles:(NSArray *)muscles ForExercise:(int)exercise;
+-(void)insertEquipments:(NSArray *)equipments ForExercise:(int)exercise;
+-(void)insertAllNewImages:(NSArray *)images;
+
+@end

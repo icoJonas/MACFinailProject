@@ -11,6 +11,7 @@
 @interface ViewController () <UIWebViewDelegate>
 @property(strong,nonatomic) RunKeeperDataSource *runKeeperDataSource;
 @property(strong,nonatomic) BigOvenDataSource *bigOvenDataSource;
+@property(strong,nonatomic) WorkoutManagerDataSource *wgerDataSource;
 @property (strong, nonatomic) IBOutlet UIWebView *wvWebView;
 @end
 
@@ -25,6 +26,7 @@ static NSString * const AUTH_REQUEST_URL = @"https://runkeeper.com/apps/authoriz
     // Do any additional setup after loading the view, typically from a nib.
     self.runKeeperDataSource = [RunKeeperDataSource new];
     self.bigOvenDataSource = [BigOvenDataSource new];
+    self.wgerDataSource = [WorkoutManagerDataSource new];
     
 //    int recipeNumber = 466985; //recipeNumber will come from user input
 //    [self.bigOvenDataSource getRecipe:recipeNumber];
