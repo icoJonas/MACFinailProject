@@ -36,37 +36,10 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewDidAppear:(BOOL)animated
-{
-    //Comment out to disable RunKeeper authorization page from showing
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[BackgroundViewHelper getSharedInstance] start];
 }
 
--(void)webViewDidFinishLoad:(UIWebView *)webView
-{
-    NSString *responseURL = [NSString stringWithString:webView.request.URL.absoluteString];
-    
-    //Check if the string contains the keyword 'code'
-    if ([responseURL containsString:@"code="])
-    {
-        //Code srting exists. Parse it
-        
-        NSString *haystack = [responseURL copy];
-        NSString *prefix = @"https://www.google.com/?code=";
-        NSString *suffix = @"&gws_rd=ssl";
-        
-        NSRange needleRange = NSMakeRange(prefix.length, haystack.length - prefix.length - suffix.length);
-        
-        NSString *code = [haystack substringWithRange:needleRange];
-        [self.runKeeperDataSource getToken:code];
-//        [self.runKeeperDataSource getFitnessActivities];
-//        [self.runKeeperDataSource getUser];
-//        [self.runKeeperDataSource getProfile];
-//        [self.runKeeperDataSource postFitnessActivity];
-//        [self.runKeeperDataSource getSleepFeed];
-//        [self.runKeeperDataSource getSleepActivity:@"548678686"];
-//        [self.runKeeperDataSource postSleepActivity:nil];
-        [webView removeFromSuperview];
-    }
-}
 
 @end
