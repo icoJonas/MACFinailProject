@@ -18,7 +18,6 @@
 		04CF1E1C1B1BA9BD00AB4F99 /* FitnessActivityPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E1B1B1BA9BD00AB4F99 /* FitnessActivityPost.m */; };
 		04CF1E1F1B1C305400AB4F99 /* SleepActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E1E1B1C305400AB4F99 /* SleepActivity.m */; };
 		04CF1E221B1C3BD000AB4F99 /* SleepActivityPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E211B1C3BD000AB4F99 /* SleepActivityPost.m */; };
-		04CF22141B1CF91F00AB4F99 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CF22131B1CF91F00AB4F99 /* libCorePlot-CocoaTouch.a */; };
 		04DBD2908F76F6076DCEC72E /* Pods_theMostAmazingFinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DD8076561B1BA51800A27F00 /* workout1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076501B1BA51800A27F00 /* workout1.jpg */; };
 		DD8076571B1BA51800A27F00 /* workout2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076511B1BA51800A27F00 /* workout2.jpg */; };
@@ -50,6 +49,7 @@
 		DDA9E91F1B18171600E422DA /* KeychainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA9E91E1B18171600E422DA /* KeychainHelper.m */; };
 		DDECCC321B1A62620047BA5C /* WorkoutManagerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC311B1A62620047BA5C /* WorkoutManagerDataSource.m */; };
 		DDECCC3A1B1ACD0C0047BA5C /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC391B1ACD0C0047BA5C /* ImageHelper.m */; };
+		DDF277AF1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF277AE1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +214,7 @@
 		DDECCC351B1A63120047BA5C /* wgerSQLiteDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wgerSQLiteDataSource.m; sourceTree = "<group>"; };
 		DDECCC381B1ACD0C0047BA5C /* ImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
 		DDECCC391B1ACD0C0047BA5C /* ImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
+		DDF277AE1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "theMostAmazingFinalProject/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04CF22141B1CF91F00AB4F99 /* libCorePlot-CocoaTouch.a in Frameworks */,
+				DDF277AF1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a in Frameworks */,
 				04DBD2908F76F6076DCEC72E /* Pods_theMostAmazingFinalProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +381,7 @@
 		88CD1549ECC427BCC89A6590 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DDF277AE1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a */,
 				04CF22131B1CF91F00AB4F99 /* libCorePlot-CocoaTouch.a */,
 				17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */,
 			);
@@ -755,7 +757,6 @@
 				04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */,
 				04CF1E1F1B1C305400AB4F99 /* SleepActivity.m in Sources */,
 				04CF1E111B1A955F00AB4F99 /* FitnessActivity.m in Sources */,
-				DDECCC2E1B1A5FCF0047BA5C /* SQLiteDataSource.m in Sources */,
 				DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */,
 				DD8076781B1BC3E800A27F00 /* AnimationHelper.m in Sources */,
 				DD8076721B1BB12600A27F00 /* LoginViewController.m in Sources */,
@@ -906,6 +907,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/mac/Desktop/CorePlot_1.4/Binaries/iOS,
+					"$(PROJECT_DIR)/theMostAmazingFinalProject",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -921,6 +923,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/mac/Desktop/CorePlot_1.4/Binaries/iOS,
+					"$(PROJECT_DIR)/theMostAmazingFinalProject",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
