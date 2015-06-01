@@ -26,10 +26,18 @@
 #pragma mark
 #pragma mark  Public Methods
 
--(void)doRequest:(NSString *)urlSite andHeaders:(NSDictionary *)headers andHTTPMethod:(NSString *)method
+-(void)doRequest:(NSString *)urlSite withParameters:(NSDictionary *)parameters andHeaders:(NSDictionary *)headers andHTTPMethod:(NSString *)method
 {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlSite]];
-    if (headers) {
+    if (parameters)
+    {
+        NSError *parameterParsingError;
+        
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:parameters options:NSJSONWritingPrettyPrinted error:&parameterParsingError];
+        [request setHTTPBody:jsonData];
+    }
+    if (headers)
+    {
         [self setHeaders:headers forRequest:request];
     }
     request.timeoutInterval = 12;
@@ -38,9 +46,13 @@
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
      {
          NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-         if (error==nil&&data&&[httpResponse statusCode]==200) {
+         NSLog(@"HTTP Response code: %ld", [httpResponse statusCode]);
+         if ((error==nil) && (data) && ([httpResponse statusCode]==200 || [httpResponse statusCode]==201))
+         {
              [delegate webServiceCallFinished:data];
-         } else {
+         }
+         else
+         {
              [delegate webServiceCallError:error];
          }
      }];
@@ -48,7 +60,8 @@
 
 -(void)setHeaders:(NSDictionary *)headers forRequest:(NSMutableURLRequest *)resquest
 {
-    for (NSString *key in headers.allKeys) {
+    for (NSString *key in headers.allKeys)
+    {
         [resquest setValue:[headers objectForKey:key] forHTTPHeaderField:key];
     }
 }

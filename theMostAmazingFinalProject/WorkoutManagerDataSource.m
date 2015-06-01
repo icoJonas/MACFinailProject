@@ -88,7 +88,7 @@ enum OPERATIONS {
 
 -(void)getCatalogs{
     currentOperation = GET_CATEGORIES;
-    [webHandler doRequest:@"http://wger.de/api/v2/exercisecategory/" andHeaders:nil andHTTPMethod:@"GET"];
+    [webHandler doRequest:@"http://wger.de/api/v2/exercisecategory/" withParameters:nil andHeaders:nil andHTTPMethod:@"GET"];
 }
 
 #pragma mark - WebServiceHandler delegate methods
@@ -142,7 +142,7 @@ enum OPERATIONS {
     }
         
     if (nextPage) {
-        [webHandler doRequest:nextPage andHeaders:nil andHTTPMethod:@"GET"];
+        [webHandler doRequest:nextPage withParameters:nil andHeaders:nil andHTTPMethod:@"GET"];
     }
 
 }

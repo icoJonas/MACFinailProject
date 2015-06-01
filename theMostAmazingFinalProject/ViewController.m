@@ -64,8 +64,11 @@ static NSString * const AUTH_REQUEST_URL = @"https://runkeeper.com/apps/authoriz
 //        [self.runKeeperDataSource getToken:code];
 //        [self.runKeeperDataSource getFitnessActivities];
 //        [self.runKeeperDataSource getUser];
-        [self.runKeeperDataSource getProfile];
-        
+//        [self.runKeeperDataSource getProfile];
+//        [self.runKeeperDataSource postFitnessActivity];
+        [self.runKeeperDataSource getSleepFeed];
+//        [self.runKeeperDataSource getSleepActivity:@"548678686"];
+//        [self.runKeeperDataSource postSleepActivity:nil];
         [webView removeFromSuperview];
     }
 }
