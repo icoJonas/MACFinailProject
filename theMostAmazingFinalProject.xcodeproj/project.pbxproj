@@ -592,6 +592,7 @@
 				DD80766D1B1BB10800A27F00 /* WorkoutViewController.m in Sources */,
 				04341F331B17D40D0002785A /* WebServiceHandler.m in Sources */,
 				04CF1E0E1B1A15CD00AB4F99 /* RecipeSearchResult.m in Sources */,
+				04CF1E1C1B1BA9BD00AB4F99 /* FitnessActivityPost.m in Sources */,
 				DD8076671B1BA95A00A27F00 /* BackgroundViewHelper.m in Sources */,
 				DDECCC321B1A62620047BA5C /* WorkoutManagerDataSource.m in Sources */,
 				DDECCC3A1B1ACD0C0047BA5C /* ImageHelper.m in Sources */,
