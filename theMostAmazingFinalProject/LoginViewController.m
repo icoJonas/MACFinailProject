@@ -1,34 +1,28 @@
 //
-//  ViewController.m
+//  LoginViewController.m
 //  theMostAmazingFinalProject
 //
-//  Created by Luis Jonathan Godoy Marín on 28/05/15.
+//  Created by Luis Jonathan Godoy Marín on 31/05/15.
 //  Copyright (c) 2015 MAC. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "BackgroundViewHelper.h"
+#import "LoginViewController.h"
 
-@interface ViewController ()
+@interface LoginViewController ()<UIWebViewDelegate>
 @property(strong,nonatomic) RunKeeperDataSource *runKeeperDataSource;
-@property(strong,nonatomic) BigOvenDataSource *bigOvenDataSource;
+@property (strong, nonatomic) IBOutlet UIWebView *wvWebView;
+
 @end
 
+static NSString * const AUTH_REQUEST_URL = @"https://runkeeper.com/apps/authorize?response_type=code&client_id=21d211d3e8d04362bf4056eca118cca6&redirect_uri=http%3A%2F%2Fwww.google.com";
 
-@implementation ViewController
+
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.title = @"main tab";
-    
+    // Do any additional setup after loading the view from its nib.
     self.runKeeperDataSource = [RunKeeperDataSource new];
-    self.bigOvenDataSource = [BigOvenDataSource new];
-    
-//    int recipeNumber = 466985; //recipeNumber will come from user input
-//    [self.bigOvenDataSource getRecipe:recipeNumber];
-    
-//    [self.bigOvenDataSource getRecipeSearch:@"shrimp"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,6 +35,16 @@
     //Comment out to disable RunKeeper authorization page from showing
     [self.wvWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:AUTH_REQUEST_URL]]];
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
@@ -58,14 +62,11 @@
         NSRange needleRange = NSMakeRange(prefix.length, haystack.length - prefix.length - suffix.length);
         
         NSString *code = [haystack substringWithRange:needleRange];
-        [self.runKeeperDataSource getToken:code];
-//        [self.runKeeperDataSource getFitnessActivities];
-//        [self.runKeeperDataSource getUser];
-//        [self.runKeeperDataSource getProfile];
-//        [self.runKeeperDataSource postFitnessActivity];
-//        [self.runKeeperDataSource getSleepFeed];
-//        [self.runKeeperDataSource getSleepActivity:@"548678686"];
-//        [self.runKeeperDataSource postSleepActivity:nil];
+        //        [self.runKeeperDataSource getToken:code];
+        //        [self.runKeeperDataSource getFitnessActivities];
+        //        [self.runKeeperDataSource getUser];
+        [self.runKeeperDataSource getProfile];
+        
         [webView removeFromSuperview];
     }
 }
