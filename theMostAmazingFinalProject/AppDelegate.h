@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyUITabBarController.h"
+#import "ViewController.h"
+#import "WorkoutViewController.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) MyUITabBarController *tabBarController;
+
+@property (strong, nonatomic) ViewController *firstViewController;
+@property (strong, nonatomic) WorkoutViewController *secondViewController;
+
 
 
 @end

@@ -16,6 +16,24 @@
 		04CF1E141B1B66DC00AB4F99 /* RunKeeperUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E131B1B66DC00AB4F99 /* RunKeeperUser.m */; };
 		04CF1E171B1B6DEA00AB4F99 /* RunKeeperProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E161B1B6DEA00AB4F99 /* RunKeeperProfile.m */; };
 		04DBD2908F76F6076DCEC72E /* Pods_theMostAmazingFinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DD8076561B1BA51800A27F00 /* workout1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076501B1BA51800A27F00 /* workout1.jpg */; };
+		DD8076571B1BA51800A27F00 /* workout2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076511B1BA51800A27F00 /* workout2.jpg */; };
+		DD8076581B1BA51800A27F00 /* workout3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076521B1BA51800A27F00 /* workout3.jpg */; };
+		DD8076591B1BA51800A27F00 /* workout4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076531B1BA51800A27F00 /* workout4.jpg */; };
+		DD80765A1B1BA51800A27F00 /* workout5.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8076541B1BA51800A27F00 /* workout5.png */; };
+		DD80765B1B1BA51800A27F00 /* workout6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076551B1BA51800A27F00 /* workout6.jpg */; };
+		DD80765E1B1BA64800A27F00 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD80765D1B1BA64800A27F00 /* ViewController.xib */; };
+		DD8076621B1BA7F800A27F00 /* MyUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8076601B1BA7F800A27F00 /* MyUITabBarController.m */; };
+		DD8076631B1BA7F800A27F00 /* MyUITabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8076611B1BA7F800A27F00 /* MyUITabBarController.xib */; };
+		DD8076671B1BA95A00A27F00 /* BackgroundViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8076661B1BA95A00A27F00 /* BackgroundViewHelper.m */; };
+		DD8076691B1BAD1200A27F00 /* workout0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076681B1BAD1200A27F00 /* workout0.jpg */; };
+		DD80766D1B1BB10800A27F00 /* WorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD80766B1B1BB10800A27F00 /* WorkoutViewController.m */; };
+		DD80766E1B1BB10800A27F00 /* WorkoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD80766C1B1BB10800A27F00 /* WorkoutViewController.xib */; };
+		DD8076721B1BB12600A27F00 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8076701B1BB12600A27F00 /* LoginViewController.m */; };
+		DD8076731B1BB12600A27F00 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8076711B1BB12600A27F00 /* LoginViewController.xib */; };
+		DD8076741B1BBF3F00A27F00 /* SQLiteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC2D1B1A5FCF0047BA5C /* SQLiteDataSource.m */; };
+		DD8076751B1BBF4700A27F00 /* wgerSQLiteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC351B1A63120047BA5C /* wgerSQLiteDataSource.m */; };
+		DD8076781B1BC3E800A27F00 /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8076771B1BC3E800A27F00 /* AnimationHelper.m */; };
 		DD9668C51B16CD02007D0A98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668C41B16CD02007D0A98 /* main.m */; };
 		DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668C71B16CD02007D0A98 /* AppDelegate.m */; };
 		DD9668CB1B16CD02007D0A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668CA1B16CD02007D0A98 /* ViewController.m */; };
@@ -26,9 +44,7 @@
 		DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */; };
 		DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA9E91B1B180CB900E422DA /* RunKeeperDataSource.m */; };
 		DDA9E91F1B18171600E422DA /* KeychainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA9E91E1B18171600E422DA /* KeychainHelper.m */; };
-		DDECCC2E1B1A5FCF0047BA5C /* SQLiteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC2D1B1A5FCF0047BA5C /* SQLiteDataSource.m */; };
 		DDECCC321B1A62620047BA5C /* WorkoutManagerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC311B1A62620047BA5C /* WorkoutManagerDataSource.m */; };
-		DDECCC361B1A63120047BA5C /* wgerSQLiteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC351B1A63120047BA5C /* wgerSQLiteDataSource.m */; };
 		DDECCC3A1B1ACD0C0047BA5C /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC391B1ACD0C0047BA5C /* ImageHelper.m */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +78,27 @@
 		17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theMostAmazingFinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DBD165123099ACEA721E6B /* Pods-theMostAmazingFinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		DA98994CB1C351E6C135A6DF /* Pods-theMostAmazingFinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		DD8076501B1BA51800A27F00 /* workout1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout1.jpg; sourceTree = "<group>"; };
+		DD8076511B1BA51800A27F00 /* workout2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout2.jpg; sourceTree = "<group>"; };
+		DD8076521B1BA51800A27F00 /* workout3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout3.jpg; sourceTree = "<group>"; };
+		DD8076531B1BA51800A27F00 /* workout4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout4.jpg; sourceTree = "<group>"; };
+		DD8076541B1BA51800A27F00 /* workout5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout5.png; sourceTree = "<group>"; };
+		DD8076551B1BA51800A27F00 /* workout6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout6.jpg; sourceTree = "<group>"; };
+		DD80765D1B1BA64800A27F00 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		DD80765F1B1BA7F800A27F00 /* MyUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUITabBarController.h; sourceTree = "<group>"; };
+		DD8076601B1BA7F800A27F00 /* MyUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUITabBarController.m; sourceTree = "<group>"; };
+		DD8076611B1BA7F800A27F00 /* MyUITabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyUITabBarController.xib; sourceTree = "<group>"; };
+		DD8076651B1BA95A00A27F00 /* BackgroundViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundViewHelper.h; sourceTree = "<group>"; };
+		DD8076661B1BA95A00A27F00 /* BackgroundViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundViewHelper.m; sourceTree = "<group>"; };
+		DD8076681B1BAD1200A27F00 /* workout0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout0.jpg; sourceTree = "<group>"; };
+		DD80766A1B1BB10800A27F00 /* WorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutViewController.h; sourceTree = "<group>"; };
+		DD80766B1B1BB10800A27F00 /* WorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutViewController.m; sourceTree = "<group>"; };
+		DD80766C1B1BB10800A27F00 /* WorkoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkoutViewController.xib; sourceTree = "<group>"; };
+		DD80766F1B1BB12600A27F00 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		DD8076701B1BB12600A27F00 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DD8076711B1BB12600A27F00 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		DD8076761B1BC3E800A27F00 /* AnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHelper.h; sourceTree = "<group>"; };
+		DD8076771B1BC3E800A27F00 /* AnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationHelper.m; sourceTree = "<group>"; };
 		DD9668BF1B16CD02007D0A98 /* theMostAmazingFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theMostAmazingFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9668C31B16CD02007D0A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD9668C41B16CD02007D0A98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -168,6 +205,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DD80764F1B1B964400A27F00 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		DD80765C1B1BA52100A27F00 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DD8076681B1BAD1200A27F00 /* workout0.jpg */,
+				DD8076501B1BA51800A27F00 /* workout1.jpg */,
+				DD8076511B1BA51800A27F00 /* workout2.jpg */,
+				DD8076521B1BA51800A27F00 /* workout3.jpg */,
+				DD8076531B1BA51800A27F00 /* workout4.jpg */,
+				DD8076541B1BA51800A27F00 /* workout5.png */,
+				DD8076551B1BA51800A27F00 /* workout6.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		DD8076641B1BA80400A27F00 /* MyUITabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				DD80765F1B1BA7F800A27F00 /* MyUITabBarController.h */,
+				DD8076601B1BA7F800A27F00 /* MyUITabBarController.m */,
+				DD8076611B1BA7F800A27F00 /* MyUITabBarController.xib */,
+			);
+			name = MyUITabBarController;
+			sourceTree = "<group>";
+		};
 		DD9668B61B16CD01007D0A98 = {
 			isa = PBXGroup;
 			children = (
@@ -193,8 +262,10 @@
 			children = (
 				DD9668C61B16CD02007D0A98 /* AppDelegate.h */,
 				DD9668C71B16CD02007D0A98 /* AppDelegate.m */,
+				DD8076641B1BA80400A27F00 /* MyUITabBarController */,
 				DD9668C91B16CD02007D0A98 /* ViewController.h */,
 				DD9668CA1B16CD02007D0A98 /* ViewController.m */,
+				DD80765D1B1BA64800A27F00 /* ViewController.xib */,
 				DD9668CC1B16CD02007D0A98 /* Main.storyboard */,
 				DD9668D11B16CD02007D0A98 /* LaunchScreen.xib */,
 				04CF1E071B19CBA600AB4F99 /* Objects */,
@@ -203,6 +274,12 @@
 				DDA9E9201B181D1C00E422DA /* Helpers */,
 				DD9668CF1B16CD02007D0A98 /* Images.xcassets */,
 				DD9668C21B16CD02007D0A98 /* Supporting Files */,
+				DD80766A1B1BB10800A27F00 /* WorkoutViewController.h */,
+				DD80766B1B1BB10800A27F00 /* WorkoutViewController.m */,
+				DD80766C1B1BB10800A27F00 /* WorkoutViewController.xib */,
+				DD80766F1B1BB12600A27F00 /* LoginViewController.h */,
+				DD8076701B1BB12600A27F00 /* LoginViewController.m */,
+				DD8076711B1BB12600A27F00 /* LoginViewController.xib */,
 			);
 			path = theMostAmazingFinalProject;
 			sourceTree = "<group>";
@@ -210,7 +287,8 @@
 		DD9668C21B16CD02007D0A98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */,
+				DD80765C1B1BA52100A27F00 /* images */,
+				DD80764F1B1B964400A27F00 /* DB */,
 				DD9668C31B16CD02007D0A98 /* Info.plist */,
 				DD9668C41B16CD02007D0A98 /* main.m */,
 			);
@@ -308,6 +386,10 @@
 			children = (
 				DDECCC381B1ACD0C0047BA5C /* ImageHelper.h */,
 				DDECCC391B1ACD0C0047BA5C /* ImageHelper.m */,
+				DD8076651B1BA95A00A27F00 /* BackgroundViewHelper.h */,
+				DD8076661B1BA95A00A27F00 /* BackgroundViewHelper.m */,
+				DD8076761B1BC3E800A27F00 /* AnimationHelper.h */,
+				DD8076771B1BC3E800A27F00 /* AnimationHelper.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -395,8 +477,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD80765E1B1BA64800A27F00 /* ViewController.xib in Resources */,
 				DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */,
+				DD8076581B1BA51800A27F00 /* workout3.jpg in Resources */,
+				DD80765B1B1BA51800A27F00 /* workout6.jpg in Resources */,
+				DD8076591B1BA51800A27F00 /* workout4.jpg in Resources */,
+				DD8076731B1BB12600A27F00 /* LoginViewController.xib in Resources */,
+				DD8076691B1BAD1200A27F00 /* workout0.jpg in Resources */,
+				DD80765A1B1BA51800A27F00 /* workout5.png in Resources */,
 				DD9668CE1B16CD02007D0A98 /* Main.storyboard in Resources */,
+				DD8076571B1BA51800A27F00 /* workout2.jpg in Resources */,
+				DD8076561B1BA51800A27F00 /* workout1.jpg in Resources */,
+				DD80766E1B1BB10800A27F00 /* WorkoutViewController.xib in Resources */,
+				DD8076631B1BA7F800A27F00 /* MyUITabBarController.xib in Resources */,
 				DD9668D31B16CD02007D0A98 /* LaunchScreen.xib in Resources */,
 				DD9668D01B16CD02007D0A98 /* Images.xcassets in Resources */,
 			);
@@ -464,22 +557,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8076751B1BBF4700A27F00 /* wgerSQLiteDataSource.m in Sources */,
+				DD8076741B1BBF3F00A27F00 /* SQLiteDataSource.m in Sources */,
 				DD9668CB1B16CD02007D0A98 /* ViewController.m in Sources */,
 				04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */,
 				04CF1E111B1A955F00AB4F99 /* FitnessActivity.m in Sources */,
 				DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */,
+				DD8076781B1BC3E800A27F00 /* AnimationHelper.m in Sources */,
+				DD8076721B1BB12600A27F00 /* LoginViewController.m in Sources */,
 				DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */,
 				04CF1E171B1B6DEA00AB4F99 /* RunKeeperProfile.m in Sources */,
 				04CF1E061B19AB1300AB4F99 /* BigOvenDataSource.m in Sources */,
 				04CF1E141B1B66DC00AB4F99 /* RunKeeperUser.m in Sources */,
 				DD9668C51B16CD02007D0A98 /* main.m in Sources */,
 				046E79D91B1828BF00E23F88 /* KeychainItemWrapper.m in Sources */,
+				DD80766D1B1BB10800A27F00 /* WorkoutViewController.m in Sources */,
 				04341F331B17D40D0002785A /* WebServiceHandler.m in Sources */,
 				04CF1E0E1B1A15CD00AB4F99 /* RecipeSearchResult.m in Sources */,
+				DD8076671B1BA95A00A27F00 /* BackgroundViewHelper.m in Sources */,
 				DDECCC321B1A62620047BA5C /* WorkoutManagerDataSource.m in Sources */,
 				DDECCC3A1B1ACD0C0047BA5C /* ImageHelper.m in Sources */,
 				DDA9E91F1B18171600E422DA /* KeychainHelper.m in Sources */,
-				DDECCC361B1A63120047BA5C /* wgerSQLiteDataSource.m in Sources */,
+				DD8076621B1BA7F800A27F00 /* MyUITabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,35 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //create the view controller for the first tab
+    self.firstViewController = [[ViewController alloc] initWithNibName:nil bundle:NULL];
+    self.secondViewController = [[WorkoutViewController alloc] initWithNibName:nil bundle:NULL];
+    
+    UINavigationController *firstTAB = [[UINavigationController alloc] initWithRootViewController:self.firstViewController];
+    
+    
+    //create an array of all view controllers that will represent the tab at the bottom
+    NSArray *myViewControllers = [[NSArray alloc] initWithObjects:
+                                  firstTAB,
+                                  self.secondViewController,
+                                  nil];
+    
+    self.window.rootViewController = self.firstViewController;
+    
+    //initialize the tab bar controller
+    self.tabBarController = [[MyUITabBarController alloc] init];
+    
+    //set the view controllers for the tab bar controller
+    [self.tabBarController setViewControllers:myViewControllers];
+    
+    //add the tab bar controllers view to the window
+    [self.window addSubview:self.tabBarController.view];
+    
+    //set the window background color and make it visible
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
