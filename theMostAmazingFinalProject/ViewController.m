@@ -39,7 +39,6 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     //Comment out to disable RunKeeper authorization page from showing
-    [self.wvWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:AUTH_REQUEST_URL]]];
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
