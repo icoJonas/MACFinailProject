@@ -32,14 +32,14 @@ enum OPERATIONS {
 {
     currentOperation = GET_RECIPE;
     NSDictionary *jsonHeader = [NSDictionary dictionaryWithObjectsAndKeys:@"application/json", @"Accept", nil];
-    [webHandler doRequest:[NSString stringWithFormat:BIGOVEN_RECIPE_REQUEST_URL,recipeNumber] andHeaders:jsonHeader andHTTPMethod:@"GET"];
+    [webHandler doRequest:[NSString stringWithFormat:BIGOVEN_RECIPE_REQUEST_URL,recipeNumber] withParameters:nil andHeaders:jsonHeader andHTTPMethod:@"GET"];
 }
 
 -(void)getRecipeSearch:(NSString *)keyword
 {
     currentOperation = GET_RECIPE_SEARCH;
     NSDictionary *jsonHeader = [NSDictionary dictionaryWithObjectsAndKeys:@"application/json", @"Accept", nil];
-    [webHandler doRequest:[NSString stringWithFormat:BIGOVER_RECIPE_SEARCH_REQUEST_URL, keyword] andHeaders:jsonHeader andHTTPMethod:@"GET"];
+    [webHandler doRequest:[NSString stringWithFormat:BIGOVER_RECIPE_SEARCH_REQUEST_URL, keyword] withParameters:nil andHeaders:jsonHeader andHTTPMethod:@"GET"];
 }
 
 -(void)webServiceCallFinished:(id)data

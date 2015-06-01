@@ -11,6 +11,9 @@
 #import "FitnessActivity.h"
 #import "RunKeeperUser.h"
 #import "RunKeeperProfile.h"
+#import "FitnessActivityPost.h"
+#import "SleepActivity.h"
+#import "SleepActivityPost.h"
 
 @interface RunKeeperDataSource : NSObject <WebServiceHandlerDelegate> {
     int currentOperation;
@@ -21,7 +24,9 @@
 -(void)getFitnessActivities;
 -(void)getUser;
 -(void)getProfile;
-
-
+-(void)postFitnessActivity:(FitnessActivity *)aFitnessActivity;
+-(void)getSleepFeed;
+-(void)getSleepActivity:(NSString *)sleepID;
+-(void)postSleepActivity:(SleepActivityPost *)sleepActivity;
 
 @end

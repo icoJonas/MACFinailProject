@@ -23,6 +23,6 @@
 
 -(id)initWithDelegate:(id <WebServiceHandlerDelegate>)del;
 
--(void)doRequest:(NSString *)urlSite andHeaders:(NSDictionary *)headers andHTTPMethod:(NSString *)method;
+-(void)doRequest:(NSString *)urlSite withParameters:(NSDictionary *)parameters andHeaders:(NSDictionary *)headers andHTTPMethod:(NSString *)method;
 
 @end
