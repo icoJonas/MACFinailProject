@@ -8,6 +8,7 @@
 
 #import "RecipeSearchViewController.h"
 #import "BackgroundViewHelper.h"
+#import "AnimationHelper.h"
 
 @interface RecipeSearchViewController () <UISearchBarDelegate>
 
@@ -34,6 +35,7 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     NSLog(@"User is searching for %@", searchBar.text);
+    [AnimationHelper changeViewSize:searchBar withFrame:CGRectMake(searchBar.frame.origin.x, self.view.frame.size.height-searchBar.frame.size.height, searchBar.frame.size.width, searchBar.frame.size.height) withDuration:1.0 andWait:0.0];
 }
 
 @end
