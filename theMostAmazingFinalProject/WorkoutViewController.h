@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "WorkoutManagerDataSource.h"
 
-@interface WorkoutViewController : UIViewController
+@interface WorkoutViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
+    IBOutlet UIActivityIndicatorView *activityView;
+    IBOutlet UITableView *muscleTableView;
+    NSMutableArray *muscles;
+}
 
 @property(strong,nonatomic) WorkoutManagerDataSource *wgerDataSource;
 

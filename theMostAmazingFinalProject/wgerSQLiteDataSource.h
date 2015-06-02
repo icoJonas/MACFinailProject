@@ -18,4 +18,7 @@
 -(void)insertEquipments:(NSArray *)equipments ForExercise:(int)exercise;
 -(void)insertAllNewImages:(NSArray *)images;
 
+-(NSArray *)getMuscles;
+-(NSArray *)getExercisesForMuscle:(NSNumber *)muscleId;
+
 @end

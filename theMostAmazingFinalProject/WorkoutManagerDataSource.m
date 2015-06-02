@@ -25,6 +25,7 @@ enum OPERATIONS {
     self = [super init];
     if (self) {
         currentOperation = 0;
+        attempts = 0;
         webHandler = [[WebServiceHandler alloc] initWithDelegate:self];
         sqliteDataSource = [wgerSQLiteDataSource new];
     }
@@ -87,8 +88,30 @@ enum OPERATIONS {
 #pragma mark - Public methods
 
 -(void)getCatalogs{
-    currentOperation = GET_CATEGORIES;
-    [webHandler doRequest:@"http://wger.de/api/v2/exercisecategory/" withParameters:nil andHeaders:nil andHTTPMethod:@"GET"];
+    NSDate *lastDate = nil;
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"workoutCatalogsDate"]) {
+        lastDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"workoutCatalogsDate"];
+    } else {
+        lastDate = [NSDate dateWithTimeIntervalSinceNow:-86400];
+        [[NSUserDefaults standardUserDefaults] setObject:lastDate forKey:@"workoutCatalogsDate"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate:lastDate];
+    
+    if (interval > 86400) {
+        lastDate = [NSDate date];
+        [[NSUserDefaults standardUserDefaults] setObject:lastDate forKey:@"workoutCatalogsDate"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        currentOperation = GET_CATEGORIES;
+        [webHandler doRequest:@"http://wger.de/api/v2/exercisecategory/" withParameters:nil andHeaders:nil andHTTPMethod:@"GET"];
+    } else {
+        if (self.delegate) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.delegate catalogsUpdated];
+            });
+        }
+    }
 }
 
 #pragma mark - WebServiceHandler delegate methods
@@ -143,12 +166,31 @@ enum OPERATIONS {
         
     if (nextPage) {
         [webHandler doRequest:nextPage withParameters:nil andHeaders:nil andHTTPMethod:@"GET"];
+    } else {
+        if (currentOperation == GET_IMAGES && self.delegate) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.delegate catalogsUpdated];
+            });
+        }
     }
 
 }
 
 -(void)webServiceCallError:(NSError *)error{
     NSLog(@"Operation:%d, %@",currentOperation, error.description);
+    if ([error.userInfo objectForKey:@"NSErrorFailingURLStringKey"]) {
+        if (attempts < 3) {
+            NSString *strURL = [error.userInfo objectForKey:@"NSErrorFailingURLStringKey"];
+            [webHandler doRequest:strURL withParameters:nil andHeaders:nil andHTTPMethod:@"GET"];
+            attempts ++;
+        } else {
+            if (self.delegate) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.delegate catalogsUpdated];
+                });
+            }
+        }
+    }
 }
 
 @end

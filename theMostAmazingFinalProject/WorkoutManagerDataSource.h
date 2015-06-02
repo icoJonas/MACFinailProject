@@ -9,10 +9,21 @@
 #import <Foundation/Foundation.h>
 #import "WebServiceHandler.h"
 
+@protocol WorkoutManagerDataSourceDelegate <NSObject>
+
+@optional
+
+-(void)catalogsUpdated;
+
+@end
+
 @interface WorkoutManagerDataSource : NSObject <WebServiceHandlerDelegate> {
     int currentOperation;
+    int attempts;
     WebServiceHandler *webHandler;
 }
+
+@property (nonatomic, weak) id <WorkoutManagerDataSourceDelegate> delegate;
 
 -(void)getCatalogs;
 

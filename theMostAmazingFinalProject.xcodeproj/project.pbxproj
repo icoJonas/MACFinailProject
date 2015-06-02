@@ -54,6 +54,8 @@
 		DDECCC321B1A62620047BA5C /* WorkoutManagerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC311B1A62620047BA5C /* WorkoutManagerDataSource.m */; };
 		DDECCC3A1B1ACD0C0047BA5C /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECCC391B1ACD0C0047BA5C /* ImageHelper.m */; };
 		DDF277AF1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF277AE1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a */; };
+		DDF277B41B1D8ADC003CD7C0 /* MusclesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF277B21B1D8ADC003CD7C0 /* MusclesTableViewCell.m */; };
+		DDF277B51B1D8ADC003CD7C0 /* MusclesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF277B31B1D8ADC003CD7C0 /* MusclesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +226,9 @@
 		DDECCC381B1ACD0C0047BA5C /* ImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
 		DDECCC391B1ACD0C0047BA5C /* ImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
 		DDF277AE1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "theMostAmazingFinalProject/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
+		DDF277B11B1D8ADC003CD7C0 /* MusclesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusclesTableViewCell.h; sourceTree = "<group>"; };
+		DDF277B21B1D8ADC003CD7C0 /* MusclesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusclesTableViewCell.m; sourceTree = "<group>"; };
+		DDF277B31B1D8ADC003CD7C0 /* MusclesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusclesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,6 +484,11 @@
 				DD9668C91B16CD02007D0A98 /* ViewController.h */,
 				DD9668CA1B16CD02007D0A98 /* ViewController.m */,
 				DD80765D1B1BA64800A27F00 /* ViewController.xib */,
+				DDF277B01B1D8AA3003CD7C0 /* WorkoutViews */,
+				DD80766F1B1BB12600A27F00 /* LoginViewController.h */,
+				DD8076701B1BB12600A27F00 /* LoginViewController.m */,
+				DD8076711B1BB12600A27F00 /* LoginViewController.xib */,
+				04CF221A1B1D1CD500AB4F99 /* CookingViews */,
 				DD9668CC1B16CD02007D0A98 /* Main.storyboard */,
 				DD9668D11B16CD02007D0A98 /* LaunchScreen.xib */,
 				04CF1E571B1CF6E800AB4F99 /* CorePlot */,
@@ -488,13 +498,6 @@
 				DDA9E9201B181D1C00E422DA /* Helpers */,
 				DD9668CF1B16CD02007D0A98 /* Images.xcassets */,
 				DD9668C21B16CD02007D0A98 /* Supporting Files */,
-				DD80766A1B1BB10800A27F00 /* WorkoutViewController.h */,
-				DD80766B1B1BB10800A27F00 /* WorkoutViewController.m */,
-				DD80766C1B1BB10800A27F00 /* WorkoutViewController.xib */,
-				DD80766F1B1BB12600A27F00 /* LoginViewController.h */,
-				DD8076701B1BB12600A27F00 /* LoginViewController.m */,
-				DD8076711B1BB12600A27F00 /* LoginViewController.xib */,
-				04CF221A1B1D1CD500AB4F99 /* CookingViews */,
 			);
 			path = theMostAmazingFinalProject;
 			sourceTree = "<group>";
@@ -609,6 +612,19 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		DDF277B01B1D8AA3003CD7C0 /* WorkoutViews */ = {
+			isa = PBXGroup;
+			children = (
+				DD80766A1B1BB10800A27F00 /* WorkoutViewController.h */,
+				DD80766B1B1BB10800A27F00 /* WorkoutViewController.m */,
+				DD80766C1B1BB10800A27F00 /* WorkoutViewController.xib */,
+				DDF277B11B1D8ADC003CD7C0 /* MusclesTableViewCell.h */,
+				DDF277B21B1D8ADC003CD7C0 /* MusclesTableViewCell.m */,
+				DDF277B31B1D8ADC003CD7C0 /* MusclesTableViewCell.xib */,
+			);
+			name = WorkoutViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -693,6 +709,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF277B51B1D8ADC003CD7C0 /* MusclesTableViewCell.xib in Resources */,
 				DD80765E1B1BA64800A27F00 /* ViewController.xib in Resources */,
 				04CF22221B1D381600AB4F99 /* RecipeSearchViewController.xib in Resources */,
 				DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */,
@@ -787,6 +804,7 @@
 				DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */,
 				04CF1E171B1B6DEA00AB4F99 /* RunKeeperProfile.m in Sources */,
 				04CF1E061B19AB1300AB4F99 /* BigOvenDataSource.m in Sources */,
+				DDF277B41B1D8ADC003CD7C0 /* MusclesTableViewCell.m in Sources */,
 				04CF1E141B1B66DC00AB4F99 /* RunKeeperUser.m in Sources */,
 				04CF22211B1D381600AB4F99 /* RecipeSearchViewController.m in Sources */,
 				04CF1E221B1C3BD000AB4F99 /* SleepActivityPost.m in Sources */,
