@@ -31,7 +31,11 @@
         self.strRecipeReviewCount = [[jsonDictMutable objectForKey:@"ReviewCount"] stringValue];
         self.strRecipePrimaryIngredient = [jsonDictMutable objectForKey:@"PrimaryIngredient"];
 
-        if ([[[jsonDictMutable objectForKey:@"TotalMinutes"] stringValue]isEqualToString: @""])
+        if ([[jsonDictMutable objectForKey:@"TotalMinutes"] isKindOfClass:[NSString class]] && [[jsonDictMutable objectForKey:@"TotalMinutes"] isEqualToString:@""])
+        {
+            self.strRecipeTotalMinutes = @"";
+        }
+        else if ([[[jsonDictMutable objectForKey:@"TotalMinutes"] stringValue] isEqualToString: @""])
         {
             self.strRecipeTotalMinutes = @"";
         }
