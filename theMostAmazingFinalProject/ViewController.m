@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "BackgroundViewHelper.h"
+#import "LoginViewController.h"
 
 @interface ViewController ()
 @property(strong,nonatomic) RunKeeperDataSource *runKeeperDataSource;
@@ -39,6 +40,11 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [[BackgroundViewHelper getSharedInstance] start];
+}
+
+-(IBAction)buttonPressed:(id)sender{
+//    LoginViewController *controller = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+//    [self.navigationController pushViewController:controller animated:YES];
 }
 
 

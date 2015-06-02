@@ -18,5 +18,7 @@
 
 -(void)getRecipe:(int)recipeNumber;
 -(void)getRecipeSearch:(NSString *)keyword;
+-(void)getRecipeFavorites;
+
 
 @end

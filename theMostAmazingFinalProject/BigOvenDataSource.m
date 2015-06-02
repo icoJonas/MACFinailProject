@@ -10,13 +10,16 @@
 
 static NSString * const BIGOVEN_RECIPE_REQUEST_URL = @"http://api.bigoven.com/recipe/%d?api_key=dvx0869aFk8U96H9396Ocbux33T0YYM6";
 
-static NSString * const BIGOVER_RECIPE_SEARCH_REQUEST_URL = @"http://api.bigoven.com/recipes/?api_key=dvx0869aFk8U96H9396Ocbux33T0YYM6&pg=3&rpp=25&title_kw=%@";
+static NSString * const BIGOVER_RECIPE_SEARCH_REQUEST_URL = @"http://api.bigoven.com/recipes/?api_key=dvx0869aFk8U96H9396Ocbux33T0YYM6&pg=1&rpp=25&title_kw=%@";
+
+static NSString * const BIGOVEN_RECIPE_FAVORITES_REQUEST_URL = @"http://api.bigoven.com/favorites?api_key=dvx0869aFk8U96H9396Ocbux33T0YYM6&pg=1&rpp=25";
 
 @implementation BigOvenDataSource
 
 enum OPERATIONS {
     GET_RECIPE = 1,
     GET_RECIPE_SEARCH = 2,
+    GET_RECIPE_FAVORITES = 3,
 };
 
 -(instancetype)init{
@@ -40,6 +43,13 @@ enum OPERATIONS {
     currentOperation = GET_RECIPE_SEARCH;
     NSDictionary *jsonHeader = [NSDictionary dictionaryWithObjectsAndKeys:@"application/json", @"Accept", nil];
     [webHandler doRequest:[NSString stringWithFormat:BIGOVER_RECIPE_SEARCH_REQUEST_URL, keyword] withParameters:nil andHeaders:jsonHeader andHTTPMethod:@"GET"];
+}
+
+-(void)getRecipeFavorites
+{
+    currentOperation = GET_RECIPE_FAVORITES;
+    NSDictionary *jsonHeader = [NSDictionary dictionaryWithObjectsAndKeys:@"application/json", @"Accept", @"Basic dHJpZ29ub2FoOmVzcGVvbg==", @"Authorization", nil];
+    [webHandler doRequest:BIGOVEN_RECIPE_FAVORITES_REQUEST_URL withParameters:nil andHeaders:jsonHeader andHTTPMethod:@"GET"];
 }
 
 -(void)webServiceCallFinished:(id)data
@@ -67,6 +77,10 @@ enum OPERATIONS {
         }
         
         NSLog(@"Description of search results: %@", arrSearchResults);
+    }
+    else if (currentOperation == GET_RECIPE_FAVORITES)
+    {
+        NSLog(@"Favorites were obtained. Do something useful");
     }
 
 }

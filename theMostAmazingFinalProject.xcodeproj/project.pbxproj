@@ -18,6 +18,10 @@
 		04CF1E1C1B1BA9BD00AB4F99 /* FitnessActivityPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E1B1B1BA9BD00AB4F99 /* FitnessActivityPost.m */; };
 		04CF1E1F1B1C305400AB4F99 /* SleepActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E1E1B1C305400AB4F99 /* SleepActivity.m */; };
 		04CF1E221B1C3BD000AB4F99 /* SleepActivityPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E211B1C3BD000AB4F99 /* SleepActivityPost.m */; };
+		04CF22191B1D160400AB4F99 /* CookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF22171B1D160400AB4F99 /* CookingViewController.xib */; };
+		04CF22211B1D381600AB4F99 /* RecipeSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF221F1B1D381600AB4F99 /* RecipeSearchViewController.m */; };
+		04CF22221B1D381600AB4F99 /* RecipeSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF22201B1D381600AB4F99 /* RecipeSearchViewController.xib */; };
+		04CF22241B1D3BE000AB4F99 /* CookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF22231B1D3BE000AB4F99 /* CookingViewController.m */; };
 		04DBD2908F76F6076DCEC72E /* Pods_theMostAmazingFinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DD8076561B1BA51800A27F00 /* workout1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076501B1BA51800A27F00 /* workout1.jpg */; };
 		DD8076571B1BA51800A27F00 /* workout2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076511B1BA51800A27F00 /* workout2.jpg */; };
@@ -163,6 +167,12 @@
 		04CF22101B1CF8FE00AB4F99 /* NSCoderExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCoderExtensions.h; sourceTree = "<group>"; };
 		04CF22111B1CF8FE00AB4F99 /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
 		04CF22121B1CF8FE00AB4F99 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
+		04CF22151B1D160400AB4F99 /* CookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookingViewController.h; sourceTree = "<group>"; };
+		04CF22171B1D160400AB4F99 /* CookingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookingViewController.xib; sourceTree = "<group>"; };
+		04CF221E1B1D381600AB4F99 /* RecipeSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeSearchViewController.h; sourceTree = "<group>"; };
+		04CF221F1B1D381600AB4F99 /* RecipeSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeSearchViewController.m; sourceTree = "<group>"; };
+		04CF22201B1D381600AB4F99 /* RecipeSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeSearchViewController.xib; sourceTree = "<group>"; };
+		04CF22231B1D3BE000AB4F99 /* CookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingViewController.m; sourceTree = "<group>"; };
 		17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theMostAmazingFinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DBD165123099ACEA721E6B /* Pods-theMostAmazingFinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		DA98994CB1C351E6C135A6DF /* Pods-theMostAmazingFinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -377,6 +387,19 @@
 			path = CorePlotHeaders;
 			sourceTree = "<group>";
 		};
+		04CF221A1B1D1CD500AB4F99 /* CookingViews */ = {
+			isa = PBXGroup;
+			children = (
+				04CF22151B1D160400AB4F99 /* CookingViewController.h */,
+				04CF22171B1D160400AB4F99 /* CookingViewController.xib */,
+				04CF22231B1D3BE000AB4F99 /* CookingViewController.m */,
+				04CF221E1B1D381600AB4F99 /* RecipeSearchViewController.h */,
+				04CF221F1B1D381600AB4F99 /* RecipeSearchViewController.m */,
+				04CF22201B1D381600AB4F99 /* RecipeSearchViewController.xib */,
+			);
+			name = CookingViews;
+			sourceTree = "<group>";
+		};
 		88CD1549ECC427BCC89A6590 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +494,7 @@
 				DD80766F1B1BB12600A27F00 /* LoginViewController.h */,
 				DD8076701B1BB12600A27F00 /* LoginViewController.m */,
 				DD8076711B1BB12600A27F00 /* LoginViewController.xib */,
+				04CF221A1B1D1CD500AB4F99 /* CookingViews */,
 			);
 			path = theMostAmazingFinalProject;
 			sourceTree = "<group>";
@@ -670,8 +694,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD80765E1B1BA64800A27F00 /* ViewController.xib in Resources */,
+				04CF22221B1D381600AB4F99 /* RecipeSearchViewController.xib in Resources */,
 				DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */,
 				DD8076581B1BA51800A27F00 /* workout3.jpg in Resources */,
+				04CF22191B1D160400AB4F99 /* CookingViewController.xib in Resources */,
 				DD80765B1B1BA51800A27F00 /* workout6.jpg in Resources */,
 				DD8076591B1BA51800A27F00 /* workout4.jpg in Resources */,
 				DD8076731B1BB12600A27F00 /* LoginViewController.xib in Resources */,
@@ -762,6 +788,7 @@
 				04CF1E171B1B6DEA00AB4F99 /* RunKeeperProfile.m in Sources */,
 				04CF1E061B19AB1300AB4F99 /* BigOvenDataSource.m in Sources */,
 				04CF1E141B1B66DC00AB4F99 /* RunKeeperUser.m in Sources */,
+				04CF22211B1D381600AB4F99 /* RecipeSearchViewController.m in Sources */,
 				04CF1E221B1C3BD000AB4F99 /* SleepActivityPost.m in Sources */,
 				DD9668C51B16CD02007D0A98 /* main.m in Sources */,
 				046E79D91B1828BF00E23F88 /* KeychainItemWrapper.m in Sources */,
@@ -769,6 +796,7 @@
 				04341F331B17D40D0002785A /* WebServiceHandler.m in Sources */,
 				04CF1E0E1B1A15CD00AB4F99 /* RecipeSearchResult.m in Sources */,
 				04CF1E1C1B1BA9BD00AB4F99 /* FitnessActivityPost.m in Sources */,
+				04CF22241B1D3BE000AB4F99 /* CookingViewController.m in Sources */,
 				DD8076671B1BA95A00A27F00 /* BackgroundViewHelper.m in Sources */,
 				DDECCC321B1A62620047BA5C /* WorkoutManagerDataSource.m in Sources */,
 				DDECCC3A1B1ACD0C0047BA5C /* ImageHelper.m in Sources */,
@@ -907,6 +935,20 @@
 					/Users/mac/Desktop/CorePlot_1.4/Binaries/iOS,
 					"$(PROJECT_DIR)/theMostAmazingFinalProject",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"FMDB\"",
+					"-framework",
+					"\"SCNetworkReachability\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -922,6 +964,20 @@
 					"$(inherited)",
 					/Users/mac/Desktop/CorePlot_1.4/Binaries/iOS,
 					"$(PROJECT_DIR)/theMostAmazingFinalProject",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"FMDB\"",
+					"-framework",
+					"\"SCNetworkReachability\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

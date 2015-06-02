@@ -11,6 +11,7 @@
 #import "ViewController.h"
 #import "WorkoutViewController.h"
 #import "LoginViewController.h"
+#import "CookingViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -19,6 +20,7 @@
 
 @property (strong, nonatomic) ViewController *firstViewController;
 @property (strong, nonatomic) WorkoutViewController *secondViewController;
+@property (strong, nonatomic) CookingViewController *thirdViewController;
 
 
 
