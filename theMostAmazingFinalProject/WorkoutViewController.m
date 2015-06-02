@@ -7,6 +7,7 @@
 //
 
 #import "WorkoutViewController.h"
+#import "BackgroundViewHelper.h"
 
 @interface WorkoutViewController ()
 
@@ -32,6 +33,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [BackgroundViewHelper getSharedInstance].assignedView = self.view;
+    [[BackgroundViewHelper getSharedInstance] start];
 }
 
 /*

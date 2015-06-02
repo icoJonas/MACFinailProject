@@ -8,6 +8,7 @@
 
 #import "CookingViewController.h"
 #import "RecipeSearchViewController.h"
+#import "BackgroundViewHelper.h"
 
 @interface CookingViewController () <UIAlertViewDelegate>
 
@@ -32,6 +33,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+//    [BackgroundViewHelper getSharedInstance].assignedView = self.view;
+//    [[BackgroundViewHelper getSharedInstance] start];
 }
 
 #pragma mark - Button methods

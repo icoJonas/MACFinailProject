@@ -47,6 +47,8 @@ static BackgroundViewHelper *sharedInstance = nil;
 
 -(void)start{
     [self stop];
+    [self.assignedView setUserInteractionEnabled:YES];
+    [self setUserInteractionEnabled:YES];
     if (![self isDescendantOfView:self.assignedView]) {
         [self.assignedView setUserInteractionEnabled:NO];
         [self.assignedView addSubview:self];

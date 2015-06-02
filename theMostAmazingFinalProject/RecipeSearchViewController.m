@@ -7,6 +7,7 @@
 //
 
 #import "RecipeSearchViewController.h"
+#import "BackgroundViewHelper.h"
 
 @interface RecipeSearchViewController () <UISearchBarDelegate>
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [BackgroundViewHelper getSharedInstance].assignedView = self.view;
+    [[BackgroundViewHelper getSharedInstance] start];
 }
 
 - (void)didReceiveMemoryWarning {
