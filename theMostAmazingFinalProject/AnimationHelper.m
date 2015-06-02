@@ -100,7 +100,7 @@
 
 +(void)transitionView:(UIView *)view toRect:(CGRect)rect WithSpringWithDamping:(float)damping andVelocity:(float)velocity andTransitionTime:(float)transitionTime andWaitTime:(float)waitTime
 {
-    [UIView animateWithDuration:transitionTime delay:waitTime usingSpringWithDamping:0.8 initialSpringVelocity:1.0 options:0 animations:^{
+    [UIView animateWithDuration:transitionTime delay:waitTime usingSpringWithDamping:damping initialSpringVelocity:velocity options:0 animations:^{
         view.frame = rect;
         view.alpha = 1.0;
     } completion:^(BOOL finished) {

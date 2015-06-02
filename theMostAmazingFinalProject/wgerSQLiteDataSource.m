@@ -74,4 +74,12 @@
     }
 }
 
+-(NSArray *)getMuscles{
+    return [self executeQuery:@"SELECT * FROM wger_muscle_catalog"];
+}
+
+-(NSArray *)getExercisesForMuscle:(NSNumber *)muscleId{
+    return [self executeQuery:[NSString stringWithFormat:@"SELECT ex.name FROM wger_exercise_catalog ex, wger_exercise_muscle mus  WHERE mus.id_muscle = %d AND ex.language = 2;",muscleId.intValue]];
+}
+
 @end

@@ -57,7 +57,7 @@ static BackgroundViewHelper *sharedInstance = nil;
             timer=nil;
         }
         [self animate];
-        timer=[NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(animate) userInfo:nil repeats:YES];
+        timer=[NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(animate) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     }
 }
@@ -84,12 +84,12 @@ static BackgroundViewHelper *sharedInstance = nil;
     UIImageView *prevImage = [[UIImageView alloc] initWithFrame:self.bounds];
     prevImage.image = animatedImageView.image;
     [self addSubview:prevImage];
-    [AnimationHelper fadeOut:prevImage withDuration:0.4 andWait:0.0];
+    [AnimationHelper fadeOut:prevImage withDuration:0.8 andWait:0.0];
     
     index=(index<imageArray.count-1?++index:0);
     [animatedImageView setImage:[imageArray objectAtIndex:index]];
     animatedImageView.alpha = 0;
-    [AnimationHelper fadeIn:prevImage withDuration:0.4 andWait:0.4];
+    [AnimationHelper fadeIn:prevImage withDuration:0.8 andWait:0.8];
     [self bringSubviewToFront:animatedImageView];
 }
 

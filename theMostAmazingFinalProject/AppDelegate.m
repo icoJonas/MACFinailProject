@@ -26,13 +26,16 @@
     
     UINavigationController *firstTAB = [[UINavigationController alloc] initWithRootViewController:self.firstViewController];
     
+    UINavigationController *secondTAB = [[UINavigationController alloc] initWithRootViewController:self.secondViewController];
+    
     UINavigationController *thirdTAB = [[UINavigationController alloc] initWithRootViewController:self.thirdViewController];
     
     
     //create an array of all view controllers that will represent the tab at the bottom
     NSArray *myViewControllers = [[NSArray alloc] initWithObjects:
                                   firstTAB,
-                                  self.secondViewController,
+                                  secondTAB,
+//                                  self.secondViewController,
                                   thirdTAB,
 //                                  self.thirdViewController,
                                   nil];
