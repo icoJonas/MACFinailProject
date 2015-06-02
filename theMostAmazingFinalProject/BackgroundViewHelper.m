@@ -17,8 +17,7 @@ static BackgroundViewHelper *sharedInstance = nil;
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        assignedView=[self topViewController].view;
-        [self setFrame:assignedView.frame];
+        [self setFrame:frame];
         self.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.9];
         index=0;
         timer=nil;
@@ -41,20 +40,17 @@ static BackgroundViewHelper *sharedInstance = nil;
 {
     if(!sharedInstance)
     {
-        sharedInstance = [[BackgroundViewHelper alloc] initWithFrame:CGRectZero];
+        sharedInstance = [[BackgroundViewHelper alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     }
     return sharedInstance;
 }
 
 -(void)start{
     [self stop];
-    if (![assignedView.superview isKindOfClass:[self topViewController].class]) {
-        assignedView=[self topViewController].view;
-    }
-    if (![self isDescendantOfView:assignedView]) {
-        [assignedView setUserInteractionEnabled:NO];
-        [assignedView addSubview:self];
-        [assignedView sendSubviewToBack:self];
+    if (![self isDescendantOfView:self.assignedView]) {
+        [self.assignedView setUserInteractionEnabled:NO];
+        [self.assignedView addSubview:self];
+        [self.assignedView sendSubviewToBack:self];
         if (timer!=nil) {
             [timer invalidate];
             timer=nil;
@@ -66,14 +62,14 @@ static BackgroundViewHelper *sharedInstance = nil;
 }
 
 -(void)stop{
-    if ([self isDescendantOfView:assignedView]) {
+    if ([self isDescendantOfView:self.assignedView]) {
         if (timer!=nil) {
             [timer invalidate];
             timer=nil;
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [self removeFromSuperview];
-            [assignedView setUserInteractionEnabled:YES];
+            [self.assignedView setUserInteractionEnabled:YES];
         });
     }
 }
@@ -97,23 +93,23 @@ static BackgroundViewHelper *sharedInstance = nil;
 }
 
 
-- (UIViewController *)topViewController{
-    return [self topViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
-}
-
-- (UIViewController *)topViewController:(UIViewController *)rootViewController
-{
-    if (rootViewController.presentedViewController == nil) {
-        return rootViewController;
-    }
-    
-    if ([rootViewController.presentedViewController isMemberOfClass:[UINavigationController class]]) {
-        UINavigationController *navigationController = (UINavigationController *)rootViewController.presentedViewController;
-        UIViewController *lastViewController = [[navigationController viewControllers] lastObject];
-        return [self topViewController:lastViewController];
-    }
-    
-    UIViewController *presentedViewController = (UIViewController *)rootViewController.presentedViewController;
-    return [self topViewController:presentedViewController];
-}
+//- (UIViewController *)topViewController{
+//    return [self topViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
+//}
+//
+//- (UIViewController *)topViewController:(UIViewController *)rootViewController
+//{
+//    if (rootViewController.presentedViewController == nil) {
+//        return rootViewController;
+//    }
+//    
+//    if ([rootViewController.presentedViewController isMemberOfClass:[UINavigationController class]]) {
+//        UINavigationController *navigationController = (UINavigationController *)rootViewController.presentedViewController;
+//        UIViewController *lastViewController = [[navigationController viewControllers] lastObject];
+//        return [self topViewController:lastViewController];
+//    }
+//    
+//    UIViewController *presentedViewController = (UIViewController *)rootViewController.presentedViewController;
+//    return [self topViewController:presentedViewController];
+//}
 @end

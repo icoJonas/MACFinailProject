@@ -14,8 +14,10 @@
     UIImageView *animatedImageView;
     NSMutableArray *imageArray;
     NSInteger index;
-    UIView *assignedView;
 }
+
+@property UIView *assignedView;
+
 
 +(BackgroundViewHelper *)getSharedInstance;
 -(void)start;

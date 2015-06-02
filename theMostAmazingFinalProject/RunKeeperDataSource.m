@@ -11,7 +11,7 @@
 
 static NSString * const AUTH_REQUEST_URL = @"https://runkeeper.com/apps/authorize?response_type=code&client_id=21d211d3e8d04362bf4056eca118cca6&redirect_uri=http%3A%2F%2Fwww.google.com";
 
-static NSString * const ACCESS_TOKEN_URL = @"https://runkeeper.com/apps/token?code=%@&client_id=%@&client_secret=%@&redirect_uri=http%3A%2F%2Fwww.google.com";
+static NSString * const ACCESS_TOKEN_URL = @"https://runkeeper.com/apps/token?grant_type=authorization_code&code=%@&client_id=%@&client_secret=%@&redirect_uri=http%3A%2F%2Fwww.google.com";
 
 static NSString * const CLIENT_ID = @"21d211d3e8d04362bf4056eca118cca6";
 static NSString * const CLIENT_SECRET = @"0951b34bcd594bf59f9ce64092b8ab67";
