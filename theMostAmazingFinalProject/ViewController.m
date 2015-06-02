@@ -18,10 +18,17 @@
 
 @implementation ViewController
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = @"main tab";
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.title = @"main tab";
     
     self.runKeeperDataSource = [RunKeeperDataSource new];
     self.bigOvenDataSource = [BigOvenDataSource new];
@@ -39,6 +46,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [BackgroundViewHelper getSharedInstance].assignedView = self.view;
     [[BackgroundViewHelper getSharedInstance] start];
 }
 

@@ -8,6 +8,7 @@
 
 #import "MyUITabBarController.h"
 #import "AppDelegate.h"
+#import "BackgroundViewHelper.h"
 
 @interface MyUITabBarController ()
 
@@ -47,6 +48,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    for (UIViewController *controller in self.viewControllers) {
+        if ([item.title isEqualToString:controller.title]) {
+            [BackgroundViewHelper getSharedInstance].assignedView = controller.view;
+            [[BackgroundViewHelper getSharedInstance] start];
+        }
+    }
 }
 
 @end
