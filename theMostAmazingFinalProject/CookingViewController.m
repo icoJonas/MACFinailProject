@@ -64,7 +64,8 @@ message:@"Please select where I should search" delegate:self cancelButtonTitle:@
     //Present the next view controller.
     RecipeSearchViewController *recipeSVC = [[RecipeSearchViewController alloc] initWithNibName:@"RecipeSearchViewController" bundle:nil];
     
-    [self presentViewController:recipeSVC animated:YES completion:nil];
+//    [self presentViewController:recipeSVC animated:YES completion:nil];
+    [self.navigationController pushViewController:recipeSVC animated:YES];
 }
 
 @end

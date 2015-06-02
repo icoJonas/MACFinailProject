@@ -65,18 +65,49 @@ enum OPERATIONS {
         //Create a recipe object
         Recipe *myRecipe = [[Recipe alloc] initNewRecipeWithJSON:jsonObject];
         NSLog(@"Recipe for %@ recieved", myRecipe.strRecipeTitle);
+        
+        //Return the recipe object
+        if (self.delegate) {
+            if ([self.delegate respondsToSelector:@selector(returnRecipe:)]) {
+                [self.delegate returnRecipe:myRecipe];
+            } else {
+                NSLog(@"delegate doesn't respond to selector");
+            }
+        } else {
+            NSLog(@"delegate is nil");
+        }
     }
     else if (currentOperation == GET_RECIPE_SEARCH)
     {
         NSMutableArray *arrSearchResults = [NSMutableArray new];
-        NSArray *searchResultsArray = [jsonObject objectForKey:@"Results"];
+        NSMutableArray *searchResultsArray = [[NSMutableArray alloc] initWithArray:[jsonObject objectForKey:@"Results"]];
         
-        for (NSDictionary *aSearchResultDict in searchResultsArray) {
+        NSMutableArray *newArray = [NSMutableArray new];
+        for (NSDictionary *dic in searchResultsArray) {
+            NSMutableDictionary *newDic = [[NSMutableDictionary alloc] initWithDictionary:dic];
+            [newArray addObject:newDic];
+        }
+        
+        for (NSMutableDictionary *dic in newArray) {
+            for (NSString *key in dic.allKeys) {
+                if ([[dic objectForKey:key] isKindOfClass:[NSNull class]]) {
+                    [dic setObject:@"" forKey:key];
+                }
+            }
+        }
+        
+        for (NSDictionary *aSearchResultDict in newArray) {
+            
             RecipeSearchResult *aSearch = [[RecipeSearchResult alloc] initWithJSONDict:aSearchResultDict];
             [arrSearchResults addObject:aSearch];
         }
         
+        //Add total number of results as the last object in the array
+        [arrSearchResults addObject:[[jsonObject objectForKey:@"ResultCount"] stringValue]];
+        [self.delegate returnSearchResults:arrSearchResults];
+         
         NSLog(@"Description of search results: %@", arrSearchResults);
+        
     }
     else if (currentOperation == GET_RECIPE_FAVORITES)
     {

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeViewController">
+            <connections>
+                <outlet property="btnBackNavbar" destination="Nd2-f8-NMl" id="PC7-Vu-L4A"/>
+                <outlet property="btnDirections" destination="iHW-k1-biE" id="Fwe-V4-Asl"/>
+                <outlet property="btnIngredients" destination="LJC-bz-B4O" id="I73-mS-2Xv"/>
+                <outlet property="btnWebPage" destination="Fns-WW-Oil" id="X4h-4f-yDa"/>
+                <outlet property="imgRecipeImage" destination="jpD-5M-4zz" id="lSK-DC-QoV"/>
+                <outlet property="lblCategory" destination="rQT-Ao-bEC" id="fyz-Dn-aR7"/>
+                <outlet property="lblCuisine" destination="8DI-M4-2dC" id="Nhu-Nx-R9H"/>
+                <outlet property="lblMainIngredient" destination="YSJ-CT-4cG" id="Pnj-KM-F1c"/>
+                <outlet property="lblPrepTime" destination="H1r-jN-b1K" id="LIW-c5-D9M"/>
+                <outlet property="lblRating" destination="P3O-cd-7BF" id="B1K-HZ-NCs"/>
+                <outlet property="lblYield" destination="agK-7S-0Qf" id="wUr-z6-0RQ"/>
+                <outlet property="navNavbar" destination="slb-da-82t" id="lau-uU-55t"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Ingredient:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSJ-CT-4cG">
+                    <rect key="frame" x="8" y="328" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yield:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agK-7S-0Qf">
+                    <rect key="frame" x="8" y="444" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3O-cd-7BF">
+                    <rect key="frame" x="8" y="473" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuisine:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DI-M4-2dC">
+                    <rect key="frame" x="8" y="357" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJC-bz-B4O">
+                    <rect key="frame" x="8" y="502" width="77" height="30"/>
+                    <state key="normal" title="Ingredients">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHW-k1-biE">
+                    <rect key="frame" x="181" y="502" width="131" height="30"/>
+                    <state key="normal" title="Cooking Directions">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQT-Ao-bEC">
+                    <rect key="frame" x="8" y="386" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prep Time:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1r-jN-b1K">
+                    <rect key="frame" x="8" y="415" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8o-I5-Uzg">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="slb-da-82t">
+                            <barButtonItem key="leftBarButtonItem" title="Back" id="Nd2-f8-NMl">
+                                <connections>
+                                    <action selector="btnBackPressed:" destination="-1" id="e12-Bu-snF"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fns-WW-Oil">
+                    <rect key="frame" x="128" y="538" width="65" height="30"/>
+                    <state key="normal" title="Webpage">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jpD-5M-4zz">
+                    <rect key="frame" x="22" y="44" width="276" height="276"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="H1r-jN-b1K" firstAttribute="leading" secondItem="agK-7S-0Qf" secondAttribute="leading" id="1fJ-Lt-jxT"/>
+                <constraint firstItem="o8o-I5-Uzg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2OH-bY-Ofa"/>
+                <constraint firstItem="H1r-jN-b1K" firstAttribute="leading" secondItem="rQT-Ao-bEC" secondAttribute="leading" id="2Ss-mn-0kK"/>
+                <constraint firstItem="jpD-5M-4zz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="4lJ-9f-3yD"/>
+                <constraint firstItem="LJC-bz-B4O" firstAttribute="top" secondItem="P3O-cd-7BF" secondAttribute="bottom" constant="8" symbolic="YES" id="ATc-ca-Ael"/>
+                <constraint firstAttribute="trailing" secondItem="o8o-I5-Uzg" secondAttribute="trailing" id="BYa-gj-mhj"/>
+                <constraint firstItem="iHW-k1-biE" firstAttribute="trailing" secondItem="P3O-cd-7BF" secondAttribute="trailing" id="Dso-cY-m6N"/>
+                <constraint firstItem="rQT-Ao-bEC" firstAttribute="leading" secondItem="8DI-M4-2dC" secondAttribute="leading" id="Hmi-mk-dKl"/>
+                <constraint firstItem="agK-7S-0Qf" firstAttribute="trailing" secondItem="P3O-cd-7BF" secondAttribute="trailing" id="Kjj-ON-z1W"/>
+                <constraint firstItem="YSJ-CT-4cG" firstAttribute="top" secondItem="jpD-5M-4zz" secondAttribute="bottom" constant="8" symbolic="YES" id="OpZ-1D-J5M"/>
+                <constraint firstItem="8DI-M4-2dC" firstAttribute="trailing" secondItem="rQT-Ao-bEC" secondAttribute="trailing" id="Oxl-Ll-Rdz"/>
+                <constraint firstItem="8DI-M4-2dC" firstAttribute="leading" secondItem="YSJ-CT-4cG" secondAttribute="leading" id="PWM-I0-Fqz"/>
+                <constraint firstItem="iHW-k1-biE" firstAttribute="baseline" secondItem="LJC-bz-B4O" secondAttribute="baseline" id="RQW-Hv-ET1"/>
+                <constraint firstItem="P3O-cd-7BF" firstAttribute="top" secondItem="agK-7S-0Qf" secondAttribute="bottom" constant="8" symbolic="YES" id="Rze-xm-Epd"/>
+                <constraint firstItem="jpD-5M-4zz" firstAttribute="top" secondItem="o8o-I5-Uzg" secondAttribute="bottom" id="UHD-wf-nv6"/>
+                <constraint firstItem="H1r-jN-b1K" firstAttribute="top" secondItem="rQT-Ao-bEC" secondAttribute="bottom" constant="8" symbolic="YES" id="VWQ-y2-ewn"/>
+                <constraint firstItem="LJC-bz-B4O" firstAttribute="leading" secondItem="P3O-cd-7BF" secondAttribute="leading" id="Wj1-E3-WLB"/>
+                <constraint firstItem="P3O-cd-7BF" firstAttribute="leading" secondItem="agK-7S-0Qf" secondAttribute="leading" id="Y96-Bj-lde"/>
+                <constraint firstItem="P3O-cd-7BF" firstAttribute="centerX" secondItem="Fns-WW-Oil" secondAttribute="centerX" id="a9a-8w-HiW"/>
+                <constraint firstItem="8DI-M4-2dC" firstAttribute="top" secondItem="YSJ-CT-4cG" secondAttribute="bottom" constant="8" symbolic="YES" id="biF-zA-BSM"/>
+                <constraint firstItem="agK-7S-0Qf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="db7-Hy-LMv"/>
+                <constraint firstItem="Fns-WW-Oil" firstAttribute="top" secondItem="iHW-k1-biE" secondAttribute="bottom" constant="6" id="dqz-4j-6NC"/>
+                <constraint firstItem="o8o-I5-Uzg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eSX-LN-3H3"/>
+                <constraint firstItem="rQT-Ao-bEC" firstAttribute="top" secondItem="8DI-M4-2dC" secondAttribute="bottom" constant="8" symbolic="YES" id="hGV-zi-ze4"/>
+                <constraint firstItem="jpD-5M-4zz" firstAttribute="centerX" secondItem="YSJ-CT-4cG" secondAttribute="centerX" id="inU-5e-zCA"/>
+                <constraint firstAttribute="bottom" secondItem="Fns-WW-Oil" secondAttribute="bottom" id="qBn-qH-Rye"/>
+                <constraint firstItem="o8o-I5-Uzg" firstAttribute="centerX" secondItem="jpD-5M-4zz" secondAttribute="centerX" id="qFZ-O7-WqK"/>
+                <constraint firstItem="agK-7S-0Qf" firstAttribute="top" secondItem="H1r-jN-b1K" secondAttribute="bottom" constant="8" symbolic="YES" id="tXt-Aj-47I"/>
+                <constraint firstItem="YSJ-CT-4cG" firstAttribute="trailing" secondItem="8DI-M4-2dC" secondAttribute="trailing" id="tom-8O-FX1"/>
+                <constraint firstItem="H1r-jN-b1K" firstAttribute="trailing" secondItem="agK-7S-0Qf" secondAttribute="trailing" id="wvJ-Qz-IXO"/>
+                <constraint firstItem="H1r-jN-b1K" firstAttribute="trailing" secondItem="rQT-Ao-bEC" secondAttribute="trailing" id="zGI-mU-jJU"/>
+            </constraints>
+            <point key="canvasLocation" x="245" y="202"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
