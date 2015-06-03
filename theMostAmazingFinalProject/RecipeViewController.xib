@@ -68,6 +68,9 @@
                     <state key="normal" title="Ingredients">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnIngredientsPressed:" destination="-1" eventType="touchUpInside" id="goI-G0-IPF"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHW-k1-biE">
                     <rect key="frame" x="181" y="502" width="131" height="30"/>
@@ -78,6 +81,9 @@
                     <state key="normal" title="Cooking Directions">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnDirectionsPressed:" destination="-1" eventType="touchUpInside" id="Udd-6E-Bbn"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQT-Ao-bEC">
                     <rect key="frame" x="8" y="386" width="75" height="21"/>
@@ -106,6 +112,7 @@
                                     <action selector="btnBackPressed:" destination="-1" id="e12-Bu-snF"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="rmt-7h-jLO"/>
                         </navigationItem>
                     </items>
                 </navigationBar>
@@ -117,6 +124,9 @@
                     <state key="normal" title="Webpage">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnWebpagePressed:" destination="-1" eventType="touchUpInside" id="aXB-7N-wRw"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jpD-5M-4zz">
                     <rect key="frame" x="22" y="44" width="276" height="276"/>
@@ -156,6 +166,7 @@
                 <constraint firstItem="agK-7S-0Qf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="tbL-qt-yXc"/>
                 <constraint firstAttribute="trailing" secondItem="o8o-I5-Uzg" secondAttribute="trailing" id="zqO-U3-exg"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <point key="canvasLocation" x="245" y="202"/>
         </view>
     </objects>
