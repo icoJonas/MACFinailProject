@@ -28,11 +28,6 @@
     [self.wvWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.currentRecipe.strRecipeWebURL]]];
 }
 
-- (void)handleBack
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 - (IBAction)btnBackPressed:(id)sender
 {
     self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;

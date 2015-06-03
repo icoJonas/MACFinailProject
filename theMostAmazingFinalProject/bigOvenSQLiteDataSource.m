@@ -48,7 +48,7 @@
     [recipeDic setObject:recipe.strRecipeWebURL forKey:@"webURL"];
     [recipeDic setObject:recipe.strRecipeInstructions forKey:@"instructions"];
     [recipeDic setObject:recipe.strRecipeYieldUnit forKey:@"yieldUnit"];
-    [recipeDic setObject:recipe.strRecipeTitle forKey:@"title"];
+    [recipeDic setObject:[recipe.strRecipeTitle stringByReplacingOccurrencesOfString:@"'" withString:@""] forKey:@"title"];
     [recipeDic setObject:recipe.strRecipeImageURL forKey:@"imageURL"];
     [recipeDic setObject:recipe.strRecipePoster forKey:@"poster"];
     [recipeDic setObject:recipe.strRecipeHeroPhotoURL forKey:@"heroPhotoURL"];
@@ -58,10 +58,14 @@
     
     NSArray *curretObjects = [self executeSingleSelect:@"bigoven_recipes" andColumnNames:@[@"id"] andFilter:[NSDictionary dictionaryWithObject:recipe.strRecipeID forKey:@"id"] andLimit:2];
     if (curretObjects.count > 0) {
-        [self executeUpdateOperation:@"bigoven_recipes" andData:recipeDic andFilter:[NSDictionary dictionaryWithObject:[recipeDic objectForKey:@"id"] forKey:@"Id"]];
+        [self executeUpdateOperation:@"bigoven_recipes" andData:recipeDic andFilter:[NSDictionary dictionaryWithObject:[recipeDic objectForKey:@"id"] forKey:@"id"]];
     } else {
         [self executeInsertOperation:@"bigoven_recipes" andData:recipeDic];
     }
 }
 
+-(NSArray *)getRecipes
+{
+    return [self executeSingleSelect:@"bigoven_recipes" andColumnNames:nil andFilter:nil andLimit:0];
+}
 @end

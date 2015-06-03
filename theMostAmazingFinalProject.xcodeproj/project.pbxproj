@@ -279,6 +279,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045A115D1B1EDF1D00B9EB4A /* bigOvenSQLiteDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				04CF227F1B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.h */,
+				04CF22801B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m */,
+			);
+			name = bigOvenSQLiteDataSource;
+			sourceTree = "<group>";
+		};
 		04CF1E031B19AAEA00AB4F99 /* BigOvenDataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -620,8 +629,7 @@
 				DDECCC2C1B1A5FCF0047BA5C /* SQLiteDataSource.h */,
 				DDECCC2D1B1A5FCF0047BA5C /* SQLiteDataSource.m */,
 				DDECCC371B1A631E0047BA5C /* wgerSQLiteDataSource */,
-				04CF227F1B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.h */,
-				04CF22801B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m */,
+				045A115D1B1EDF1D00B9EB4A /* bigOvenSQLiteDataSource */,
 			);
 			name = SQLiteDataSource;
 			sourceTree = "<group>";

@@ -24,8 +24,7 @@
 
     self.txtDirections.text = self.currentRecipe.strRecipeInstructions;
     
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
- initWithTarget:self action:@selector(finished)];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(finished)];
     tapGesture.numberOfTapsRequired = 1;
     tapGesture.numberOfTouchesRequired = 1;
     

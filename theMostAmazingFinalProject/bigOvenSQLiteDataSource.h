@@ -12,5 +12,5 @@
 @interface bigOvenSQLiteDataSource : SQLiteDataSource
 
 -(void)insertOrUpdate:(Recipe *)recipe;
-
+-(NSArray *)getRecipes;
 @end

@@ -12,8 +12,10 @@
 #import "IngredientsTableViewController.h"
 #import "DirectionsViewController.h"
 #import "WebViewController.h"
+#import "bigOvenSQLiteDataSource.h"
 
-@interface RecipeViewController ()
+
+@interface RecipeViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -73,6 +75,7 @@
     [[BackgroundViewHelper getSharedInstance] start];
 }
 
+#pragma mark - Button methods
 - (IBAction)btnBackPressed:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -81,7 +84,28 @@
 - (IBAction)btnBookmarkPressed:(id)sender
 {
     //Download the recipe and save it to the database
-//    self.recipeToDisplay saveTo
+    bigOvenSQLiteDataSource *bosds = [[bigOvenSQLiteDataSource alloc] init];
+
+    NSArray *arrSavedRecipes = [bosds getRecipes];
+    BOOL recipeFound = false;
+    
+    for (NSDictionary *aRecipe in arrSavedRecipes)
+    {
+        if ([[aRecipe objectForKey:@"id"] isEqualToString:self.recipeToDisplay.strRecipeID])
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Recipe already saved" message:@"This recipe is already bookmarked as a favorite. Would you like to remove the from favorites?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Remove", nil];
+            [alert setDelegate:self];
+            [alert show];
+            recipeFound = true;
+            break;
+        }
+    }
+    
+    if (recipeFound == false) {
+        [bosds insertOrUpdate:self.recipeToDisplay];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Recipe saved!" message:@"Recipe has been added to favorites!" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (IBAction)btnIngredientsPressed:(id)sender
@@ -112,4 +136,20 @@
     [self presentViewController:wvc animated:YES completion:nil];
 }
 
+#pragma mark - UIAlertView delegate methods
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        //Cancel was pressed. Do nothing
+    }
+    else if (buttonIndex == 1)
+    {
+        //Remove was pressed. Do something
+        bigOvenSQLiteDataSource *bosds = [[bigOvenSQLiteDataSource alloc] init];
+        [bosds executeDeleteOperation:@"bigoven_recipes" andFilter:[NSDictionary dictionaryWithObject:self.recipeToDisplay.strRecipeID forKey:@"id"]];
+        [bosds executeDeleteOperation:@"bigoven_ingredientsForRecipe" andFilter:[NSDictionary dictionaryWithObject:self.recipeToDisplay.strRecipeID forKey:@"recipe_id"]];
+        NSLog(@"Remove entry from the database");
+    }
+}
 @end

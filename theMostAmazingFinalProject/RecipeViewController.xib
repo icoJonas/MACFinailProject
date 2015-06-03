@@ -112,7 +112,11 @@
                                     <action selector="btnBackPressed:" destination="-1" id="e12-Bu-snF"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="rmt-7h-jLO"/>
+                            <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="rmt-7h-jLO">
+                                <connections>
+                                    <action selector="btnBookmarkPressed:" destination="-1" id="k46-RM-Agu"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
