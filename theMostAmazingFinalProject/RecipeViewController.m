@@ -16,6 +16,7 @@
 
 
 @interface RecipeViewController () <UIAlertViewDelegate>
+@property (strong, nonatomic) IBOutlet UILabel *lblToolBarTitle;
 
 @end
 
@@ -24,8 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navNavbar.title = self.recipeToDisplay.strRecipeTitle;
-//    self.lblTitle.text = self.recipeToDisplay.strRecipeTitle;
+    self.navigationItem.title = self.recipeToDisplay.strRecipeTitle;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(btnBookmarkPressed:)];
+    
     self.lblCategory.text = [NSString stringWithFormat:@"Category: %@",self.recipeToDisplay.strRecipeCategory];
     self.lblCuisine.text = [NSString stringWithFormat:@"Cuisine: %@", self.recipeToDisplay.strRecipeCuisine];
     self.lblMainIngredient.text = [NSString stringWithFormat:@"Main ingredient: %@",self.recipeToDisplay.strRecipePrimaryIngredient];;

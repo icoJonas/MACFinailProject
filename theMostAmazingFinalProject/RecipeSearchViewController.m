@@ -91,8 +91,8 @@
     //Load the new view with the recipe object
     RecipeViewController *rvc = [[RecipeViewController alloc] initWithNibName:@"RecipeViewController" bundle:nil];
     rvc.recipeToDisplay = recipeObject;
-    [self presentViewController:rvc animated:YES completion:nil];
-//    [self.navigationController pushViewController:rvc animated:YES];
+//    [self presentViewController:rvc animated:YES completion:nil];
+    [self.navigationController pushViewController:rvc animated:YES];
 }
 
 #pragma mark - TableView delegate and datasource methods
