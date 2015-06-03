@@ -26,6 +26,13 @@
 		04CF22291B1D4D6E00AB4F99 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF22271B1D4D6E00AB4F99 /* SearchResultTableViewCell.xib */; };
 		04CF222D1B1D6B2200AB4F99 /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF222B1B1D6B2200AB4F99 /* RecipeViewController.m */; };
 		04CF222E1B1D6B2200AB4F99 /* RecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF222C1B1D6B2200AB4F99 /* RecipeViewController.xib */; };
+		04CF22731B1E97D900AB4F99 /* IngredientsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF22711B1E97D900AB4F99 /* IngredientsTableViewController.m */; };
+		04CF22741B1E97D900AB4F99 /* IngredientsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF22721B1E97D900AB4F99 /* IngredientsTableViewController.xib */; };
+		04CF22781B1EB0A300AB4F99 /* DirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF22761B1EB0A300AB4F99 /* DirectionsViewController.m */; };
+		04CF22791B1EB0A300AB4F99 /* DirectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF22771B1EB0A300AB4F99 /* DirectionsViewController.xib */; };
+		04CF227D1B1EC05D00AB4F99 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF227B1B1EC05D00AB4F99 /* WebViewController.m */; };
+		04CF227E1B1EC05D00AB4F99 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF227C1B1EC05D00AB4F99 /* WebViewController.xib */; };
+		04CF22811B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF22801B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m */; };
 		04DBD2908F76F6076DCEC72E /* Pods_theMostAmazingFinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DD8076561B1BA51800A27F00 /* workout1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076501B1BA51800A27F00 /* workout1.jpg */; };
 		DD8076571B1BA51800A27F00 /* workout2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076511B1BA51800A27F00 /* workout2.jpg */; };
@@ -196,6 +203,17 @@
 		04CF222A1B1D6B2200AB4F99 /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
 		04CF222B1B1D6B2200AB4F99 /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
 		04CF222C1B1D6B2200AB4F99 /* RecipeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeViewController.xib; sourceTree = "<group>"; };
+		04CF22701B1E97D900AB4F99 /* IngredientsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientsTableViewController.h; sourceTree = "<group>"; };
+		04CF22711B1E97D900AB4F99 /* IngredientsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientsTableViewController.m; sourceTree = "<group>"; };
+		04CF22721B1E97D900AB4F99 /* IngredientsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientsTableViewController.xib; sourceTree = "<group>"; };
+		04CF22751B1EB0A300AB4F99 /* DirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsViewController.h; sourceTree = "<group>"; };
+		04CF22761B1EB0A300AB4F99 /* DirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsViewController.m; sourceTree = "<group>"; };
+		04CF22771B1EB0A300AB4F99 /* DirectionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionsViewController.xib; sourceTree = "<group>"; };
+		04CF227A1B1EC05D00AB4F99 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		04CF227B1B1EC05D00AB4F99 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		04CF227C1B1EC05D00AB4F99 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		04CF227F1B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bigOvenSQLiteDataSource.h; sourceTree = "<group>"; };
+		04CF22801B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bigOvenSQLiteDataSource.m; sourceTree = "<group>"; };
 		17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theMostAmazingFinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DBD165123099ACEA721E6B /* Pods-theMostAmazingFinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		DA98994CB1C351E6C135A6DF /* Pods-theMostAmazingFinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +306,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045A115D1B1EDF1D00B9EB4A /* bigOvenSQLiteDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				04CF227F1B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.h */,
+				04CF22801B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m */,
+			);
+			name = bigOvenSQLiteDataSource;
+			sourceTree = "<group>";
+		};
 		04CF1E031B19AAEA00AB4F99 /* BigOvenDataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +471,15 @@
 				04CF222A1B1D6B2200AB4F99 /* RecipeViewController.h */,
 				04CF222B1B1D6B2200AB4F99 /* RecipeViewController.m */,
 				04CF222C1B1D6B2200AB4F99 /* RecipeViewController.xib */,
+				04CF22701B1E97D900AB4F99 /* IngredientsTableViewController.h */,
+				04CF22711B1E97D900AB4F99 /* IngredientsTableViewController.m */,
+				04CF22721B1E97D900AB4F99 /* IngredientsTableViewController.xib */,
+				04CF22751B1EB0A300AB4F99 /* DirectionsViewController.h */,
+				04CF22761B1EB0A300AB4F99 /* DirectionsViewController.m */,
+				04CF22771B1EB0A300AB4F99 /* DirectionsViewController.xib */,
+				04CF227A1B1EC05D00AB4F99 /* WebViewController.h */,
+				04CF227B1B1EC05D00AB4F99 /* WebViewController.m */,
+				04CF227C1B1EC05D00AB4F99 /* WebViewController.xib */,
 			);
 			name = CookingViews;
 			sourceTree = "<group>";
@@ -623,6 +659,7 @@
 				DDECCC2C1B1A5FCF0047BA5C /* SQLiteDataSource.h */,
 				DDECCC2D1B1A5FCF0047BA5C /* SQLiteDataSource.m */,
 				DDECCC371B1A631E0047BA5C /* wgerSQLiteDataSource */,
+				045A115D1B1EDF1D00B9EB4A /* bigOvenSQLiteDataSource */,
 			);
 			name = SQLiteDataSource;
 			sourceTree = "<group>";
@@ -790,13 +827,16 @@
 				04CF22291B1D4D6E00AB4F99 /* SearchResultTableViewCell.xib in Resources */,
 				DD80765E1B1BA64800A27F00 /* ViewController.xib in Resources */,
 				04CF22221B1D381600AB4F99 /* RecipeSearchViewController.xib in Resources */,
+				04CF22791B1EB0A300AB4F99 /* DirectionsViewController.xib in Resources */,
 				DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */,
 				DDF278071B1EB3C7003CD7C0 /* ExerciseSelectionViewController.xib in Resources */,
 				DD8076581B1BA51800A27F00 /* workout3.jpg in Resources */,
 				04CF22191B1D160400AB4F99 /* CookingViewController.xib in Resources */,
 				DD80765B1B1BA51800A27F00 /* workout6.jpg in Resources */,
+				04CF227E1B1EC05D00AB4F99 /* WebViewController.xib in Resources */,
 				DD8076591B1BA51800A27F00 /* workout4.jpg in Resources */,
 				DD8076731B1BB12600A27F00 /* LoginViewController.xib in Resources */,
+				04CF22741B1E97D900AB4F99 /* IngredientsTableViewController.xib in Resources */,
 				DD8076691B1BAD1200A27F00 /* workout0.jpg in Resources */,
 				DD80765A1B1BA51800A27F00 /* workout5.png in Resources */,
 				DDF277F81B1E9AD7003CD7C0 /* exercise_icon.png in Resources */,
@@ -880,15 +920,19 @@
 				DDF278001B1E9C32003CD7C0 /* UIImage+ColorAtPixel.m in Sources */,
 				DDF278061B1EB3C7003CD7C0 /* ExerciseSelectionViewController.m in Sources */,
 				DD9668CB1B16CD02007D0A98 /* ViewController.m in Sources */,
+				04CF22731B1E97D900AB4F99 /* IngredientsTableViewController.m in Sources */,
 				04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */,
 				04CF1E1F1B1C305400AB4F99 /* SleepActivity.m in Sources */,
 				04CF1E111B1A955F00AB4F99 /* FitnessActivity.m in Sources */,
 				DDF277F31B1E94BF003CD7C0 /* MuscleSelectionViewController.m in Sources */,
 				04CF22281B1D4D6E00AB4F99 /* SearchResultTableViewCell.m in Sources */,
+				04CF22781B1EB0A300AB4F99 /* DirectionsViewController.m in Sources */,
+				04CF22811B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m in Sources */,
 				DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */,
 				DD8076781B1BC3E800A27F00 /* AnimationHelper.m in Sources */,
 				DD8076721B1BB12600A27F00 /* LoginViewController.m in Sources */,
 				04CF222D1B1D6B2200AB4F99 /* RecipeViewController.m in Sources */,
+				04CF227D1B1EC05D00AB4F99 /* WebViewController.m in Sources */,
 				DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */,
 				DDF2780B1B1EB5DE003CD7C0 /* ExerciseTableViewCell.m in Sources */,
 				DDF277FF1B1E9C32003CD7C0 /* OBShapedButton.m in Sources */,

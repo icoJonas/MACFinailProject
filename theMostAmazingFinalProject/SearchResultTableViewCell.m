@@ -12,6 +12,11 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.lblTitle.backgroundColor = [UIColor colorWithWhite:.5 alpha:0.5];
+    self.lblCategory.backgroundColor = [UIColor colorWithWhite:.5 alpha:0.5];
+    self.lblCuisine.backgroundColor = [UIColor colorWithWhite:.5 alpha:0.5];
+    self.lblStarRating.backgroundColor = [UIColor colorWithWhite:.5 alpha:0.5];
+    self.lblYield.backgroundColor = [UIColor colorWithWhite:.5 alpha:0.5];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
