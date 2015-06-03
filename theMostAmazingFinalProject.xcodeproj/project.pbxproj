@@ -60,6 +60,17 @@
 		DDF277AF1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF277AE1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a */; };
 		DDF277B41B1D8ADC003CD7C0 /* MusclesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF277B21B1D8ADC003CD7C0 /* MusclesTableViewCell.m */; };
 		DDF277B51B1D8ADC003CD7C0 /* MusclesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF277B31B1D8ADC003CD7C0 /* MusclesTableViewCell.xib */; };
+		DDF277F31B1E94BF003CD7C0 /* MuscleSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF277F11B1E94BF003CD7C0 /* MuscleSelectionViewController.m */; };
+		DDF277F41B1E94BF003CD7C0 /* MuscleSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF277F21B1E94BF003CD7C0 /* MuscleSelectionViewController.xib */; };
+		DDF277F81B1E9AD7003CD7C0 /* exercise_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF277F51B1E9AD7003CD7C0 /* exercise_icon.png */; };
+		DDF277F91B1E9AD7003CD7C0 /* nutrition_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF277F61B1E9AD7003CD7C0 /* nutrition_icon.png */; };
+		DDF277FA1B1E9AD7003CD7C0 /* schedule_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF277F71B1E9AD7003CD7C0 /* schedule_icon.png */; };
+		DDF277FF1B1E9C32003CD7C0 /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF277FC1B1E9C32003CD7C0 /* OBShapedButton.m */; };
+		DDF278001B1E9C32003CD7C0 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF277FE1B1E9C32003CD7C0 /* UIImage+ColorAtPixel.m */; };
+		DDF278061B1EB3C7003CD7C0 /* ExerciseSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF278041B1EB3C7003CD7C0 /* ExerciseSelectionViewController.m */; };
+		DDF278071B1EB3C7003CD7C0 /* ExerciseSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF278051B1EB3C7003CD7C0 /* ExerciseSelectionViewController.xib */; };
+		DDF2780B1B1EB5DE003CD7C0 /* ExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF278091B1EB5DE003CD7C0 /* ExerciseTableViewCell.m */; };
+		DDF2780C1B1EB5DE003CD7C0 /* ExerciseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF2780A1B1EB5DE003CD7C0 /* ExerciseTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +250,22 @@
 		DDF277B11B1D8ADC003CD7C0 /* MusclesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusclesTableViewCell.h; sourceTree = "<group>"; };
 		DDF277B21B1D8ADC003CD7C0 /* MusclesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusclesTableViewCell.m; sourceTree = "<group>"; };
 		DDF277B31B1D8ADC003CD7C0 /* MusclesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusclesTableViewCell.xib; sourceTree = "<group>"; };
+		DDF277F01B1E94BF003CD7C0 /* MuscleSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuscleSelectionViewController.h; sourceTree = "<group>"; };
+		DDF277F11B1E94BF003CD7C0 /* MuscleSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuscleSelectionViewController.m; sourceTree = "<group>"; };
+		DDF277F21B1E94BF003CD7C0 /* MuscleSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MuscleSelectionViewController.xib; sourceTree = "<group>"; };
+		DDF277F51B1E9AD7003CD7C0 /* exercise_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exercise_icon.png; sourceTree = "<group>"; };
+		DDF277F61B1E9AD7003CD7C0 /* nutrition_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nutrition_icon.png; sourceTree = "<group>"; };
+		DDF277F71B1E9AD7003CD7C0 /* schedule_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = schedule_icon.png; sourceTree = "<group>"; };
+		DDF277FB1B1E9C32003CD7C0 /* OBShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBShapedButton.h; sourceTree = "<group>"; };
+		DDF277FC1B1E9C32003CD7C0 /* OBShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBShapedButton.m; sourceTree = "<group>"; };
+		DDF277FD1B1E9C32003CD7C0 /* UIImage+ColorAtPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorAtPixel.h"; sourceTree = "<group>"; };
+		DDF277FE1B1E9C32003CD7C0 /* UIImage+ColorAtPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorAtPixel.m"; sourceTree = "<group>"; };
+		DDF278031B1EB3C7003CD7C0 /* ExerciseSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseSelectionViewController.h; sourceTree = "<group>"; };
+		DDF278041B1EB3C7003CD7C0 /* ExerciseSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseSelectionViewController.m; sourceTree = "<group>"; };
+		DDF278051B1EB3C7003CD7C0 /* ExerciseSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseSelectionViewController.xib; sourceTree = "<group>"; };
+		DDF278081B1EB5DE003CD7C0 /* ExerciseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseTableViewCell.h; sourceTree = "<group>"; };
+		DDF278091B1EB5DE003CD7C0 /* ExerciseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseTableViewCell.m; sourceTree = "<group>"; };
+		DDF2780A1B1EB5DE003CD7C0 /* ExerciseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,6 +477,9 @@
 		DD80765C1B1BA52100A27F00 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DDF277F51B1E9AD7003CD7C0 /* exercise_icon.png */,
+				DDF277F61B1E9AD7003CD7C0 /* nutrition_icon.png */,
+				DDF277F71B1E9AD7003CD7C0 /* schedule_icon.png */,
 				DD8076681B1BAD1200A27F00 /* workout0.jpg */,
 				DD8076501B1BA51800A27F00 /* workout1.jpg */,
 				DD8076511B1BA51800A27F00 /* workout2.jpg */,
@@ -507,7 +537,7 @@
 				04CF221A1B1D1CD500AB4F99 /* CookingViews */,
 				DD9668CC1B16CD02007D0A98 /* Main.storyboard */,
 				DD9668D11B16CD02007D0A98 /* LaunchScreen.xib */,
-				04CF1E571B1CF6E800AB4F99 /* CorePlot */,
+				DDF278021B1E9C6E003CD7C0 /* External */,
 				04CF1E071B19CBA600AB4F99 /* Objects */,
 				DDA9E9191B180B4F00E422DA /* WebServiceDataSource */,
 				DDECCC2F1B1A60B00047BA5C /* SQLiteDataSource */,
@@ -634,11 +664,40 @@
 				DD80766A1B1BB10800A27F00 /* WorkoutViewController.h */,
 				DD80766B1B1BB10800A27F00 /* WorkoutViewController.m */,
 				DD80766C1B1BB10800A27F00 /* WorkoutViewController.xib */,
+				DDF277F01B1E94BF003CD7C0 /* MuscleSelectionViewController.h */,
+				DDF277F11B1E94BF003CD7C0 /* MuscleSelectionViewController.m */,
+				DDF277F21B1E94BF003CD7C0 /* MuscleSelectionViewController.xib */,
 				DDF277B11B1D8ADC003CD7C0 /* MusclesTableViewCell.h */,
 				DDF277B21B1D8ADC003CD7C0 /* MusclesTableViewCell.m */,
 				DDF277B31B1D8ADC003CD7C0 /* MusclesTableViewCell.xib */,
+				DDF278031B1EB3C7003CD7C0 /* ExerciseSelectionViewController.h */,
+				DDF278041B1EB3C7003CD7C0 /* ExerciseSelectionViewController.m */,
+				DDF278051B1EB3C7003CD7C0 /* ExerciseSelectionViewController.xib */,
+				DDF278081B1EB5DE003CD7C0 /* ExerciseTableViewCell.h */,
+				DDF278091B1EB5DE003CD7C0 /* ExerciseTableViewCell.m */,
+				DDF2780A1B1EB5DE003CD7C0 /* ExerciseTableViewCell.xib */,
 			);
 			name = WorkoutViews;
+			sourceTree = "<group>";
+		};
+		DDF278011B1E9C50003CD7C0 /* OBShapedButton */ = {
+			isa = PBXGroup;
+			children = (
+				DDF277FB1B1E9C32003CD7C0 /* OBShapedButton.h */,
+				DDF277FC1B1E9C32003CD7C0 /* OBShapedButton.m */,
+				DDF277FD1B1E9C32003CD7C0 /* UIImage+ColorAtPixel.h */,
+				DDF277FE1B1E9C32003CD7C0 /* UIImage+ColorAtPixel.m */,
+			);
+			name = OBShapedButton;
+			sourceTree = "<group>";
+		};
+		DDF278021B1E9C6E003CD7C0 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				04CF1E571B1CF6E800AB4F99 /* CorePlot */,
+				DDF278011B1E9C50003CD7C0 /* OBShapedButton */,
+			);
+			name = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -725,11 +784,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF277F91B1E9AD7003CD7C0 /* nutrition_icon.png in Resources */,
+				DDF277FA1B1E9AD7003CD7C0 /* schedule_icon.png in Resources */,
 				DDF277B51B1D8ADC003CD7C0 /* MusclesTableViewCell.xib in Resources */,
 				04CF22291B1D4D6E00AB4F99 /* SearchResultTableViewCell.xib in Resources */,
 				DD80765E1B1BA64800A27F00 /* ViewController.xib in Resources */,
 				04CF22221B1D381600AB4F99 /* RecipeSearchViewController.xib in Resources */,
 				DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */,
+				DDF278071B1EB3C7003CD7C0 /* ExerciseSelectionViewController.xib in Resources */,
 				DD8076581B1BA51800A27F00 /* workout3.jpg in Resources */,
 				04CF22191B1D160400AB4F99 /* CookingViewController.xib in Resources */,
 				DD80765B1B1BA51800A27F00 /* workout6.jpg in Resources */,
@@ -737,6 +799,7 @@
 				DD8076731B1BB12600A27F00 /* LoginViewController.xib in Resources */,
 				DD8076691B1BAD1200A27F00 /* workout0.jpg in Resources */,
 				DD80765A1B1BA51800A27F00 /* workout5.png in Resources */,
+				DDF277F81B1E9AD7003CD7C0 /* exercise_icon.png in Resources */,
 				DD9668CE1B16CD02007D0A98 /* Main.storyboard in Resources */,
 				DD8076571B1BA51800A27F00 /* workout2.jpg in Resources */,
 				DD8076561B1BA51800A27F00 /* workout1.jpg in Resources */,
@@ -744,7 +807,9 @@
 				04CF222E1B1D6B2200AB4F99 /* RecipeViewController.xib in Resources */,
 				DD8076631B1BA7F800A27F00 /* MyUITabBarController.xib in Resources */,
 				DD9668D31B16CD02007D0A98 /* LaunchScreen.xib in Resources */,
+				DDF2780C1B1EB5DE003CD7C0 /* ExerciseTableViewCell.xib in Resources */,
 				DD9668D01B16CD02007D0A98 /* Images.xcassets in Resources */,
+				DDF277F41B1E94BF003CD7C0 /* MuscleSelectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,16 +877,21 @@
 			files = (
 				DD8076751B1BBF4700A27F00 /* wgerSQLiteDataSource.m in Sources */,
 				DD8076741B1BBF3F00A27F00 /* SQLiteDataSource.m in Sources */,
+				DDF278001B1E9C32003CD7C0 /* UIImage+ColorAtPixel.m in Sources */,
+				DDF278061B1EB3C7003CD7C0 /* ExerciseSelectionViewController.m in Sources */,
 				DD9668CB1B16CD02007D0A98 /* ViewController.m in Sources */,
 				04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */,
 				04CF1E1F1B1C305400AB4F99 /* SleepActivity.m in Sources */,
 				04CF1E111B1A955F00AB4F99 /* FitnessActivity.m in Sources */,
+				DDF277F31B1E94BF003CD7C0 /* MuscleSelectionViewController.m in Sources */,
 				04CF22281B1D4D6E00AB4F99 /* SearchResultTableViewCell.m in Sources */,
 				DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */,
 				DD8076781B1BC3E800A27F00 /* AnimationHelper.m in Sources */,
 				DD8076721B1BB12600A27F00 /* LoginViewController.m in Sources */,
 				04CF222D1B1D6B2200AB4F99 /* RecipeViewController.m in Sources */,
 				DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */,
+				DDF2780B1B1EB5DE003CD7C0 /* ExerciseTableViewCell.m in Sources */,
+				DDF277FF1B1E9C32003CD7C0 /* OBShapedButton.m in Sources */,
 				04CF1E171B1B6DEA00AB4F99 /* RunKeeperProfile.m in Sources */,
 				04CF1E061B19AB1300AB4F99 /* BigOvenDataSource.m in Sources */,
 				DDF277B41B1D8ADC003CD7C0 /* MusclesTableViewCell.m in Sources */,

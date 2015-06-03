@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.15];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

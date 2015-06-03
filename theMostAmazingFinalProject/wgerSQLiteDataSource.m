@@ -79,7 +79,22 @@
 }
 
 -(NSArray *)getExercisesForMuscle:(NSNumber *)muscleId{
-    return [self executeQuery:[NSString stringWithFormat:@"SELECT ex.name FROM wger_exercise_catalog ex, wger_exercise_muscle mus  WHERE mus.id_muscle = %d AND ex.language = 2;",muscleId.intValue]];
+    NSMutableArray *returnArray = [NSMutableArray new];
+    
+    NSArray *objects = [self executeQuery:[NSString stringWithFormat:@"SELECT DISTINCT ex.id, ex.name FROM wger_exercise_catalog ex, wger_exercise_muscle exmus WHERE exmus.id_muscle = %d and ex.language = 2;",muscleId.intValue]];
+    
+    for (NSDictionary *dic in objects) {
+        NSMutableDictionary *mutableDic = [[NSMutableDictionary alloc] initWithDictionary:dic];
+        NSArray *images = [self executeQuery:[NSString stringWithFormat:@"SELECT DISTINCT image FROM wger_image_exercise WHERE exercise = %d LIMIT 1;",[[mutableDic objectForKey:@"id"] intValue]]];
+        if (images.count > 0) {
+            [mutableDic setObject:[[images firstObject] objectForKey:@"image"]  forKey:@"image"];
+        } else {
+            [mutableDic setObject:@""  forKey:@"image"];
+        }
+        [returnArray addObject:mutableDic];
+    }
+    
+    return returnArray;
 }
 
 @end

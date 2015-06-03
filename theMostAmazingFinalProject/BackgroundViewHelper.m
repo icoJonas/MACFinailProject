@@ -52,13 +52,14 @@ static BackgroundViewHelper *sharedInstance = nil;
         [self.assignedView setUserInteractionEnabled:YES];
         [self.assignedView addSubview:self];
         [self.assignedView sendSubviewToBack:self];
-        if (timer!=nil) {
-            [timer invalidate];
-            timer=nil;
-        }
         [self animate];
-        timer=[NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(animate) userInfo:nil repeats:YES];
-        [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+//        if (timer!=nil) {
+//            [timer invalidate];
+//            timer=nil;
+//        }
+//        [self animate];
+//        timer=[NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(animate) userInfo:nil repeats:YES];
+//        [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     }
 }
 

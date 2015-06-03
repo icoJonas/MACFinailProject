@@ -8,8 +8,8 @@
 
 #import "WorkoutViewController.h"
 #import "BackgroundViewHelper.h"
-#import "MusclesTableViewCell.h"
-#import "wgerSQLiteDataSource.h"
+#import "AnimationHelper.h"
+#import "MuscleSelectionViewController.h"
 
 @interface WorkoutViewController () <WorkoutManagerDataSourceDelegate>
 
@@ -21,7 +21,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Workout";
-        muscles = [NSMutableArray new];
     }
     return self;
 }
@@ -31,9 +30,9 @@
     // Do any additional setup after loading the view from its nib.
     self.wgerDataSource = [WorkoutManagerDataSource new];
     self.wgerDataSource.delegate = self;
-    [self.wgerDataSource getCatalogs];
-    [muscleTableView registerNib:[UINib nibWithNibName:@"MusclesTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
     [activityView startAnimating];
+    [scheduleButton setHidden:YES];
+    [exerciseButton setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,10 +40,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [BackgroundViewHelper getSharedInstance].assignedView = self.view;
     [[BackgroundViewHelper getSharedInstance] start];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [AnimationHelper changeViewSize:scheduleButton withFrame:CGRectMake(scheduleButton.frame.origin.x-500, scheduleButton.frame.origin.y, scheduleButton.frame.size.width, scheduleButton.frame.size.height) withDuration:0.0 andWait:0.0];
+    [AnimationHelper changeViewSize:exerciseButton withFrame:CGRectMake(exerciseButton.frame.origin.x+500, exerciseButton.frame.origin.y, exerciseButton.frame.size.width, exerciseButton.frame.size.height) withDuration:0.0 andWait:0.0];
+    [self.wgerDataSource getCatalogs];
 }
 
 /*
@@ -60,38 +66,21 @@
 #pragma mark - WorkoutManagerDataSourceDelegate methods
 
 -(void)catalogsUpdated{
+    
     [activityView stopAnimating];
-    wgerSQLiteDataSource *dataSource = [wgerSQLiteDataSource new];
-    [muscles addObjectsFromArray:[dataSource getMuscles]];
-    [muscleTableView reloadData];
+    [self performSelector:@selector(animateAfter) withObject:nil afterDelay:0.5];
 }
 
-#pragma mark - UITableView DataSource methods
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return muscles.count;
+-(void)animateAfter{
+    [scheduleButton setHidden:NO];
+    [exerciseButton setHidden:NO];
+    [AnimationHelper transitionView:scheduleButton toRect:CGRectMake(scheduleButton.frame.origin.x+500, scheduleButton.frame.origin.y, scheduleButton.frame.size.width, scheduleButton.frame.size.height) WithSpringWithDamping:0.6 andVelocity:1.0 andTransitionTime:0.8 andWaitTime:0.0];
+    [AnimationHelper transitionView:exerciseButton toRect:CGRectMake(exerciseButton.frame.origin.x-500, exerciseButton.frame.origin.y, exerciseButton.frame.size.width, exerciseButton.frame.size.height) WithSpringWithDamping:0.6 andVelocity:1.0 andTransitionTime:0.8 andWaitTime:0.0];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *cellIdentifier = @"Cell";
-    NSDictionary *muscleDic = [muscles objectAtIndex:indexPath.row];
-    MusclesTableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    [cell setupCellWithData:muscleDic];
-    return cell;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 67.0;
-}
-
-#pragma mark - UITableView Delegate methods
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary *muscleDic = [muscles objectAtIndex:indexPath.row];
-    NSLog(@"%@",muscleDic);
-//    NewsDetailViewController *newsDetailVC = [[NewsDetailViewController alloc] init];
-//    newsDetailVC.newsData = newsDic;
-//    [self.navigationController pushViewController:newsDetailVC animated:YES];
+- (IBAction)goToMuscleSelection:(id)sender {
+    MuscleSelectionViewController *muscleSelection = [[MuscleSelectionViewController alloc] init];
+    [self.navigationController pushViewController:muscleSelection animated:YES];
 }
 
 

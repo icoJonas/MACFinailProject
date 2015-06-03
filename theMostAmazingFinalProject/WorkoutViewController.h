@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "WorkoutManagerDataSource.h"
+#import "OBShapedButton.h"
 
-@interface WorkoutViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
+@interface WorkoutViewController : UIViewController{
     IBOutlet UIActivityIndicatorView *activityView;
-    IBOutlet UITableView *muscleTableView;
-    NSMutableArray *muscles;
+    IBOutlet OBShapedButton *scheduleButton;
+    IBOutlet OBShapedButton *exerciseButton;
 }
 
 @property(strong,nonatomic) WorkoutManagerDataSource *wgerDataSource;

@@ -7,7 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorkoutViewController">
             <connections>
                 <outlet property="activityView" destination="mAM-MJ-Taa" id="2n4-30-2CC"/>
-                <outlet property="muscleTableView" destination="SC6-eL-27J" id="nbc-6P-IhB"/>
+                <outlet property="exerciseButton" destination="LZt-iV-1x2" id="5cr-8a-qn6"/>
+                <outlet property="scheduleButton" destination="arb-d8-PCf" id="I92-Zf-oBW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,31 +17,51 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SC6-eL-27J">
-                    <rect key="frame" x="8" y="128" width="304" height="359"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="HLj-SY-3Wc"/>
-                        <outlet property="delegate" destination="-1" id="GH0-p6-l7s"/>
-                    </connections>
-                </tableView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mAM-MJ-Taa">
                     <rect key="frame" x="142" y="265" width="37" height="37"/>
                 </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZt-iV-1x2" customClass="OBShapedButton">
+                    <rect key="frame" x="187" y="239" width="90" height="90"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="BuZ-Pb-UKx"/>
+                        <constraint firstAttribute="width" constant="90" id="RMJ-Hb-v32"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="exercise_icon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goToMuscleSelection:" destination="-1" eventType="touchUpInside" id="1la-aA-8Ys"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arb-d8-PCf" customClass="OBShapedButton">
+                    <rect key="frame" x="44" y="239" width="90" height="90"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="YRM-hN-FvS"/>
+                        <constraint firstAttribute="height" constant="90" id="ZL6-aW-dvT"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="schedule_icon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="mAM-MJ-Taa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0hA-RI-SZp"/>
-                <constraint firstAttribute="trailing" secondItem="SC6-eL-27J" secondAttribute="trailing" constant="8" id="1vH-ED-d3V"/>
-                <constraint firstItem="SC6-eL-27J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="bcl-sG-Siv"/>
+                <constraint firstAttribute="trailing" secondItem="LZt-iV-1x2" secondAttribute="trailing" constant="43" id="4Kq-eF-tRh"/>
+                <constraint firstAttribute="centerY" secondItem="arb-d8-PCf" secondAttribute="centerY" id="D97-3c-cTI"/>
+                <constraint firstAttribute="centerY" secondItem="LZt-iV-1x2" secondAttribute="centerY" id="KYz-c6-1u6"/>
+                <constraint firstItem="arb-d8-PCf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="S1p-sI-XBi"/>
                 <constraint firstAttribute="centerY" secondItem="mAM-MJ-Taa" secondAttribute="centerY" id="eof-Nl-esa"/>
-                <constraint firstAttribute="bottom" secondItem="SC6-eL-27J" secondAttribute="bottom" constant="81" id="kOs-Sd-zrH"/>
-                <constraint firstItem="SC6-eL-27J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="128" id="r0y-pH-m6T"/>
             </constraints>
             <point key="canvasLocation" x="410" y="355"/>
         </view>
     </objects>
+    <resources>
+        <image name="exercise_icon" width="300" height="300"/>
+        <image name="schedule_icon" width="255" height="255"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
