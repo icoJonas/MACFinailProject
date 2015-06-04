@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExerciseSelectionViewController : UIViewController
+@interface ExerciseSelectionViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
+    IBOutlet UITableView *exerciseTableView;
+    NSMutableArray *exercises;
+}
+
 
 @property NSDictionary *muscleDic;
 
