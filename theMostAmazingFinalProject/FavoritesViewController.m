@@ -104,9 +104,7 @@
         //Delete everything from the database
         NSLog(@"Implement database deletion");
         bigOvenSQLiteDataSource *bosds = [[bigOvenSQLiteDataSource alloc] init];
-        [bosds executeQuery:@"DELETE * FROM bigoven_recipes"];
-        [bosds executeQuery:@"DELETE * FROM bigoven_ingredientsForRecipes"];
-        [bosds executeQuery:@"DELETE * FROM bigoven_ingredients"];
+
     }
 }
 
