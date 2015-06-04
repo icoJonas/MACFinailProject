@@ -31,8 +31,8 @@
     self.wgerDataSource = [WorkoutManagerDataSource new];
     self.wgerDataSource.delegate = self;
     [activityView startAnimating];
-    [scheduleButton setHidden:YES];
-    [exerciseButton setHidden:YES];
+    [scheduleButton setAlpha:0.0];
+    [exerciseButton setAlpha:0.0];
     scheduleButtonOriginalFrame = CGRectZero;
     exerciseButtonOriginalFrame = CGRectZero;
 }
@@ -63,8 +63,8 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [scheduleButton setHidden:YES];
-    [exerciseButton setHidden:YES];
+    [scheduleButton setAlpha:0.0];
+    [exerciseButton setAlpha:0.0];
 //    [AnimationHelper changeViewSize:scheduleButton withFrame:CGRectMake(scheduleButtonOriginalFrame.origin.x-500, scheduleButtonOriginalFrame.origin.y, scheduleButtonOriginalFrame.size.width, scheduleButtonOriginalFrame.size.height) withDuration:0.0 andWait:0.0];
 //    [AnimationHelper changeViewSize:exerciseButton withFrame:CGRectMake(exerciseButtonOriginalFrame.origin.x+500, exerciseButtonOriginalFrame.origin.y, exerciseButtonOriginalFrame.size.width, exerciseButtonOriginalFrame.size.height) withDuration:0.0 andWait:0.0];
 //    scheduleButtonOriginalFrame = CGRectZero;
@@ -90,8 +90,8 @@
 }
 
 -(void)animateAfter{
-    [scheduleButton setHidden:NO];
-    [exerciseButton setHidden:NO];
+    [AnimationHelper fadeIn:scheduleButton withDuration:0.4 andWait:0.0];
+    [AnimationHelper fadeIn:exerciseButton withDuration:0.4 andWait:0.0];
     [AnimationHelper transitionView:scheduleButton toRect:scheduleButtonOriginalFrame WithSpringWithDamping:0.6 andVelocity:1.0 andTransitionTime:0.8 andWaitTime:0.0];
     [AnimationHelper transitionView:exerciseButton toRect:exerciseButtonOriginalFrame WithSpringWithDamping:0.6 andVelocity:1.0 andTransitionTime:0.8 andWaitTime:0.0];
 }
