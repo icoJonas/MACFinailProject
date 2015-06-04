@@ -79,11 +79,12 @@
     NSMutableArray *arrIngredientsForRecipe = [NSMutableArray new];
     for (NSDictionary *anIngredientID in arrIngredientIDsForRecipe)
     {
-        [arrIngredientsForRecipe addObject:[self executeQuery:[NSString stringWithFormat:@"SELECT * FROM bigoven_ingredients WHERE IngredientID = %@", [anIngredientID objectForKey:@"ingredient_id"]]]];
+        NSString *searchQuery = @"SELECT * FROM bigoven_ingredients WHERE IngredientID = %@";
+        
+        [arrIngredientsForRecipe addObject:[self executeQuery:[NSString stringWithFormat:searchQuery, [anIngredientID objectForKey:@"ingredient_id"]]]];
     }
-//    return [self executeSingleSelect:@"bigoven_ingredientsForRecipe" andColumnNames:@"recipe_id" andFilter:<#(NSDictionary *)#> andLimit:<#(int)#>]
     
-    return nil;
+    return arrIngredientsForRecipe;
 }
 
 -(NSDictionary *)cleanupNullVariables:(NSDictionary *)originalDictionary

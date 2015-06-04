@@ -108,7 +108,7 @@ enum OPERATIONS {
         for (NSDictionary *aRecipe in arrMatchedRecipes)
         {
             //Find the ingredients for the recipe
-            [bosds getIngredientsForRecipeID:[aRecipe objectForKey:@"id"]];
+            NSArray *ingredientsForRecipe = [bosds getIngredientsForRecipeID:[aRecipe objectForKey:@"id"]];
         }
     }
     else if (recipeFound == false)
