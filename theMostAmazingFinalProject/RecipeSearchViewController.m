@@ -64,7 +64,8 @@
 //    [AnimationHelper transitionView:searchBar toRect:CGRectMake(searchBar.frame.origin.x, self.view.frame.size.height-searchBar.frame.size.height, searchBar.frame.size.width, searchBar.frame.size.height) WithSpringWithDamping:1.8 andVelocity:0.5 andTransitionTime:1.0 andWaitTime:0.0];
     
     //Perform the request
-    [self.bods getRecipeSearch:searchBar.text];
+    NSString *formattedSearchString = [searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    [self.bods getRecipeSearch:formattedSearchString];
 }
 
 
@@ -91,8 +92,8 @@
     //Load the new view with the recipe object
     RecipeViewController *rvc = [[RecipeViewController alloc] initWithNibName:@"RecipeViewController" bundle:nil];
     rvc.recipeToDisplay = recipeObject;
-    [self presentViewController:rvc animated:YES completion:nil];
-//    [self.navigationController pushViewController:rvc animated:YES];
+//    [self presentViewController:rvc animated:YES completion:nil];
+    [self.navigationController pushViewController:rvc animated:YES];
 }
 
 #pragma mark - TableView delegate and datasource methods

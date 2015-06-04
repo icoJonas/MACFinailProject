@@ -10,8 +10,10 @@
 #import "Recipe.h"
 
 @interface RecipeViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UINavigationItem *navNavbar;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnBackNavbar;
+//@property (strong, nonatomic) IBOutlet UINavigationItem *navNavbar;
+//@property (strong, nonatomic) IBOutlet UIToolbar *tbToolbar;
+
+//@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnBackNavbar;
 //@property (strong, nonatomic) IBOutlet UILabel *lblTitle;
 @property (strong, nonatomic) IBOutlet UIImageView *imgRecipeImage;
 @property (strong, nonatomic) IBOutlet UILabel *lblMainIngredient;
