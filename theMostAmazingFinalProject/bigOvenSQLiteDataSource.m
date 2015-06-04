@@ -27,6 +27,9 @@
         [ingredientDic setObject:metricUnit forKey:@"MetricUnit"];
         [ingredientDic setObject:metricQuantity forKey:@"MetricDisplayQuantity"];
         
+        //Clean up any null values in the dictionary
+        ingredientDic = (NSMutableDictionary *)[self cleanupNullVariables:ingredientDic];
+        
         NSArray *currentIngredient = [self executeQuery:[NSString stringWithFormat:@"SELECT IngredientID FROM bigoven_ingredients WHERE IngredientID = %@",[anIngredient objectForKey:@"IngredientID"]]];
         if (currentIngredient.count > 0) {
             [self executeUpdateOperation:@"bigoven_ingredients" andData:ingredientDic andFilter:[NSDictionary dictionaryWithObject:[anIngredient objectForKey:@"IngredientID"] forKey:@"IngredientID"]];
@@ -54,7 +57,7 @@
     [recipeDic setObject:recipe.strRecipeHeroPhotoURL forKey:@"heroPhotoURL"];
     [recipeDic setObject:recipe.strRecipeFavoriteCount forKey:@"favoriteCount"];
     
-
+    recipeDic = (NSMutableDictionary *)[self cleanupNullVariables:recipeDic];
     
     NSArray *curretObjects = [self executeSingleSelect:@"bigoven_recipes" andColumnNames:@[@"id"] andFilter:[NSDictionary dictionaryWithObject:recipe.strRecipeID forKey:@"id"] andLimit:2];
     if (curretObjects.count > 0) {
@@ -67,5 +70,32 @@
 -(NSArray *)getRecipes
 {
     return [self executeSingleSelect:@"bigoven_recipes" andColumnNames:nil andFilter:nil andLimit:0];
+}
+
+-(NSArray *)getIngredientsForRecipeID:(NSString *)recipeID
+{
+    NSArray *arrIngredientIDsForRecipe = [self executeQuery:[NSString stringWithFormat:@"SELECT ingredient_id FROM bigoven_ingredientsForRecipe WHERE recipe_id = %@", recipeID]];
+    
+    NSMutableArray *arrIngredientsForRecipe = [NSMutableArray new];
+    for (NSDictionary *anIngredientID in arrIngredientIDsForRecipe)
+    {
+        [arrIngredientsForRecipe addObject:[self executeQuery:[NSString stringWithFormat:@"SELECT * FROM bigoven_ingredients WHERE IngredientID = %@", [anIngredientID objectForKey:@"ingredient_id"]]]];
+    }
+//    return [self executeSingleSelect:@"bigoven_ingredientsForRecipe" andColumnNames:@"recipe_id" andFilter:<#(NSDictionary *)#> andLimit:<#(int)#>]
+    
+    return nil;
+}
+
+-(NSDictionary *)cleanupNullVariables:(NSDictionary *)originalDictionary
+{
+    NSArray *keys = [originalDictionary allKeys];
+    NSMutableDictionary *ret = [originalDictionary mutableCopy];
+    for (NSString *k in keys) {
+        if([[originalDictionary objectForKey:k] isKindOfClass:[NSNull class]])
+        {
+            [ret removeObjectForKey:k];
+        }
+    }
+    return ret;
 }
 @end

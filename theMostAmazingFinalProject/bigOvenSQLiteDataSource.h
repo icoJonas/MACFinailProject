@@ -13,4 +13,6 @@
 
 -(void)insertOrUpdate:(Recipe *)recipe;
 -(NSArray *)getRecipes;
+-(NSArray *)getIngredientsForRecipeID:(NSString *)recipeID;
+
 @end

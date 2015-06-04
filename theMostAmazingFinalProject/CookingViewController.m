@@ -10,6 +10,11 @@
 #import "RecipeSearchViewController.h"
 #import "BackgroundViewHelper.h"
 
+enum OPERATIONS {
+    SEARCH_LOCAL = 1,
+    SEARCH_ONLINE = 2,
+};
+
 @interface CookingViewController () <UIAlertViewDelegate>
 
 @end
@@ -61,10 +66,21 @@ message:@"Please select where I should search" delegate:self cancelButtonTitle:@
 {
     NSLog(@"The user selected %@", [alertView buttonTitleAtIndex:buttonIndex]);
     
-    //Present the next view controller.
     RecipeSearchViewController *recipeSVC = [[RecipeSearchViewController alloc] initWithNibName:@"RecipeSearchViewController" bundle:nil];
     
-//    [self presentViewController:recipeSVC animated:YES completion:nil];
+    if (buttonIndex == 0)
+    {
+        recipeSVC.searchParameter = SEARCH_LOCAL;
+    }
+    else if (buttonIndex == 1)
+    {
+        recipeSVC.searchParameter = SEARCH_ONLINE;
+    }
+    
+    //Present the next view controller.
+    
+    
+    //    [self presentViewController:recipeSVC animated:YES completion:nil];
     
     CATransition* transition = [CATransition animation];
     transition.duration = .5;

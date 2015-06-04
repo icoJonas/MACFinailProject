@@ -460,8 +460,8 @@
 			isa = PBXGroup;
 			children = (
 				04CF22151B1D160400AB4F99 /* CookingViewController.h */,
-				04CF22171B1D160400AB4F99 /* CookingViewController.xib */,
 				04CF22231B1D3BE000AB4F99 /* CookingViewController.m */,
+				04CF22171B1D160400AB4F99 /* CookingViewController.xib */,
 				04CF221E1B1D381600AB4F99 /* RecipeSearchViewController.h */,
 				04CF221F1B1D381600AB4F99 /* RecipeSearchViewController.m */,
 				04CF22201B1D381600AB4F99 /* RecipeSearchViewController.xib */,
