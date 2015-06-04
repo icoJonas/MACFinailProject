@@ -27,7 +27,7 @@
             <connections>
                 <outlet property="muscleName" destination="HUy-TI-q0x" id="iIE-N7-B8k"/>
             </connections>
-            <point key="canvasLocation" x="280" y="366.5"/>
+            <point key="canvasLocation" x="146" y="119.5"/>
         </tableViewCell>
     </objects>
 </document>

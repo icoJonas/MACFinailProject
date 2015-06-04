@@ -14,6 +14,8 @@
     IBOutlet UIActivityIndicatorView *activityView;
     IBOutlet OBShapedButton *scheduleButton;
     IBOutlet OBShapedButton *exerciseButton;
+    CGRect scheduleButtonOriginalFrame;
+    CGRect exerciseButtonOriginalFrame;
 }
 
 @property(strong,nonatomic) WorkoutManagerDataSource *wgerDataSource;

@@ -81,7 +81,16 @@
 -(NSArray *)getExercisesForMuscle:(NSNumber *)muscleId{
     NSMutableArray *returnArray = [NSMutableArray new];
     
-    NSArray *objects = [self executeQuery:[NSString stringWithFormat:@"SELECT DISTINCT ex.id, ex.name FROM wger_exercise_catalog ex, wger_exercise_muscle exmus WHERE exmus.id_muscle = %d and ex.language = 2;",muscleId.intValue]];
+    NSArray *exercises = [self executeQuery:[NSString stringWithFormat:@"SELECT DISTINCT exmus.id_exercise FROM wger_exercise_muscle exmus WHERE exmus.id_muscle = %d;",muscleId.intValue]];
+    
+    NSMutableArray *objects = [NSMutableArray new];
+    for (NSDictionary *exercise in exercises) {
+        NSArray *others = [self executeQuery:[NSString stringWithFormat:@"SELECT id, name FROM wger_exercise_catalog WHERE id = %d AND language = 2;",[[exercise objectForKey:@"id_exercise"] intValue]]];
+        if (others.count > 0) {
+            [objects addObject:[others firstObject]];
+        }
+    }
+    
     
     for (NSDictionary *dic in objects) {
         NSMutableDictionary *mutableDic = [[NSMutableDictionary alloc] initWithDictionary:dic];
@@ -95,6 +104,17 @@
     }
     
     return returnArray;
+}
+
+-(NSDictionary *)getExercisesDetail:(NSNumber *)exerciseId{
+    NSMutableDictionary *returnDic = [NSMutableDictionary new];
+    [returnDic addEntriesFromDictionary:[[self executeQuery:[NSString stringWithFormat:@"SELECT ex.name, ex.description FROM wger_exercise_catalog ex WHERE ex.id = %d",exerciseId.intValue]] firstObject]];
+    NSArray *imageArray = [self executeQuery:[NSString stringWithFormat:@"SELECT im.image FROM wger_image_exercise im WHERE im.exercise = %d", exerciseId.intValue]];
+    NSArray *equipmentArray = [self executeQuery:[NSString stringWithFormat:@"SELECT eq.name FROM wger_equipment_catalog eq WHERE id = (SELECT DISTINCT  ex.id_equipment FROM  wger_exercise_equipment ex WHERE ex.id_exercise = %d)", exerciseId.intValue]];
+    [returnDic setObject:imageArray forKey:@"images"];
+    [returnDic setObject:equipmentArray forKey:@"equipment"];
+    
+    return returnDic;
 }
 
 @end

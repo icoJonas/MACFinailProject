@@ -20,5 +20,6 @@
 
 -(NSArray *)getMuscles;
 -(NSArray *)getExercisesForMuscle:(NSNumber *)muscleId;
+-(NSDictionary *)getExercisesDetail:(NSNumber *)exerciseId;
 
 @end
