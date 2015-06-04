@@ -14,6 +14,12 @@
 #import "RecipeSearchResult.h"
 #import "RecipeViewController.h"
 #import "ImageHelper.h"
+#import "bigOvenSQLiteDataSource.h"
+
+enum OPERATIONS {
+    SEARCH_LOCAL = 1,
+    SEARCH_ONLINE = 2,
+};
 
 @interface RecipeSearchViewController () <UISearchBarDelegate,BigOvenDataSourceDelegate,UITableViewDataSource, UITableViewDelegate>
 
@@ -63,11 +69,55 @@
     //Animate the searchbar to the bottom of the screen
 //    [AnimationHelper transitionView:searchBar toRect:CGRectMake(searchBar.frame.origin.x, self.view.frame.size.height-searchBar.frame.size.height, searchBar.frame.size.width, searchBar.frame.size.height) WithSpringWithDamping:1.8 andVelocity:0.5 andTransitionTime:1.0 andWaitTime:0.0];
     
-    //Perform the request
-    NSString *formattedSearchString = [searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-    [self.bods getRecipeSearch:formattedSearchString];
+    if (self.searchParameter == SEARCH_LOCAL)
+    {
+        //Perform the request
+        [self localRecipeSearch:searchBar.text];
+    }
+    else if (self.searchParameter == SEARCH_ONLINE)
+    {
+        //Perform the request
+        NSString *formattedSearchString = [searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+        [self.bods getRecipeSearch:formattedSearchString];
+    }
 }
 
+#pragma mark - Helper methods
+-(void)localRecipeSearch:(NSString *)recipeKeywords
+{
+    //Search the database to see if the name exists
+    bigOvenSQLiteDataSource *bosds = [[bigOvenSQLiteDataSource alloc] init];
+    
+    NSArray *arrSavedRecipes = [bosds getRecipes];
+    NSMutableArray *arrMatchedRecipes = [NSMutableArray new];
+    BOOL recipeFound = false;
+    
+    for (NSDictionary *aRecipe in arrSavedRecipes)
+    {
+        if ([[[aRecipe objectForKey:@"title"] uppercaseString] containsString:[recipeKeywords uppercaseString]])
+        {
+            recipeFound = true;
+            [arrMatchedRecipes addObject:aRecipe];
+        }
+    }
+    
+    if (recipeFound == true)
+    {
+        //Create recipe objects for the found recipes
+        NSLog(@"Create the recipe for display");
+        for (NSDictionary *aRecipe in arrMatchedRecipes)
+        {
+            //Find the ingredients for the recipe
+            [bosds getIngredientsForRecipeID:[aRecipe objectForKey:@"id"]];
+        }
+    }
+    else if (recipeFound == false)
+    {
+        //Notify the user the recipe doesn't exist locally
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Recipe not found" message:@"No matching recipes were found locally. Consider searching online." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+}
 
 #pragma  mark - BigOvenDataSource delegate methods
 -(void)returnSearchResults:(NSMutableArray *)arrSeachResults
@@ -90,10 +140,17 @@
 -(void)returnRecipe:(Recipe *)recipeObject
 {
     //Load the new view with the recipe object
+//    RecipeViewController *rvc = [[RecipeViewController alloc] initWithNibName:@"RecipeViewController" bundle:nil];
+//    rvc.recipeToDisplay = recipeObject;
+//    [self presentViewController:rvc animated:YES completion:nil];
+//    [self.navigationController pushViewController:rvc animated:YES];
+    
+    __weak RecipeSearchViewController *wSelf = self;
     RecipeViewController *rvc = [[RecipeViewController alloc] initWithNibName:@"RecipeViewController" bundle:nil];
     rvc.recipeToDisplay = recipeObject;
-//    [self presentViewController:rvc animated:YES completion:nil];
-    [self.navigationController pushViewController:rvc animated:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [wSelf.navigationController pushViewController:rvc animated:YES];
+    });
 }
 
 #pragma mark - TableView delegate and datasource methods

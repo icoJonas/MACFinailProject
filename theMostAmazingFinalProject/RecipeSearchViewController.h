@@ -11,4 +11,6 @@
 
 @interface RecipeSearchViewController : UIViewController
 
+@property (nonatomic, assign) int searchParameter;
+
 @end

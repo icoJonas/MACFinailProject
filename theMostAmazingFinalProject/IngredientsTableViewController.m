@@ -69,10 +69,11 @@
         NSString *quantity = [anIngredient objectForKey:@"DisplayQuantity"];
         NSString *name = [anIngredient objectForKey:@"Name"];
         NSString *quantityUnit = [anIngredient objectForKey:@"Unit"];
-        NSString *metricUnit = [anIngredient objectForKey:@"MetricUnit"];
-        NSString *metricQuantity = [anIngredient objectForKey:@"MetricDisplayQuantity"];
+//        NSString *metricUnit = [anIngredient objectForKey:@"MetricUnit"];
+//        NSString *metricQuantity = [anIngredient objectForKey:@"MetricDisplayQuantity"];
         
-        NSString *ingredientString = [NSString stringWithFormat:@"%@ %@ (%@ %@) %@", quantity, quantityUnit, metricQuantity, metricUnit, name];
+//        NSString *ingredientString = [NSString stringWithFormat:@"%@ %@ (%@ %@) %@", quantity, quantityUnit, metricQuantity, metricUnit, name];
+        NSString *ingredientString = [NSString stringWithFormat:@"%@ %@ %@", quantity, quantityUnit, name];
         
         [self.arrIngredientStrings addObject:ingredientString];
     }

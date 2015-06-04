@@ -15,6 +15,7 @@
 #import "bigOvenSQLiteDataSource.h"
 
 
+
 @interface RecipeViewController () <UIAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *lblToolBarTitle;
 
@@ -29,13 +30,25 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(btnBookmarkPressed:)];
     
     self.lblCategory.text = [NSString stringWithFormat:@"Category: %@",self.recipeToDisplay.strRecipeCategory];
+    self.lblCategory.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    
     self.lblCuisine.text = [NSString stringWithFormat:@"Cuisine: %@", self.recipeToDisplay.strRecipeCuisine];
-    self.lblMainIngredient.text = [NSString stringWithFormat:@"Main ingredient: %@",self.recipeToDisplay.strRecipePrimaryIngredient];;
+    self.lblCuisine.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    
+    self.lblMainIngredient.text = [NSString stringWithFormat:@"Main ingredient: %@",self.recipeToDisplay.strRecipePrimaryIngredient];
+    self.lblMainIngredient.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    
     self.lblPrepTime.text = [NSString stringWithFormat:@"Prep time: %@ minutes",self.recipeToDisplay.strRecipeTotalMinutes];
+    self.lblPrepTime.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    
     self.lblRating.text = [NSString stringWithFormat:@"%g/5 stars", [self.recipeToDisplay.strRecipeStarRating floatValue]];
+    self.lblRating.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    
     self.lblYield.text = [NSString stringWithFormat:@"Yields: %@ %@", self.recipeToDisplay.strRecipeYieldNumber, self.recipeToDisplay.strRecipeYieldUnit];
+    self.lblYield.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     
 //    [ImageHelper setImage:self.imgRecipeImage FromPath:self.recipeToDisplay.strRecipeImageURL];
+    
     dispatch_queue_t tempQueue = dispatch_queue_create("tempQueue", nil);
     dispatch_async(tempQueue, ^{
         dispatch_async(dispatch_get_main_queue(), ^{
