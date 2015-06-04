@@ -56,6 +56,7 @@
     [recipeDic setObject:recipe.strRecipePoster forKey:@"poster"];
     [recipeDic setObject:recipe.strRecipeHeroPhotoURL forKey:@"heroPhotoURL"];
     [recipeDic setObject:recipe.strRecipeFavoriteCount forKey:@"favoriteCount"];
+    [recipeDic setObject:recipe.strRecipeImageURL120 forKey:@"imageURL120"];
     
     recipeDic = (NSMutableDictionary *)[self cleanupNullVariables:recipeDic];
     

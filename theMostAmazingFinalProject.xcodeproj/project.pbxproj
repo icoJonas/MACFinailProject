@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04341F331B17D40D0002785A /* WebServiceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04341F321B17D40D0002785A /* WebServiceHandler.m */; };
+		0465436E1B2032E80087ED02 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465436C1B2032E80087ED02 /* FavoritesViewController.m */; };
+		0465436F1B2032E80087ED02 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0465436D1B2032E80087ED02 /* FavoritesViewController.xib */; };
 		046E79D91B1828BF00E23F88 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E79D81B1828BF00E23F88 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04CF1E061B19AB1300AB4F99 /* BigOvenDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E051B19AB1300AB4F99 /* BigOvenDataSource.m */; };
 		04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E091B19CBB800AB4F99 /* Recipe.m */; };
@@ -95,6 +97,9 @@
 /* Begin PBXFileReference section */
 		04341F311B17D40D0002785A /* WebServiceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceHandler.h; sourceTree = "<group>"; };
 		04341F321B17D40D0002785A /* WebServiceHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceHandler.m; sourceTree = "<group>"; };
+		0465436B1B2032E80087ED02 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		0465436C1B2032E80087ED02 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		0465436D1B2032E80087ED02 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		046E79D71B1828BF00E23F88 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		046E79D81B1828BF00E23F88 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		04CF1E041B19AB1300AB4F99 /* BigOvenDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigOvenDataSource.h; sourceTree = "<group>"; };
@@ -485,6 +490,9 @@
 				04CF227A1B1EC05D00AB4F99 /* WebViewController.h */,
 				04CF227B1B1EC05D00AB4F99 /* WebViewController.m */,
 				04CF227C1B1EC05D00AB4F99 /* WebViewController.xib */,
+				0465436B1B2032E80087ED02 /* FavoritesViewController.h */,
+				0465436C1B2032E80087ED02 /* FavoritesViewController.m */,
+				0465436D1B2032E80087ED02 /* FavoritesViewController.xib */,
 			);
 			name = CookingViews;
 			sourceTree = "<group>";
@@ -837,6 +845,7 @@
 				04CF22221B1D381600AB4F99 /* RecipeSearchViewController.xib in Resources */,
 				04CF22791B1EB0A300AB4F99 /* DirectionsViewController.xib in Resources */,
 				DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */,
+				0465436F1B2032E80087ED02 /* FavoritesViewController.xib in Resources */,
 				DDF278071B1EB3C7003CD7C0 /* ExerciseSelectionViewController.xib in Resources */,
 				DD8076581B1BA51800A27F00 /* workout3.jpg in Resources */,
 				04CF22191B1D160400AB4F99 /* CookingViewController.xib in Resources */,
@@ -958,6 +967,7 @@
 				04341F331B17D40D0002785A /* WebServiceHandler.m in Sources */,
 				04CF1E0E1B1A15CD00AB4F99 /* RecipeSearchResult.m in Sources */,
 				04CF1E1C1B1BA9BD00AB4F99 /* FitnessActivityPost.m in Sources */,
+				0465436E1B2032E80087ED02 /* FavoritesViewController.m in Sources */,
 				04CF22241B1D3BE000AB4F99 /* CookingViewController.m in Sources */,
 				DD8076671B1BA95A00A27F00 /* BackgroundViewHelper.m in Sources */,
 				DDECCC321B1A62620047BA5C /* WorkoutManagerDataSource.m in Sources */,

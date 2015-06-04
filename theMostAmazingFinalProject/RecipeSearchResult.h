@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Recipe.h"
 
 @interface RecipeSearchResult : NSObject
 
@@ -20,6 +21,6 @@
 @property(strong,nonatomic) NSString * strSearchCuisine;
 
 -(id)initWithJSONDict:(NSDictionary *)jsonDict;
-
++(RecipeSearchResult *)buildObjectForRecipe:(Recipe *)recipe;
 
 @end

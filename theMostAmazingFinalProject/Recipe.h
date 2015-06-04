@@ -28,7 +28,9 @@
 @property(strong,nonatomic) NSString * strRecipePoster;
 @property(strong,nonatomic) NSString * strRecipeHeroPhotoURL;
 @property(strong,nonatomic) NSString * strRecipeFavoriteCount;
+@property(strong,nonatomic) NSString * strRecipeImageURL120;
+
 
 -(id)initNewRecipeWithJSON:(NSDictionary *)jsonDict;
-
++(Recipe *)buildRecipeObjectForRecipeDict:(NSDictionary *)dictRecipe andIngredientsArray:(NSArray *)arrIngredients;
 @end

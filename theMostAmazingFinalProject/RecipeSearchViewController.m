@@ -24,6 +24,8 @@ enum OPERATIONS {
 @interface RecipeSearchViewController () <UISearchBarDelegate,BigOvenDataSourceDelegate,UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong) NSMutableArray * searchResultsArray;
+@property(nonatomic, strong) NSMutableArray * arrRecipeObjects;
+@property(nonatomic, strong) NSString *savedImageURL120;
 @property(nonatomic, strong) dispatch_queue_t myQueue;
 @property(nonatomic, strong) BigOvenDataSource *bods;
 @property (strong, nonatomic) IBOutlet UITableView *tableSearchResults;
@@ -103,13 +105,35 @@ enum OPERATIONS {
     
     if (recipeFound == true)
     {
-        //Create recipe objects for the found recipes
+        //Create recipe search result objects for the found recipes
         NSLog(@"Create the recipe for display");
+        self.arrRecipeObjects = [NSMutableArray new];
         for (NSDictionary *aRecipe in arrMatchedRecipes)
         {
             //Find the ingredients for the recipe
             NSArray *ingredientsForRecipe = [bosds getIngredientsForRecipeID:[aRecipe objectForKey:@"id"]];
+            //Build the recipe object from recipe and ingredient info
+            Recipe *recipe = [Recipe buildRecipeObjectForRecipeDict:aRecipe andIngredientsArray:ingredientsForRecipe];
+            //Add it to an array of recipe object
+            [_arrRecipeObjects addObject:recipe];
         }
+        
+        NSMutableArray *arrSearchResultObjects = [NSMutableArray new];
+        for (Recipe *recipe in _arrRecipeObjects) {
+            RecipeSearchResult *searchReult = [RecipeSearchResult buildObjectForRecipe:recipe];
+            [arrSearchResultObjects addObject:searchReult];
+        }
+        
+        //Present the table view
+        self.searchResultsArray = [[NSMutableArray alloc] initWithArray:arrSearchResultObjects];
+        //Load and present the table view
+        dispatch_async(_myQueue, ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableSearchResults reloadData];
+            });
+        });
+        [self.tableSearchResults setHidden:false];
+        
     }
     else if (recipeFound == false)
     {
@@ -133,20 +157,16 @@ enum OPERATIONS {
            [self.tableSearchResults reloadData];
        });
    });
-//    [self.view addSubview:self.tableSearchResults];
     [self.tableSearchResults setHidden:false];
 }
 
 -(void)returnRecipe:(Recipe *)recipeObject
 {
-    //Load the new view with the recipe object
-//    RecipeViewController *rvc = [[RecipeViewController alloc] initWithNibName:@"RecipeViewController" bundle:nil];
-//    rvc.recipeToDisplay = recipeObject;
-//    [self presentViewController:rvc animated:YES completion:nil];
-//    [self.navigationController pushViewController:rvc animated:YES];
-    
+    //Load the new view with the recipe object on the main thread
     __weak RecipeSearchViewController *wSelf = self;
     RecipeViewController *rvc = [[RecipeViewController alloc] initWithNibName:@"RecipeViewController" bundle:nil];
+    recipeObject.strRecipeImageURL120 = _savedImageURL120;
+    
     rvc.recipeToDisplay = recipeObject;
     dispatch_async(dispatch_get_main_queue(), ^{
         [wSelf.navigationController pushViewController:rvc animated:YES];
@@ -183,6 +203,7 @@ enum OPERATIONS {
     cell.lblTitle.text = aSearchResult.strSearchTitle;
     cell.lblYield.text = [NSString stringWithFormat:@"%@ servings", aSearchResult.strSearchYieldNumber];
     [ImageHelper setImage:cell.imgRecipeImage120 FromPath:aSearchResult.strSearchImageURL120];
+    
 //    dispatch_async(self.myQueue, ^{
 //        dispatch_async(dispatch_get_main_queue(), ^{
 //            cell.imgRecipeImage120.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:aSearchResult.strSearchImageURL120]]];
@@ -195,9 +216,18 @@ enum OPERATIONS {
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //The user selected a recipe. Get that recipe
-    RecipeSearchResult *lookThisUp = [self.searchResultsArray objectAtIndex:indexPath.row];
-    [self.bods getRecipe:[lookThisUp.strSearchRecipeID intValue]];
+    if (self.searchParameter == SEARCH_LOCAL)
+    {
+        [self returnRecipe:[_arrRecipeObjects objectAtIndex:indexPath.row]];
+    }
+    else if (self.searchParameter == SEARCH_ONLINE)
+    {
+        //The user selected a recipe. Get that recipe
+        RecipeSearchResult *lookThisUp = [self.searchResultsArray objectAtIndex:indexPath.row];
+        _savedImageURL120 = lookThisUp.strSearchImageURL120;
+        
+        [self.bods getRecipe:[lookThisUp.strSearchRecipeID intValue]];
+    }
 }
 
 @end
