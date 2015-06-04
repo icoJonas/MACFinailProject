@@ -17,11 +17,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZrF-yf-Yd5">
-                    <rect key="frame" x="8" y="135" width="584" height="359"/>
+                    <rect key="frame" x="8" y="85" width="584" height="457"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="359" id="TvR-4R-VGM"/>
-                    </constraints>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="lt9-1p-8Qa"/>
@@ -31,9 +28,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="ZrF-yf-Yd5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="135" id="5ny-hh-ksc"/>
-                <constraint firstItem="ZrF-yf-Yd5" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="9Cf-Rx-EdK"/>
-                <constraint firstItem="ZrF-yf-Yd5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="lLQ-2i-vUx"/>
+                <constraint firstAttribute="bottom" secondItem="ZrF-yf-Yd5" secondAttribute="bottom" constant="58" id="HcO-7x-6ff"/>
+                <constraint firstItem="ZrF-yf-Yd5" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="RKl-Eu-2za"/>
+                <constraint firstItem="ZrF-yf-Yd5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="ska-5D-wnd"/>
+                <constraint firstItem="ZrF-yf-Yd5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="ui9-Ey-18Q"/>
             </constraints>
         </view>
     </objects>

@@ -10,6 +10,7 @@
 #import "BackgroundViewHelper.h"
 #import "wgerSQLiteDataSource.h"
 #import "ExerciseTableViewCell.h"
+#import "ExerciseDetailViewController.h"
 
 @interface ExerciseSelectionViewController ()
 
@@ -17,11 +18,19 @@
 
 @implementation ExerciseSelectionViewController
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = @"Exercise Selection";
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     wgerSQLiteDataSource *dataSource = [wgerSQLiteDataSource new];
-    NSLog(@"%@",[dataSource getExercisesForMuscle:[self.muscleDic objectForKey:@"id"]]);
+    exercises = [[NSMutableArray alloc] initWithArray:[dataSource getExercisesForMuscle:[self.muscleDic objectForKey:@"id"]]];
     [exerciseTableView registerNib:[UINib nibWithNibName:@"ExerciseTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
 }
 
@@ -53,23 +62,23 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"Cell";
-    NSDictionary *muscleDic = [exercises objectAtIndex:indexPath.row];
+    NSDictionary *exerciseDic = [exercises objectAtIndex:indexPath.row];
     ExerciseTableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    [cell setupCellWithData:muscleDic];
+    [cell setupCellWithData:exerciseDic];
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 67.0;
+    return 135.0;
 }
 
 #pragma mark - UITableView Delegate methods
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary *muscleDic = [exercises objectAtIndex:indexPath.row];
-//    ExerciseSelectionViewController *exerVC = [[ExerciseSelectionViewController alloc] init];
-//    exerVC.muscleDic = muscleDic;
-//    [self.navigationController pushViewController:exerVC animated:YES];
+    NSDictionary *exerciseDic = [exercises objectAtIndex:indexPath.row];
+    ExerciseDetailViewController *exerDVC = [[ExerciseDetailViewController alloc] init];
+    exerDVC.exerciseDic = exerciseDic;
+    [self.navigationController pushViewController:exerDVC animated:YES];
 }
 
 

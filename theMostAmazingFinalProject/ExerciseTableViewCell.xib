@@ -15,18 +15,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-HW-OyO">
-                        <rect key="frame" x="192" y="7" width="120" height="120"/>
+                        <rect key="frame" x="215" y="7" width="97" height="120"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="120" id="OHV-VV-Dph"/>
+                            <constraint firstAttribute="width" constant="97" id="OHV-VV-Dph"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaM-jj-ufd">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaM-jj-ufd">
                         <rect key="frame" x="17" y="8" width="152" height="118"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="bdU-HW-OyO" secondAttribute="bottom" constant="-1" id="4j8-PE-3E5"/>
                     <constraint firstItem="BaM-jj-ufd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="5Jr-Ox-rLG"/>
@@ -34,14 +37,15 @@
                     <constraint firstItem="BaM-jj-ufd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="OYo-g1-4MR"/>
                     <constraint firstItem="bdU-HW-OyO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="aeV-BB-vj4"/>
                     <constraint firstItem="BaM-jj-ufd" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="g2v-jg-L1X"/>
-                    <constraint firstItem="bdU-HW-OyO" firstAttribute="leading" secondItem="BaM-jj-ufd" secondAttribute="trailing" constant="23" id="oPX-ZU-24M"/>
+                    <constraint firstItem="bdU-HW-OyO" firstAttribute="leading" secondItem="BaM-jj-ufd" secondAttribute="trailing" constant="46" id="oPX-ZU-24M"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="exerciseImage" destination="bdU-HW-OyO" id="dCr-jq-GrB"/>
                 <outlet property="exerciseName" destination="BaM-jj-ufd" id="aFh-dQ-JS5"/>
             </connections>
-            <point key="canvasLocation" x="302" y="203.5"/>
+            <point key="canvasLocation" x="149" y="295.5"/>
         </tableViewCell>
     </objects>
 </document>

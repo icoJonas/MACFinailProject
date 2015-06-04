@@ -33,6 +33,8 @@
     [activityView startAnimating];
     [scheduleButton setHidden:YES];
     [exerciseButton setHidden:YES];
+    scheduleButtonOriginalFrame = CGRectZero;
+    exerciseButtonOriginalFrame = CGRectZero;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,9 +50,25 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [AnimationHelper changeViewSize:scheduleButton withFrame:CGRectMake(scheduleButton.frame.origin.x-500, scheduleButton.frame.origin.y, scheduleButton.frame.size.width, scheduleButton.frame.size.height) withDuration:0.0 andWait:0.0];
-    [AnimationHelper changeViewSize:exerciseButton withFrame:CGRectMake(exerciseButton.frame.origin.x+500, exerciseButton.frame.origin.y, exerciseButton.frame.size.width, exerciseButton.frame.size.height) withDuration:0.0 andWait:0.0];
+    if (CGRectEqualToRect(scheduleButtonOriginalFrame, CGRectZero)) {
+        scheduleButtonOriginalFrame = scheduleButton.frame;
+    }
+    if (CGRectEqualToRect(exerciseButtonOriginalFrame, CGRectZero)) {
+        exerciseButtonOriginalFrame = exerciseButton.frame;
+    }
+    [AnimationHelper changeViewSize:scheduleButton withFrame:CGRectMake(scheduleButtonOriginalFrame.origin.x-500, scheduleButtonOriginalFrame.origin.y, scheduleButtonOriginalFrame.size.width, scheduleButtonOriginalFrame.size.height) withDuration:0.0 andWait:0.0];
+    [AnimationHelper changeViewSize:exerciseButton withFrame:CGRectMake(exerciseButtonOriginalFrame.origin.x+500, exerciseButtonOriginalFrame.origin.y, exerciseButtonOriginalFrame.size.width, exerciseButtonOriginalFrame.size.height) withDuration:0.0 andWait:0.0];
     [self.wgerDataSource getCatalogs];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [scheduleButton setHidden:YES];
+    [exerciseButton setHidden:YES];
+//    [AnimationHelper changeViewSize:scheduleButton withFrame:CGRectMake(scheduleButtonOriginalFrame.origin.x-500, scheduleButtonOriginalFrame.origin.y, scheduleButtonOriginalFrame.size.width, scheduleButtonOriginalFrame.size.height) withDuration:0.0 andWait:0.0];
+//    [AnimationHelper changeViewSize:exerciseButton withFrame:CGRectMake(exerciseButtonOriginalFrame.origin.x+500, exerciseButtonOriginalFrame.origin.y, exerciseButtonOriginalFrame.size.width, exerciseButtonOriginalFrame.size.height) withDuration:0.0 andWait:0.0];
+//    scheduleButtonOriginalFrame = CGRectZero;
+//    exerciseButtonOriginalFrame = CGRectZero;
 }
 
 /*
@@ -74,8 +92,8 @@
 -(void)animateAfter{
     [scheduleButton setHidden:NO];
     [exerciseButton setHidden:NO];
-    [AnimationHelper transitionView:scheduleButton toRect:CGRectMake(scheduleButton.frame.origin.x+500, scheduleButton.frame.origin.y, scheduleButton.frame.size.width, scheduleButton.frame.size.height) WithSpringWithDamping:0.6 andVelocity:1.0 andTransitionTime:0.8 andWaitTime:0.0];
-    [AnimationHelper transitionView:exerciseButton toRect:CGRectMake(exerciseButton.frame.origin.x-500, exerciseButton.frame.origin.y, exerciseButton.frame.size.width, exerciseButton.frame.size.height) WithSpringWithDamping:0.6 andVelocity:1.0 andTransitionTime:0.8 andWaitTime:0.0];
+    [AnimationHelper transitionView:scheduleButton toRect:scheduleButtonOriginalFrame WithSpringWithDamping:0.6 andVelocity:1.0 andTransitionTime:0.8 andWaitTime:0.0];
+    [AnimationHelper transitionView:exerciseButton toRect:exerciseButtonOriginalFrame WithSpringWithDamping:0.6 andVelocity:1.0 andTransitionTime:0.8 andWaitTime:0.0];
 }
 
 - (IBAction)goToMuscleSelection:(id)sender {

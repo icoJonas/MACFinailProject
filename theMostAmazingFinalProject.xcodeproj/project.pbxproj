@@ -34,6 +34,8 @@
 		04CF227E1B1EC05D00AB4F99 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF227C1B1EC05D00AB4F99 /* WebViewController.xib */; };
 		04CF22811B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF22801B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m */; };
 		04DBD2908F76F6076DCEC72E /* Pods_theMostAmazingFinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DD3C398E1B1FE0F800D09B2E /* ExerciseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C398C1B1FE0F800D09B2E /* ExerciseDetailViewController.m */; };
+		DD3C398F1B1FE0F800D09B2E /* ExerciseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3C398D1B1FE0F800D09B2E /* ExerciseDetailViewController.xib */; };
 		DD8076561B1BA51800A27F00 /* workout1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076501B1BA51800A27F00 /* workout1.jpg */; };
 		DD8076571B1BA51800A27F00 /* workout2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076511B1BA51800A27F00 /* workout2.jpg */; };
 		DD8076581B1BA51800A27F00 /* workout3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076521B1BA51800A27F00 /* workout3.jpg */; };
@@ -217,6 +219,9 @@
 		17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theMostAmazingFinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DBD165123099ACEA721E6B /* Pods-theMostAmazingFinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		DA98994CB1C351E6C135A6DF /* Pods-theMostAmazingFinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMostAmazingFinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theMostAmazingFinalProject/Pods-theMostAmazingFinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		DD3C398B1B1FE0F800D09B2E /* ExerciseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseDetailViewController.h; sourceTree = "<group>"; };
+		DD3C398C1B1FE0F800D09B2E /* ExerciseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseDetailViewController.m; sourceTree = "<group>"; };
+		DD3C398D1B1FE0F800D09B2E /* ExerciseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseDetailViewController.xib; sourceTree = "<group>"; };
 		DD8076501B1BA51800A27F00 /* workout1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout1.jpg; sourceTree = "<group>"; };
 		DD8076511B1BA51800A27F00 /* workout2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout2.jpg; sourceTree = "<group>"; };
 		DD8076521B1BA51800A27F00 /* workout3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout3.jpg; sourceTree = "<group>"; };
@@ -713,6 +718,9 @@
 				DDF278081B1EB5DE003CD7C0 /* ExerciseTableViewCell.h */,
 				DDF278091B1EB5DE003CD7C0 /* ExerciseTableViewCell.m */,
 				DDF2780A1B1EB5DE003CD7C0 /* ExerciseTableViewCell.xib */,
+				DD3C398B1B1FE0F800D09B2E /* ExerciseDetailViewController.h */,
+				DD3C398C1B1FE0F800D09B2E /* ExerciseDetailViewController.m */,
+				DD3C398D1B1FE0F800D09B2E /* ExerciseDetailViewController.xib */,
 			);
 			name = WorkoutViews;
 			sourceTree = "<group>";
@@ -847,6 +855,7 @@
 				04CF222E1B1D6B2200AB4F99 /* RecipeViewController.xib in Resources */,
 				DD8076631B1BA7F800A27F00 /* MyUITabBarController.xib in Resources */,
 				DD9668D31B16CD02007D0A98 /* LaunchScreen.xib in Resources */,
+				DD3C398F1B1FE0F800D09B2E /* ExerciseDetailViewController.xib in Resources */,
 				DDF2780C1B1EB5DE003CD7C0 /* ExerciseTableViewCell.xib in Resources */,
 				DD9668D01B16CD02007D0A98 /* Images.xcassets in Resources */,
 				DDF277F41B1E94BF003CD7C0 /* MuscleSelectionViewController.xib in Resources */,
@@ -942,6 +951,7 @@
 				04CF1E141B1B66DC00AB4F99 /* RunKeeperUser.m in Sources */,
 				04CF22211B1D381600AB4F99 /* RecipeSearchViewController.m in Sources */,
 				04CF1E221B1C3BD000AB4F99 /* SleepActivityPost.m in Sources */,
+				DD3C398E1B1FE0F800D09B2E /* ExerciseDetailViewController.m in Sources */,
 				DD9668C51B16CD02007D0A98 /* main.m in Sources */,
 				046E79D91B1828BF00E23F88 /* KeychainItemWrapper.m in Sources */,
 				DD80766D1B1BB10800A27F00 /* WorkoutViewController.m in Sources */,
