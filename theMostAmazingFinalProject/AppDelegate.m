@@ -23,6 +23,7 @@
     self.firstViewController = [[ViewController alloc] initWithNibName:nil bundle:NULL];
     self.secondViewController = [[WorkoutViewController alloc] initWithNibName:nil bundle:NULL];
     self.thirdViewController = [[CookingViewController alloc] initWithNibName:nil bundle:NULL];
+    self.fourthViewController = [[ActivityViewController alloc] initWithNibName:nil bundle:nil];
     
     UINavigationController *firstTAB = [[UINavigationController alloc] initWithRootViewController:self.firstViewController];
     
@@ -30,14 +31,15 @@
     
     UINavigationController *thirdTAB = [[UINavigationController alloc] initWithRootViewController:self.thirdViewController];
     
+    UINavigationController *fourthTAB = [[UINavigationController alloc] initWithRootViewController:self.fourthViewController];
+    
     
     //create an array of all view controllers that will represent the tab at the bottom
     NSArray *myViewControllers = [[NSArray alloc] initWithObjects:
                                   firstTAB,
                                   secondTAB,
-//                                  self.secondViewController,
                                   thirdTAB,
-//                                  self.thirdViewController,
+                                  fourthTAB,
                                   nil];
     
     self.window.rootViewController = self.firstViewController;
@@ -50,6 +52,9 @@
     
     //add the tab bar controllers view to the window
     [self.window addSubview:self.tabBarController.view];
+    
+    //make the tab bar controller translucent
+//    [self.tabBarController.tabBar setBackgroundColor:[UIColor clearColor]];
     
     //set the window background color and make it visible
     self.window.backgroundColor = [UIColor blackColor];

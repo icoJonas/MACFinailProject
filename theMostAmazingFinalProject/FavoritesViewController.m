@@ -102,9 +102,15 @@
     else if (buttonIndex == 1)
     {
         //Delete everything from the database
-        NSLog(@"Implement database deletion");
         bigOvenSQLiteDataSource *bosds = [[bigOvenSQLiteDataSource alloc] init];
-
+        [bosds executeQuery:@"DELETE FROM bigoven_recipes"];
+        [bosds executeQuery:@"DELETE FROM bigoven_ingredients"];
+        [bosds executeQuery:@"DELETE FROM bigoven_ingredientsForRecipe"];
+        
+        [self.arrSearchResultObjects removeAllObjects];
+        [self.arrRecipeObjects removeAllObjects];
+        [self.tableSearchResults reloadData];
+        NSLog(@"Favorites database has been cleared");
     }
 }
 

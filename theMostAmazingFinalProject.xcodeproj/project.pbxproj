@@ -11,6 +11,8 @@
 		0465436E1B2032E80087ED02 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465436C1B2032E80087ED02 /* FavoritesViewController.m */; };
 		0465436F1B2032E80087ED02 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0465436D1B2032E80087ED02 /* FavoritesViewController.xib */; };
 		046E79D91B1828BF00E23F88 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E79D81B1828BF00E23F88 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		049C79D61B204BC100EF3A69 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049C79D41B204BC100EF3A69 /* ActivityViewController.m */; };
+		049C79D71B204BC100EF3A69 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C79D51B204BC100EF3A69 /* ActivityViewController.xib */; };
 		04CF1E061B19AB1300AB4F99 /* BigOvenDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E051B19AB1300AB4F99 /* BigOvenDataSource.m */; };
 		04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E091B19CBB800AB4F99 /* Recipe.m */; };
 		04CF1E0E1B1A15CD00AB4F99 /* RecipeSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E0D1B1A15CD00AB4F99 /* RecipeSearchResult.m */; };
@@ -102,6 +104,9 @@
 		0465436D1B2032E80087ED02 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		046E79D71B1828BF00E23F88 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		046E79D81B1828BF00E23F88 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		049C79D31B204BC100EF3A69 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		049C79D41B204BC100EF3A69 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		049C79D51B204BC100EF3A69 /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 		04CF1E041B19AB1300AB4F99 /* BigOvenDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigOvenDataSource.h; sourceTree = "<group>"; };
 		04CF1E051B19AB1300AB4F99 /* BigOvenDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigOvenDataSource.m; sourceTree = "<group>"; };
 		04CF1E081B19CBB800AB4F99 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
@@ -323,6 +328,16 @@
 				04CF22801B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m */,
 			);
 			name = bigOvenSQLiteDataSource;
+			sourceTree = "<group>";
+		};
+		049C79D21B204BA200EF3A69 /* Activity Views */ = {
+			isa = PBXGroup;
+			children = (
+				049C79D31B204BC100EF3A69 /* ActivityViewController.h */,
+				049C79D41B204BC100EF3A69 /* ActivityViewController.m */,
+				049C79D51B204BC100EF3A69 /* ActivityViewController.xib */,
+			);
+			name = "Activity Views";
 			sourceTree = "<group>";
 		};
 		04CF1E031B19AAEA00AB4F99 /* BigOvenDataSource */ = {
@@ -575,23 +590,24 @@
 			children = (
 				DD9668C61B16CD02007D0A98 /* AppDelegate.h */,
 				DD9668C71B16CD02007D0A98 /* AppDelegate.m */,
-				DD8076641B1BA80400A27F00 /* MyUITabBarController */,
 				DD9668C91B16CD02007D0A98 /* ViewController.h */,
 				DD9668CA1B16CD02007D0A98 /* ViewController.m */,
 				DD80765D1B1BA64800A27F00 /* ViewController.xib */,
-				DDF277B01B1D8AA3003CD7C0 /* WorkoutViews */,
 				DD80766F1B1BB12600A27F00 /* LoginViewController.h */,
 				DD8076701B1BB12600A27F00 /* LoginViewController.m */,
 				DD8076711B1BB12600A27F00 /* LoginViewController.xib */,
-				04CF221A1B1D1CD500AB4F99 /* CookingViews */,
 				DD9668CC1B16CD02007D0A98 /* Main.storyboard */,
 				DD9668D11B16CD02007D0A98 /* LaunchScreen.xib */,
-				DDF278021B1E9C6E003CD7C0 /* External */,
-				04CF1E071B19CBA600AB4F99 /* Objects */,
+				DD9668CF1B16CD02007D0A98 /* Images.xcassets */,
+				DD8076641B1BA80400A27F00 /* MyUITabBarController */,
+				049C79D21B204BA200EF3A69 /* Activity Views */,
+				04CF221A1B1D1CD500AB4F99 /* CookingViews */,
+				DDF277B01B1D8AA3003CD7C0 /* WorkoutViews */,
 				DDA9E9191B180B4F00E422DA /* WebServiceDataSource */,
 				DDECCC2F1B1A60B00047BA5C /* SQLiteDataSource */,
+				04CF1E071B19CBA600AB4F99 /* Objects */,
 				DDA9E9201B181D1C00E422DA /* Helpers */,
-				DD9668CF1B16CD02007D0A98 /* Images.xcassets */,
+				DDF278021B1E9C6E003CD7C0 /* External */,
 				DD9668C21B16CD02007D0A98 /* Supporting Files */,
 			);
 			path = theMostAmazingFinalProject;
@@ -860,6 +876,7 @@
 				DD9668CE1B16CD02007D0A98 /* Main.storyboard in Resources */,
 				DD8076571B1BA51800A27F00 /* workout2.jpg in Resources */,
 				DD8076561B1BA51800A27F00 /* workout1.jpg in Resources */,
+				049C79D71B204BC100EF3A69 /* ActivityViewController.xib in Resources */,
 				DD80766E1B1BB10800A27F00 /* WorkoutViewController.xib in Resources */,
 				04CF222E1B1D6B2200AB4F99 /* RecipeViewController.xib in Resources */,
 				DD8076631B1BA7F800A27F00 /* MyUITabBarController.xib in Resources */,
@@ -952,6 +969,7 @@
 				04CF222D1B1D6B2200AB4F99 /* RecipeViewController.m in Sources */,
 				04CF227D1B1EC05D00AB4F99 /* WebViewController.m in Sources */,
 				DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */,
+				049C79D61B204BC100EF3A69 /* ActivityViewController.m in Sources */,
 				DDF2780B1B1EB5DE003CD7C0 /* ExerciseTableViewCell.m in Sources */,
 				DDF277FF1B1E9C32003CD7C0 /* OBShapedButton.m in Sources */,
 				04CF1E171B1B6DEA00AB4F99 /* RunKeeperProfile.m in Sources */,
