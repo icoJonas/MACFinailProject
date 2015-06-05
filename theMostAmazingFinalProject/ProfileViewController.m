@@ -42,10 +42,6 @@
     self.lblLocation.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     self.lblName.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     
-    self.runKeeperDataSource = [RunKeeperDataSource new];
-    self.runKeeperDataSource.delegate = self;
-    
-    [self.runKeeperDataSource getProfile];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +60,11 @@
     if (![KeychainHelper getToken]) {
         LoginViewController *lvc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
         [self presentViewController:lvc animated:YES completion:nil];
+    } else {
+        self.runKeeperDataSource = [RunKeeperDataSource new];
+        self.runKeeperDataSource.delegate = self;
+        
+        [self.runKeeperDataSource getProfile];
     }
 }
 

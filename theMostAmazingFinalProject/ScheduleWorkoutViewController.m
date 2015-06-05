@@ -176,6 +176,8 @@
         cell.textLabel.text = [[sqlite getExercisesDetail:[exercisesArray firstObject]] objectForKey:@"name"];
     }
     
+    cell.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.25];
+    
     return cell;
 }
 

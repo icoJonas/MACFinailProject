@@ -29,8 +29,8 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="zBe-nN-D5E"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tng-P4-79B">
@@ -39,6 +39,7 @@
                                 <constraint firstAttribute="width" constant="63" id="Qrw-wA-ZyQ"/>
                             </constraints>
                             <state key="normal" title="Add">
+                                <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -47,14 +48,14 @@
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="N90-9d-XgJ">
                             <rect key="frame" x="0.0" y="35" width="498" height="120"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="Wvr-NA-bMw"/>
                                 <outlet property="delegate" destination="-1" id="1A4-xw-LlI"/>
                             </connections>
                         </tableView>
                     </subviews>
-                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="tng-P4-79B" firstAttribute="leading" secondItem="N90-9d-XgJ" secondAttribute="trailing" constant="-1" id="6wa-mW-NM4"/>
                         <constraint firstAttribute="bottom" secondItem="N90-9d-XgJ" secondAttribute="bottom" id="7gc-ZQ-rWZ"/>
@@ -80,8 +81,8 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="HfJ-9l-Fqp"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zi-LZ-YkV">
@@ -90,6 +91,7 @@
                                         <constraint firstAttribute="height" constant="40" id="ysh-JL-75R"/>
                                     </constraints>
                                     <state key="normal" title="Add">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
@@ -98,14 +100,14 @@
                                 </button>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qDB-ke-Z0P">
                                     <rect key="frame" x="0.0" y="35" width="272" height="215"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <connections>
                                         <outlet property="dataSource" destination="-1" id="b6G-nn-3nn"/>
                                         <outlet property="delegate" destination="-1" id="mco-wU-nx7"/>
                                     </connections>
                                 </tableView>
                             </subviews>
-                            <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="qDB-ke-Z0P" firstAttribute="leading" secondItem="oxx-gN-LtH" secondAttribute="leading" id="0Id-nO-0Tv"/>
                                 <constraint firstItem="qDB-ke-Z0P" firstAttribute="top" secondItem="6BZ-Nq-or6" secondAttribute="bottom" id="1c6-4m-ZgV"/>
@@ -127,8 +129,8 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="iV1-4o-7ob"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFJ-nd-SiC">
@@ -137,6 +139,7 @@
                                         <constraint firstAttribute="height" constant="40" id="BeT-Op-MpM"/>
                                     </constraints>
                                     <state key="normal" title="Add">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
@@ -145,14 +148,14 @@
                                 </button>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UaZ-xq-mvI">
                                     <rect key="frame" x="0.0" y="36" width="272" height="215"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <connections>
                                         <outlet property="dataSource" destination="-1" id="f5a-MK-jsj"/>
                                         <outlet property="delegate" destination="-1" id="RhR-LA-70V"/>
                                     </connections>
                                 </tableView>
                             </subviews>
-                            <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="2k1-qk-JiK" firstAttribute="top" secondItem="fhE-44-s6L" secondAttribute="top" constant="1" id="8dh-zW-9be"/>
                                 <constraint firstItem="2k1-qk-JiK" firstAttribute="leading" secondItem="fhE-44-s6L" secondAttribute="leading" id="Q0C-kn-tyK"/>
@@ -168,13 +171,13 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBQ-8e-qRk">
                             <rect key="frame" x="280" y="0.0" width="1" height="290"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="cxI-Hb-Rri"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="fhE-44-s6L" secondAttribute="trailing" id="8qs-J3-uYv"/>
                         <constraint firstItem="oBQ-8e-qRk" firstAttribute="top" secondItem="8RA-E9-kVe" secondAttribute="top" id="96A-dC-ncY"/>
