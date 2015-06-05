@@ -24,6 +24,7 @@ enum OPERATIONS {
     GET_SCHEDULE_STEP = 8,
     GET_DAYS = 9,
     GET_EXERCISES_FOR_DAY = 10,
+    POST_SCHEDULE = 11,
 };
 
 -(instancetype)init{
@@ -134,6 +135,10 @@ enum OPERATIONS {
     [webHandler doRequest:@"http://wger.de/api/v2/set/" withParameters:set andHeaders:authenticationCredentials andHTTPMethod:@"POST"];
 }
 
+-(void)postASchedule:(NSDictionary *)set{
+    [webHandler doRequest:@"http://wger.de/api/v2/schedule/" withParameters:set andHeaders:authenticationCredentials andHTTPMethod:@"POST"];
+}
+
 #pragma mark - WebServiceHandler delegate methods
 
 -(void)webServiceCallFinished:(id)data{
@@ -219,6 +224,10 @@ enum OPERATIONS {
                     [self.delegate schedulesSyncronized:[NSDictionary dictionaryWithObjects:@[schedules, workouts, scheduleSteps, days, exercises] forKeys:@[@"schedules", @"workouts", @"scheduleSteps", @"days", @"exercises"]]];
                 });
             }
+            break;
+            
+        case POST_SCHEDULE:
+            [self getSchedules];
             break;
             
         default:
