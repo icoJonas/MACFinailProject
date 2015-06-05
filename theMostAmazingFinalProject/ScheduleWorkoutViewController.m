@@ -9,6 +9,8 @@
 #import "ScheduleWorkoutViewController.h"
 #import "BackgroundViewHelper.h"
 #import "ExerciseDetailViewController.h"
+#import "wgerSQLiteDataSource.h"
+#import "AddExercisesViewController.h"
 
 @interface ScheduleWorkoutViewController ()
 
@@ -32,9 +34,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.wgerDataSource = [WorkoutManagerDataSource new];
-    self.wgerDataSource.delegate = self;
-    [activityView startAnimating];
     [self.schedulesTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"scheduleCell"];
     [self.workoutsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"workoutCell"];
     [self.exercisesTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"exerciseCell"];
@@ -45,7 +44,6 @@
     exercisesArr = [NSMutableArray new];
     workoutsArrFiltered = [NSMutableArray new];
     exercisesArrFiltered = [NSMutableArray new];
-    [self.wgerDataSource getSchedules];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,12 +55,27 @@
     [super viewWillAppear:animated];
     [BackgroundViewHelper getSharedInstance].assignedView = self.view;
     [[BackgroundViewHelper getSharedInstance] start];
+    [schedulesArr removeAllObjects];
+    [workoutsArr removeAllObjects];
+    [daysArr removeAllObjects];
+    [exercisesArr removeAllObjects];
+    [workoutsArrFiltered removeAllObjects];
+    [exercisesArrFiltered removeAllObjects];
+    [addExerciseButton setEnabled:NO];
+    [addWorkoutButton setEnabled:NO];
+    [self.schedulesTableView reloadData];
+    [self.workoutsTableView reloadData];
+    [self.exercisesTableView reloadData];
 }
 
-//-(void)viewDidAppear:(BOOL)animated{
-//    [super viewDidAppear:animated];
-//    [self.wgerDataSource getSchedules];
-//}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    WorkoutManagerDataSource *wgerDataSource;
+    wgerDataSource = [WorkoutManagerDataSource new];
+    wgerDataSource.delegate = self;
+    [wgerDataSource getSchedules];
+    [activityView startAnimating];
+}
 
 /*
 #pragma mark - Navigation
@@ -83,6 +96,18 @@
 }
 
 - (IBAction)addExercisesButtonPressed:(id)sender {
+    AddExercisesViewController *aevc = [AddExercisesViewController new];
+    NSDictionary *workoutDic = [workoutsArrFiltered objectAtIndex:self.workoutsTableView.indexPathForSelectedRow.row];
+    NSNumber *workoutId = [workoutDic objectForKey:@"id"];
+    NSNumber *dayId;
+    for (NSDictionary *day in daysArr) {
+        if ([[day objectForKey:@"training"] isEqual:workoutId]) {
+            dayId = [day objectForKey:@"id"];
+        }
+    }
+    aevc.workout = [NSDictionary dictionaryWithObject:dayId forKey:@"exerciseday"];
+    aevc.exercisesArr = [NSArray arrayWithArray:exercisesArrFiltered];
+    [self.navigationController pushViewController:aevc animated:YES];
 }
 
 #pragma mark - WorkoutManagerDataSourceDelegate methods
@@ -107,6 +132,8 @@
     
     [workoutsArrFiltered removeAllObjects];
     [exercisesArrFiltered removeAllObjects];
+    [addExerciseButton setEnabled:NO];
+    [addWorkoutButton setEnabled:NO];
     [self.schedulesTableView reloadData];
     [self.workoutsTableView reloadData];
     [self.exercisesTableView reloadData];
@@ -145,7 +172,8 @@
         cell= [tableView dequeueReusableCellWithIdentifier:@"exerciseCell"];
         NSDictionary *exerciseDic = [exercisesArrFiltered objectAtIndex:indexPath.row];
         NSArray *exercisesArray = [exerciseDic objectForKey:@"exercises"];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@",[exercisesArray firstObject]];
+        wgerSQLiteDataSource *sqlite = [wgerSQLiteDataSource new];
+        cell.textLabel.text = [[sqlite getExercisesDetail:[exercisesArray firstObject]] objectForKey:@"name"];
     }
     
     return cell;
@@ -172,6 +200,8 @@
             }
         }
         [self.workoutsTableView reloadData];
+        [addExerciseButton setEnabled:NO];
+        [addWorkoutButton setEnabled:YES];
     }
     if (tableView == self.workoutsTableView) {
         [exercisesArrFiltered removeAllObjects];
@@ -190,6 +220,8 @@
             }
         }
         [self.exercisesTableView reloadData];
+        [addExerciseButton setEnabled:YES];
+        [addWorkoutButton setEnabled:YES];
     }
     if (tableView == self.exercisesTableView) {
         NSDictionary *exerciseDic = [exercisesArrFiltered objectAtIndex:indexPath.row];

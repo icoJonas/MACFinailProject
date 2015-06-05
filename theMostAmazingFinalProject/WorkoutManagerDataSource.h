@@ -35,4 +35,6 @@
 -(void)getCatalogs;
 -(void)getSchedules;
 
+-(void)postAExerciseForWorkout:(NSDictionary *)set;
+
 @end

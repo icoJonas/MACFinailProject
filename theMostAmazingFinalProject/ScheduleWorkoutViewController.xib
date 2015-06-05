@@ -7,6 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScheduleWorkoutViewController">
             <connections>
                 <outlet property="activityView" destination="GiO-yT-LeM" id="y0d-5D-LP6"/>
+                <outlet property="addExerciseButton" destination="GFJ-nd-SiC" id="pNE-MR-Lny"/>
+                <outlet property="addScheduleButton" destination="tng-P4-79B" id="bGB-Uz-8hH"/>
+                <outlet property="addWorkoutButton" destination="9Zi-LZ-YkV" id="O2m-K7-O0X"/>
                 <outlet property="exercisesTableView" destination="UaZ-xq-mvI" id="dBa-W0-oQk"/>
                 <outlet property="schedulesTableView" destination="N90-9d-XgJ" id="Xri-72-zUv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

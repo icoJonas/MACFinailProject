@@ -45,6 +45,10 @@
     NSUserDefaults *uuidStorage = [NSUserDefaults standardUserDefaults];
     NSString *uuid = [uuidStorage stringForKey:@"UUID_String"];
     
+    if (!uuid) {
+        return nil;
+    }
+    
     //Create the keychain
     KeychainItemWrapper *theKeychain = [[KeychainItemWrapper alloc] initWithIdentifier:uuid accessGroup:nil];
     

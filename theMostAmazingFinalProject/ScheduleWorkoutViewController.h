@@ -11,6 +11,9 @@
 
 @interface ScheduleWorkoutViewController : UIViewController <WorkoutManagerDataSourceDelegate, UITableViewDataSource, UITableViewDelegate>{
     IBOutlet UIActivityIndicatorView *activityView;
+    __weak IBOutlet UIButton *addScheduleButton;
+    __weak IBOutlet UIButton *addWorkoutButton;
+    __weak IBOutlet UIButton *addExerciseButton;
     NSMutableArray *schedulesArr;
     NSMutableArray *workoutsArr;
     NSMutableArray *scheduleStepsArr;
@@ -19,7 +22,5 @@
     NSMutableArray *workoutsArrFiltered;
     NSMutableArray *exercisesArrFiltered;
 }
-
-@property(strong,nonatomic) WorkoutManagerDataSource *wgerDataSource;
 
 @end

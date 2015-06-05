@@ -117,4 +117,8 @@
     return returnDic;
 }
 
+-(NSArray *)getAllExercises{
+    return [self executeQuery:@"SELECT * FROM wger_exercise_catalog WHERE language = 2"];
+}
+
 @end
