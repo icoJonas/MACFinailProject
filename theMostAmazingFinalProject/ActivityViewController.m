@@ -10,7 +10,7 @@
 #import "BackgroundViewHelper.h"
 #import "AnimationHelper.h"
 #import "OBShapedButton.h"
-#import "PostActivityViewController.h"
+#import "ActivitySelectViewController.h"
 #import "ViewProgressViewController.h"
 
 @interface ActivityViewController ()
@@ -82,7 +82,7 @@
 - (IBAction)btnPostActivityPressed:(id)sender
 {
     //Push the new view
-    PostActivityViewController *pavc = [[PostActivityViewController alloc] initWithNibName:@"PostActivityViewController" bundle:nil];
+    ActivitySelectViewController *asvc = [[ActivitySelectViewController alloc] initWithNibName:@"ActivitySelectViewController" bundle:nil];
     
     CATransition* transition = [CATransition animation];
     transition.duration = 1;
@@ -92,7 +92,7 @@
     
     [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
     
-    [self.navigationController pushViewController:pavc animated:YES];
+    [self.navigationController pushViewController:asvc animated:YES];
     
 }
 

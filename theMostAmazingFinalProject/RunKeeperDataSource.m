@@ -87,23 +87,26 @@ enum OPERATIONS {
     [webHandler doRequest:@"http://api.runkeeper.com/profile/" withParameters:nil andHeaders:headers andHTTPMethod:@"GET"];
 }
 
--(void)postFitnessActivity:(FitnessActivity *)aFitnessActivity
+-(void)postFitnessActivity:(FitnessActivityPost *)aFitnessActivityPost
 {
     currentOperation = POST_FITNESS_ACTIVITY;
     
     //Get fitness activity to post
     //User will create a fitness activity object to post.
     //For now create a fitness activity object for posting.
-    FitnessActivityPost *aNewActivity = [[FitnessActivityPost alloc] initDefault];
+//    FitnessActivityPost *aNewActivity = [[FitnessActivityPost alloc] initDefault];
     
     //New fitness activity post created. For the header and send the message to the API
-    //Get the token
-    NSString *AUTH_TOKEN = [KeychainHelper getToken];
+#warning Using hardcoded value for atuhorization token.
+    //    NSString * AUTH_TOKEN = [KeychainHelper getToken];
+    NSString * AUTH_TOKEN = @"3205693701f44eab893db341ae9e2f44";
     NSLog(@"The retrieved token is %@", AUTH_TOKEN);
     //Form the header
     NSDictionary *headers = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Bearer %@", AUTH_TOKEN], @"Authorization", @"application/vnd.com.runkeeper.NewFitnessActivity+json", @"Content-Type", nil];
     
-    NSDictionary *messageBody = [NSDictionary dictionaryWithObjectsAndKeys:aNewActivity.strType,@"type", aNewActivity.strEquipment, @"equipment", aNewActivity.strStartTime, @"start_time", aNewActivity.strNotes, @"notes", aNewActivity.strTotalDistance, @"total_distance", aNewActivity.strDuration, @"duration", aNewActivity.strTotalCalories, @"total_calories", nil];
+//    NSDictionary *messageBody = [NSDictionary dictionaryWithObjectsAndKeys:aNewActivity.strType,@"type", aNewActivity.strEquipment, @"equipment", aNewActivity.strStartTime, @"start_time", aNewActivity.strNotes, @"notes", aNewActivity.strTotalDistance, @"total_distance", aNewActivity.strDuration, @"duration", aNewActivity.strTotalCalories, @"total_calories", nil];
+
+    NSDictionary *messageBody = [NSDictionary dictionaryWithObjectsAndKeys:aFitnessActivityPost.strType,@"type", aFitnessActivityPost.strEquipment, @"equipment", aFitnessActivityPost.strStartTime, @"start_time", aFitnessActivityPost.strNotes, @"notes", aFitnessActivityPost.strTotalDistance, @"total_distance", aFitnessActivityPost.strDuration, @"duration", aFitnessActivityPost.strTotalCalories, @"total_calories", nil];
     
     [webHandler doRequest:@"http://api.runkeeper.com/fitnessActivities" withParameters:messageBody andHeaders:headers andHTTPMethod:@"POST"];
 }
@@ -115,7 +118,8 @@ enum OPERATIONS {
     //Get the token
 #warning Using hardcoded value for atuhorization token.
     //    NSString * AUTH_TOKEN = [KeychainHelper getToken];
-    NSString * AUTH_TOKEN = @"3205693701f44eab893db341ae9e2f44";    NSLog(@"The retrieved token is %@", AUTH_TOKEN);
+    NSString * AUTH_TOKEN = @"3205693701f44eab893db341ae9e2f44";
+    NSLog(@"The retrieved token is %@", AUTH_TOKEN);
     //Form the header
     NSDictionary *headers = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Bearer %@", AUTH_TOKEN], @"Authorization", @"application/vnd.com.runkeeper.SleepSetFeed+json", @"Accept", @"application/vnd.com.runkeeper.SleepSetFeed+json", @"Content-Type", nil];
     
@@ -204,7 +208,10 @@ enum OPERATIONS {
     }
     else if (currentOperation == POST_FITNESS_ACTIVITY)
     {
-        NSLog(@"Post was successfull. Diplay something notifying the user.");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Post Successful" message:@"Posted fitness activity to RunKeeper!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        });
     }
     else if (currentOperation == GET_SLEEP_FEED)
     {
@@ -218,7 +225,7 @@ enum OPERATIONS {
     }
     else if (currentOperation == POST_SLEEP_ACTIVITY)
     {
-        NSLog(@"Post was successful. Display something notifying the user.");
+        NSLog(@"Post was successfull. Diplay something notifying the user.");
     }
 }
 

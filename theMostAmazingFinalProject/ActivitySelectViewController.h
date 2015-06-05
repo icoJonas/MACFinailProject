@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PostActivityViewController : UIViewController
-
-@property (strong, nonatomic) NSMutableArray * someActivityInfo;
+@interface ActivitySelectViewController : UIViewController
 
 @end

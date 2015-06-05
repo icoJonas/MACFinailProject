@@ -13,10 +13,12 @@
 		046E79D91B1828BF00E23F88 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E79D81B1828BF00E23F88 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		049C79D61B204BC100EF3A69 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049C79D41B204BC100EF3A69 /* ActivityViewController.m */; };
 		049C79D71B204BC100EF3A69 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C79D51B204BC100EF3A69 /* ActivityViewController.xib */; };
-		049C79E91B20B52600EF3A69 /* PostActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049C79E71B20B52600EF3A69 /* PostActivityViewController.m */; };
-		049C79EA1B20B52600EF3A69 /* PostActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C79E81B20B52600EF3A69 /* PostActivityViewController.xib */; };
+		049C79E91B20B52600EF3A69 /* ActivitySelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049C79E71B20B52600EF3A69 /* ActivitySelectViewController.m */; };
+		049C79EA1B20B52600EF3A69 /* ActivitySelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C79E81B20B52600EF3A69 /* ActivitySelectViewController.xib */; };
 		049C79F11B20B66700EF3A69 /* ViewProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049C79EF1B20B66700EF3A69 /* ViewProgressViewController.m */; };
 		049C79F21B20B66700EF3A69 /* ViewProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C79F01B20B66700EF3A69 /* ViewProgressViewController.xib */; };
+		049C79F61B20EF2900EF3A69 /* PostActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049C79F41B20EF2900EF3A69 /* PostActivityViewController.m */; };
+		049C79F71B20EF2900EF3A69 /* PostActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C79F51B20EF2900EF3A69 /* PostActivityViewController.xib */; };
 		04CF1E061B19AB1300AB4F99 /* BigOvenDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E051B19AB1300AB4F99 /* BigOvenDataSource.m */; };
 		04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E091B19CBB800AB4F99 /* Recipe.m */; };
 		04CF1E0E1B1A15CD00AB4F99 /* RecipeSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E0D1B1A15CD00AB4F99 /* RecipeSearchResult.m */; };
@@ -111,12 +113,15 @@
 		049C79D31B204BC100EF3A69 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
 		049C79D41B204BC100EF3A69 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 		049C79D51B204BC100EF3A69 /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
-		049C79E61B20B52600EF3A69 /* PostActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostActivityViewController.h; sourceTree = "<group>"; };
-		049C79E71B20B52600EF3A69 /* PostActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostActivityViewController.m; sourceTree = "<group>"; };
-		049C79E81B20B52600EF3A69 /* PostActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostActivityViewController.xib; sourceTree = "<group>"; };
+		049C79E61B20B52600EF3A69 /* ActivitySelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectViewController.h; sourceTree = "<group>"; };
+		049C79E71B20B52600EF3A69 /* ActivitySelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySelectViewController.m; sourceTree = "<group>"; };
+		049C79E81B20B52600EF3A69 /* ActivitySelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivitySelectViewController.xib; sourceTree = "<group>"; };
 		049C79EE1B20B66700EF3A69 /* ViewProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewProgressViewController.h; sourceTree = "<group>"; };
 		049C79EF1B20B66700EF3A69 /* ViewProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewProgressViewController.m; sourceTree = "<group>"; };
 		049C79F01B20B66700EF3A69 /* ViewProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewProgressViewController.xib; sourceTree = "<group>"; };
+		049C79F31B20EF2900EF3A69 /* PostActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostActivityViewController.h; sourceTree = "<group>"; };
+		049C79F41B20EF2900EF3A69 /* PostActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostActivityViewController.m; sourceTree = "<group>"; };
+		049C79F51B20EF2900EF3A69 /* PostActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostActivityViewController.xib; sourceTree = "<group>"; };
 		04CF1E041B19AB1300AB4F99 /* BigOvenDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigOvenDataSource.h; sourceTree = "<group>"; };
 		04CF1E051B19AB1300AB4F99 /* BigOvenDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigOvenDataSource.m; sourceTree = "<group>"; };
 		04CF1E081B19CBB800AB4F99 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
@@ -346,9 +351,12 @@
 				049C79D31B204BC100EF3A69 /* ActivityViewController.h */,
 				049C79D41B204BC100EF3A69 /* ActivityViewController.m */,
 				049C79D51B204BC100EF3A69 /* ActivityViewController.xib */,
-				049C79E61B20B52600EF3A69 /* PostActivityViewController.h */,
-				049C79E71B20B52600EF3A69 /* PostActivityViewController.m */,
-				049C79E81B20B52600EF3A69 /* PostActivityViewController.xib */,
+				049C79E61B20B52600EF3A69 /* ActivitySelectViewController.h */,
+				049C79E71B20B52600EF3A69 /* ActivitySelectViewController.m */,
+				049C79E81B20B52600EF3A69 /* ActivitySelectViewController.xib */,
+				049C79F31B20EF2900EF3A69 /* PostActivityViewController.h */,
+				049C79F41B20EF2900EF3A69 /* PostActivityViewController.m */,
+				049C79F51B20EF2900EF3A69 /* PostActivityViewController.xib */,
 				049C79EE1B20B66700EF3A69 /* ViewProgressViewController.h */,
 				049C79EF1B20B66700EF3A69 /* ViewProgressViewController.m */,
 				049C79F01B20B66700EF3A69 /* ViewProgressViewController.xib */,
@@ -871,6 +879,7 @@
 			files = (
 				DDF277F91B1E9AD7003CD7C0 /* nutrition_icon.png in Resources */,
 				DDF277FA1B1E9AD7003CD7C0 /* schedule_icon.png in Resources */,
+				049C79F71B20EF2900EF3A69 /* PostActivityViewController.xib in Resources */,
 				DDF277B51B1D8ADC003CD7C0 /* MusclesTableViewCell.xib in Resources */,
 				04CF22291B1D4D6E00AB4F99 /* SearchResultTableViewCell.xib in Resources */,
 				DD80765E1B1BA64800A27F00 /* ViewController.xib in Resources */,
@@ -901,7 +910,7 @@
 				DD3C398F1B1FE0F800D09B2E /* ExerciseDetailViewController.xib in Resources */,
 				DDF2780C1B1EB5DE003CD7C0 /* ExerciseTableViewCell.xib in Resources */,
 				DD9668D01B16CD02007D0A98 /* Images.xcassets in Resources */,
-				049C79EA1B20B52600EF3A69 /* PostActivityViewController.xib in Resources */,
+				049C79EA1B20B52600EF3A69 /* ActivitySelectViewController.xib in Resources */,
 				DDF277F41B1E94BF003CD7C0 /* MuscleSelectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -978,10 +987,11 @@
 				04CF1E1F1B1C305400AB4F99 /* SleepActivity.m in Sources */,
 				04CF1E111B1A955F00AB4F99 /* FitnessActivity.m in Sources */,
 				DDF277F31B1E94BF003CD7C0 /* MuscleSelectionViewController.m in Sources */,
+				049C79F61B20EF2900EF3A69 /* PostActivityViewController.m in Sources */,
 				04CF22281B1D4D6E00AB4F99 /* SearchResultTableViewCell.m in Sources */,
 				04CF22781B1EB0A300AB4F99 /* DirectionsViewController.m in Sources */,
 				04CF22811B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m in Sources */,
-				049C79E91B20B52600EF3A69 /* PostActivityViewController.m in Sources */,
+				049C79E91B20B52600EF3A69 /* ActivitySelectViewController.m in Sources */,
 				DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */,
 				DD8076781B1BC3E800A27F00 /* AnimationHelper.m in Sources */,
 				DD8076721B1BB12600A27F00 /* LoginViewController.m in Sources */,
@@ -1156,7 +1166,6 @@
 					"\"SCNetworkReachability\"",
 					"-framework",
 					"\"SDWebImage\"",
-					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1186,7 +1195,6 @@
 					"\"SCNetworkReachability\"",
 					"-framework",
 					"\"SDWebImage\"",
-					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
