@@ -55,11 +55,14 @@ enum OPERATIONS {
 {
     currentOperation = GET_FITNESS_ACTIVITIES;
     
-    //Get the token from the keychain to form the header
-    NSString *AUTH_TOKEN = [KeychainHelper getToken];
+#warning Using hardcoded value for atuhorization token.
+    //    NSString * AUTH_TOKEN = [KeychainHelper getToken];
+    NSString * AUTH_TOKEN = @"3205693701f44eab893db341ae9e2f44";
     NSLog(@"The retrieved token is %@", AUTH_TOKEN);
+    
     //Form the header
     NSDictionary *headers = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Bearer %@", AUTH_TOKEN], @"Authorization", @"application/vnd.com.runkeeper.FitnessActivityFeed+json", @"Content-Type", nil];
+    
     [webHandler doRequest:@"http://api.runkeeper.com/fitnessActivities" withParameters:nil andHeaders:headers andHTTPMethod:@"GET"];
 }
 
@@ -192,8 +195,8 @@ enum OPERATIONS {
         {
             FitnessActivity *aFitnessActivity = [[FitnessActivity alloc] initWithJSONDict:aFitnessActivityDict];
             [arrFitnessActivities addObject:aFitnessActivity];
-            
         }
+        [self.delegate returnFitnessActivities:arrFitnessActivities];
     }
     else if (currentOperation == GET_USER)
     {

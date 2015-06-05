@@ -15,10 +15,18 @@
 #import "SleepActivity.h"
 #import "SleepActivityPost.h"
 
+@protocol RunKeeperDataSourceDelegate <NSObject>
+
+-(void)returnFitnessActivities:(NSArray*)arrFitnessActivities;
+
+@end
+
 @interface RunKeeperDataSource : NSObject <WebServiceHandlerDelegate> {
     int currentOperation;
     WebServiceHandler *webHandler;
 }
+
+@property (weak, nonatomic) id <RunKeeperDataSourceDelegate> delegate;
 
 -(void)getToken:(NSString *)CODE;
 -(void)getFitnessActivities;
