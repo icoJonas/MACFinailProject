@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CookingViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UIButton *btnSearchForRecipes;
 @property (strong, nonatomic) IBOutlet UIButton *btnViewSavedRecipes;
 

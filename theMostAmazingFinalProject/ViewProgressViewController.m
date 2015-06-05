@@ -37,10 +37,6 @@ enum{
     RunKeeperDataSource *rkds = [[RunKeeperDataSource alloc] init];
     rkds.delegate = self;
     [rkds getFitnessActivities];
-
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [rkds getFitnessActivities];
-//    });
 }
 
 -(void)viewWillAppear:(BOOL)animated

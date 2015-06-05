@@ -10,6 +10,7 @@
 #import "RecipeSearchViewController.h"
 #import "BackgroundViewHelper.h"
 #import "FavoritesViewController.h"
+#import "AnimationHelper.h"
 
 enum OPERATIONS {
     SEARCH_LOCAL = 1,
@@ -36,15 +37,19 @@ enum OPERATIONS {
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [BackgroundViewHelper getSharedInstance].assignedView = self.view;
     [[BackgroundViewHelper getSharedInstance] start];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [AnimationHelper popIn:self.btnSearchForRecipes withDuration:1.0 andWait:0 andScaleFactor:.25];
+    [AnimationHelper popIn:self.btnViewSavedRecipes withDuration:1.0 andWait:0 andScaleFactor:.25];
+
+    [AnimationHelper popIn:self.btnSearchForRecipes withDuration:2.0 andWait:0 andScaleFactor:1];
+    [AnimationHelper popIn:self.btnViewSavedRecipes withDuration:2.0 andWait:0 andScaleFactor:1];
 }
 
 #pragma mark - Button methods
@@ -59,8 +64,6 @@ message:@"Please select where I should search" delegate:self cancelButtonTitle:@
 
 -(IBAction)btnViewSavedRecipesPressed:(UIButton *)sender
 {
-//    __weak CookingViewController *wSelf = [[CookingViewController alloc] initWithNibName:@"CookingViewController" bundle:nil];
-    
     FavoritesViewController *fvc = [[FavoritesViewController alloc] initWithNibName:@"FavoritesViewController" bundle:nil];
     
     CATransition* transition = [CATransition animation];
@@ -69,13 +72,10 @@ message:@"Please select where I should search" delegate:self cancelButtonTitle:@
     transition.type = kCATransitionPush; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
     transition.subtype = kCATransitionFromTop; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
     
-//    [wSelf.navigationController.view.layer addAnimation:transition forKey:kCATransition];
-    
     [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
 
     
     dispatch_async(dispatch_get_main_queue(), ^{
-//        [wSelf.navigationController pushViewController:fvc animated:YES];
         [self.navigationController pushViewController:fvc animated:YES];
     });
 }
@@ -96,17 +96,14 @@ message:@"Please select where I should search" delegate:self cancelButtonTitle:@
         recipeSVC.searchParameter = SEARCH_ONLINE;
     }
     
-    //Present the next view controller.
-    
-    
-    //    [self presentViewController:recipeSVC animated:YES completion:nil];
-    
+    //Set animations
     CATransition* transition = [CATransition animation];
     transition.duration = .5;
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     transition.type = kCATransitionPush; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
     transition.subtype = kCATransitionFromRight; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
     
+    //Present the next view controller
     [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
     [self.navigationController pushViewController:recipeSVC animated:YES];
 }
