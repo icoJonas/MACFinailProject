@@ -10,6 +10,7 @@
 #import "BackgroundViewHelper.h"
 #import "AnimationHelper.h"
 #import "MuscleSelectionViewController.h"
+#import "ScheduleWorkoutViewController.h"
 
 @interface WorkoutViewController () <WorkoutManagerDataSourceDelegate>
 
@@ -65,10 +66,6 @@
     [super viewWillDisappear:animated];
     [scheduleButton setAlpha:0.0];
     [exerciseButton setAlpha:0.0];
-//    [AnimationHelper changeViewSize:scheduleButton withFrame:CGRectMake(scheduleButtonOriginalFrame.origin.x-500, scheduleButtonOriginalFrame.origin.y, scheduleButtonOriginalFrame.size.width, scheduleButtonOriginalFrame.size.height) withDuration:0.0 andWait:0.0];
-//    [AnimationHelper changeViewSize:exerciseButton withFrame:CGRectMake(exerciseButtonOriginalFrame.origin.x+500, exerciseButtonOriginalFrame.origin.y, exerciseButtonOriginalFrame.size.width, exerciseButtonOriginalFrame.size.height) withDuration:0.0 andWait:0.0];
-//    scheduleButtonOriginalFrame = CGRectZero;
-//    exerciseButtonOriginalFrame = CGRectZero;
 }
 
 /*
@@ -89,11 +86,20 @@
     [self performSelector:@selector(animateAfter) withObject:nil afterDelay:0.5];
 }
 
+#pragma mark - UI methods
+
 -(void)animateAfter{
     [AnimationHelper fadeIn:scheduleButton withDuration:0.4 andWait:0.0];
     [AnimationHelper fadeIn:exerciseButton withDuration:0.4 andWait:0.0];
     [AnimationHelper transitionView:scheduleButton toRect:scheduleButtonOriginalFrame WithSpringWithDamping:0.6 andVelocity:1.0 andTransitionTime:0.8 andWaitTime:0.0];
     [AnimationHelper transitionView:exerciseButton toRect:exerciseButtonOriginalFrame WithSpringWithDamping:0.6 andVelocity:1.0 andTransitionTime:0.8 andWaitTime:0.0];
+}
+
+#pragma mark - User interaction methods
+
+- (IBAction)goToScheduleView:(id)sender {
+    ScheduleWorkoutViewController *scheduleVC = [[ScheduleWorkoutViewController alloc] init];
+    [self.navigationController pushViewController:scheduleVC animated:YES];
 }
 
 - (IBAction)goToMuscleSelection:(id)sender {
