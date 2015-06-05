@@ -34,6 +34,8 @@ enum{
     
     self.arrDataToLoad = [[NSMutableArray alloc] init];
     
+    self.segcntrSelection.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    
     RunKeeperDataSource *rkds = [[RunKeeperDataSource alloc] init];
     rkds.delegate = self;
     [rkds getFitnessActivities];

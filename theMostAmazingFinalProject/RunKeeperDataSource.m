@@ -55,9 +55,8 @@ enum OPERATIONS {
 {
     currentOperation = GET_FITNESS_ACTIVITIES;
     
-#warning Using hardcoded value for atuhorization token.
+    //Get the token
     NSString * AUTH_TOKEN = [KeychainHelper getToken];
-//    NSString * AUTH_TOKEN = @"3205693701f44eab893db341ae9e2f44";
     NSLog(@"The retrieved token is %@", AUTH_TOKEN);
     
     //Form the header
@@ -95,13 +94,11 @@ enum OPERATIONS {
     currentOperation = POST_FITNESS_ACTIVITY;
     
     //Create the header and send the message to the API
-#warning Using hardcoded value for atuhorization token.
-    //    NSString * AUTH_TOKEN = [KeychainHelper getToken];
-    NSString * AUTH_TOKEN = @"3205693701f44eab893db341ae9e2f44";
+    NSString * AUTH_TOKEN = [KeychainHelper getToken];
     NSLog(@"The retrieved token is %@", AUTH_TOKEN);
     //Form the header
     NSDictionary *headers = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Bearer %@", AUTH_TOKEN], @"Authorization", @"application/vnd.com.runkeeper.NewFitnessActivity+json", @"Content-Type", nil];
-
+    
     NSDictionary *messageBody = [NSDictionary dictionaryWithObjectsAndKeys:aFitnessActivityPost.strType,@"type", aFitnessActivityPost.strEquipment, @"equipment", aFitnessActivityPost.strStartTime, @"start_time", aFitnessActivityPost.strNotes, @"notes", aFitnessActivityPost.strTotalDistance, @"total_distance", aFitnessActivityPost.strDuration, @"duration", aFitnessActivityPost.strTotalCalories, @"total_calories", nil];
     
     [webHandler doRequest:@"http://api.runkeeper.com/fitnessActivities" withParameters:messageBody andHeaders:headers andHTTPMethod:@"POST"];
@@ -112,9 +109,7 @@ enum OPERATIONS {
     currentOperation = GET_SLEEP_FEED;
     
     //Get the token
-#warning Using hardcoded value for atuhorization token.
-    //    NSString * AUTH_TOKEN = [KeychainHelper getToken];
-    NSString * AUTH_TOKEN = @"3205693701f44eab893db341ae9e2f44";
+    NSString * AUTH_TOKEN = [KeychainHelper getToken];
     NSLog(@"The retrieved token is %@", AUTH_TOKEN);
     //Form the header
     NSDictionary *headers = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Bearer %@", AUTH_TOKEN], @"Authorization", @"application/vnd.com.runkeeper.SleepSetFeed+json", @"Accept", @"application/vnd.com.runkeeper.SleepSetFeed+json", @"Content-Type", nil];
@@ -126,10 +121,8 @@ enum OPERATIONS {
 {
     currentOperation = GET_SLEEP_ACTIVITY;
     
-//    Get the token
-#warning Using hardcoded value for atuhorization token.
-//    NSString * AUTH_TOKEN = [KeychainHelper getToken];
-    NSString * AUTH_TOKEN = @"3205693701f44eab893db341ae9e2f44";
+    //Get the token
+    NSString * AUTH_TOKEN = [KeychainHelper getToken];
     NSLog(@"The retrieved token is %@", AUTH_TOKEN);
     //Form the header
     NSDictionary *headers = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Bearer %@", AUTH_TOKEN], @"Authorization", @"application/vnd.com.runkeeper.SleepSet+json", @"Content-Type", nil];
@@ -141,13 +134,11 @@ enum OPERATIONS {
 {
     currentOperation = POST_SLEEP_ACTIVITY;
     
-   //Create a sleep activity for use. It will eventually be an object generated from user input.
+    //Create a sleep activity for use. It will eventually be an object generated from user input.
     SleepActivityPost *defaultSleepActivity = [[SleepActivityPost alloc] initWithDefault];
     
     //Form the API request using the token
-#warning Using hardcoded value for atuhorization token.
-    //    NSString * AUTH_TOKEN = [KeychainHelper getToken];
-    NSString * AUTH_TOKEN = @"3205693701f44eab893db341ae9e2f44";
+    NSString * AUTH_TOKEN = [KeychainHelper getToken];
     NSLog(@"The retrieved token is %@", AUTH_TOKEN);
     //Form the header
     NSDictionary *headers = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Bearer %@", AUTH_TOKEN], @"Authorization", @"application/vnd.com.runkeeper.NewSleepSet+json", @"Content-Type", nil];
@@ -202,6 +193,8 @@ enum OPERATIONS {
     {
         //Profile object contains user personal information and location
         RunKeeperProfile *rkProfile = [[RunKeeperProfile alloc] initWithJSONDict:jsonObject];
+        
+        [self.delegate returnRunKeeperProfile:rkProfile];
     }
     else if (currentOperation == POST_FITNESS_ACTIVITY)
     {
