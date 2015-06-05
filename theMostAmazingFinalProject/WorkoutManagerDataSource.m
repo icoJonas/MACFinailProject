@@ -19,6 +19,11 @@ enum OPERATIONS {
     GET_MUSCLES = 3,
     GET_EXERCISES = 4,
     GET_IMAGES = 5,
+    GET_SCHEDULES = 6,
+    GET_WORKOUTS = 7,
+    GET_SCHEDULE_STEP = 8,
+    GET_DAYS = 9,
+    GET_EXERCISES_FOR_DAY = 10,
 };
 
 -(instancetype)init{
@@ -28,6 +33,12 @@ enum OPERATIONS {
         attempts = 0;
         webHandler = [[WebServiceHandler alloc] initWithDelegate:self];
         sqliteDataSource = [wgerSQLiteDataSource new];
+        authenticationCredentials = [NSDictionary dictionaryWithObjects:@[@"Token 821d0e09f08fd6e459f2379e041becdbdc18ab8c"] forKeys:@[@"Authorization"]];
+        schedules = [NSMutableArray new];
+        workouts = [NSMutableArray new];
+        scheduleSteps = [NSMutableArray new];
+        days = [NSMutableArray new];
+        exercises = [NSMutableArray new];
     }
     return self;
 }
@@ -51,9 +62,9 @@ enum OPERATIONS {
 }
 
 -(void)storeExercises:(NSDictionary *)dic{
-    NSArray *exercises = [dic objectForKey:@"results"];
+    NSArray *exercisesArr = [dic objectForKey:@"results"];
     NSMutableArray *parsedData = [NSMutableArray new];
-    for (NSDictionary *aExercise in exercises) {
+    for (NSDictionary *aExercise in exercisesArr) {
         int identifier = [[aExercise objectForKey:@"id"] intValue];
         NSString *description = [aExercise objectForKey:@"description"];
         description = [description stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
@@ -73,9 +84,9 @@ enum OPERATIONS {
 }
 
 -(void)storeImages:(NSDictionary *)dic{
-    NSArray *exercises = [dic objectForKey:@"results"];
+    NSArray *exercisesArr = [dic objectForKey:@"results"];
     NSMutableArray *parsedData = [NSMutableArray new];
-    for (NSDictionary *aExercise in exercises) {
+    for (NSDictionary *aExercise in exercisesArr) {
         NSMutableDictionary *exercisesDic = [[NSMutableDictionary alloc] initWithDictionary:aExercise];
         [exercisesDic removeObjectsForKeys:@[@"license", @"license_author", @"status", @"is_main"]];
         [exercisesDic setObject:[NSString stringWithFormat:@"https://wger.de/media/%@",[aExercise objectForKey:@"image"]] forKey:@"image"];
@@ -112,6 +123,11 @@ enum OPERATIONS {
             });
         }
     }
+}
+
+-(void)getSchedules{
+    currentOperation = GET_SCHEDULES;
+    [webHandler doRequest:@"http://wger.de/api/v2/schedule/?format=json" withParameters:nil andHeaders:authenticationCredentials andHTTPMethod:@"GET"];
 }
 
 #pragma mark - WebServiceHandler delegate methods
@@ -160,12 +176,53 @@ enum OPERATIONS {
             [self storeImages:jsonObject];
             break;
             
+        case GET_SCHEDULES:
+            [schedules addObjectsFromArray:(NSArray *)[jsonObject objectForKey:@"results"]];
+            if (!nextPage) {
+                currentOperation = GET_WORKOUTS;
+                nextPage = @"http://wger.de/api/v2/workout/";
+            }
+            break;
+            
+        case GET_WORKOUTS:
+            [workouts addObjectsFromArray:(NSArray *)[jsonObject objectForKey:@"results"]];
+            if (!nextPage) {
+                currentOperation = GET_SCHEDULE_STEP;
+                nextPage = @"http://wger.de/api/v2/schedulestep/";
+            }
+            break;
+            
+        case GET_SCHEDULE_STEP:
+            [scheduleSteps addObjectsFromArray:(NSArray *)[jsonObject objectForKey:@"results"]];
+            if (!nextPage) {
+                currentOperation = GET_DAYS;
+                nextPage = @"http://wger.de/api/v2/day/";
+            }
+            break;
+            
+        case GET_DAYS:
+            [days addObjectsFromArray:(NSArray *)[jsonObject objectForKey:@"results"]];
+            if (!nextPage) {
+                currentOperation = GET_EXERCISES_FOR_DAY;
+                nextPage = @"http://wger.de/api/v2/set/";
+            }
+            break;
+            
+        case GET_EXERCISES_FOR_DAY:
+            [exercises addObjectsFromArray:(NSArray *)[jsonObject objectForKey:@"results"]];
+            if (!nextPage) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.delegate schedulesSyncronized:[NSDictionary dictionaryWithObjects:@[schedules, workouts, scheduleSteps, days, exercises] forKeys:@[@"schedules", @"workouts", @"scheduleSteps", @"days", @"exercises"]]];
+                });
+            }
+            break;
+            
         default:
             break;
     }
         
     if (nextPage) {
-        [webHandler doRequest:nextPage withParameters:nil andHeaders:nil andHTTPMethod:@"GET"];
+        [webHandler doRequest:nextPage withParameters:nil andHeaders:authenticationCredentials andHTTPMethod:@"GET"];
     } else {
         if (currentOperation == GET_IMAGES && self.delegate) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -181,12 +238,17 @@ enum OPERATIONS {
     if ([error.userInfo objectForKey:@"NSErrorFailingURLStringKey"]) {
         if (attempts < 3) {
             NSString *strURL = [error.userInfo objectForKey:@"NSErrorFailingURLStringKey"];
-            [webHandler doRequest:strURL withParameters:nil andHeaders:nil andHTTPMethod:@"GET"];
+            [webHandler doRequest:strURL withParameters:nil andHeaders:authenticationCredentials andHTTPMethod:@"GET"];
             attempts ++;
         } else {
             if (self.delegate) {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.delegate catalogsUpdated];
+                    if ([self.delegate respondsToSelector:@selector(catalogsUpdated)]) {
+                        [self.delegate catalogsUpdated];
+                    }
+                    if ([self.delegate respondsToSelector:@selector(schedulesSyncronized:)]) {
+                        [self.delegate schedulesSyncronized:@{}];
+                    }
                 });
             }
         }

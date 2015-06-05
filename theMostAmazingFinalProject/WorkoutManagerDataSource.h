@@ -14,6 +14,7 @@
 @optional
 
 -(void)catalogsUpdated;
+-(void)schedulesSyncronized:(NSDictionary *)schedules;
 
 @end
 
@@ -21,10 +22,17 @@
     int currentOperation;
     int attempts;
     WebServiceHandler *webHandler;
+    NSDictionary *authenticationCredentials;
+    NSMutableArray *schedules;
+    NSMutableArray *workouts;
+    NSMutableArray *scheduleSteps;
+    NSMutableArray *days;
+    NSMutableArray *exercises;
 }
 
 @property (nonatomic, weak) id <WorkoutManagerDataSourceDelegate> delegate;
 
 -(void)getCatalogs;
+-(void)getSchedules;
 
 @end

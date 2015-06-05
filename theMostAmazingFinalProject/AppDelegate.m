@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "KeychainHelper.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -73,6 +75,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+//    LoginViewController *lvc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+//    [self.window.rootViewController presentViewController:lvc animated:YES completion:nil];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
