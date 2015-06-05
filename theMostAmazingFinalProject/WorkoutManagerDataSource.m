@@ -130,6 +130,10 @@ enum OPERATIONS {
     [webHandler doRequest:@"http://wger.de/api/v2/schedule/?format=json" withParameters:nil andHeaders:authenticationCredentials andHTTPMethod:@"GET"];
 }
 
+-(void)postAExerciseForWorkout:(NSDictionary *)set{
+    [webHandler doRequest:@"http://wger.de/api/v2/set/" withParameters:set andHeaders:authenticationCredentials andHTTPMethod:@"POST"];
+}
+
 #pragma mark - WebServiceHandler delegate methods
 
 -(void)webServiceCallFinished:(id)data{

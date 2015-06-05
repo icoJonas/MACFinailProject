@@ -59,6 +59,8 @@
 		DD3C398F1B1FE0F800D09B2E /* ExerciseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3C398D1B1FE0F800D09B2E /* ExerciseDetailViewController.xib */; };
 		DD3C39941B201B2B00D09B2E /* ScheduleWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C39921B201B2B00D09B2E /* ScheduleWorkoutViewController.m */; };
 		DD3C39951B201B2B00D09B2E /* ScheduleWorkoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3C39931B201B2B00D09B2E /* ScheduleWorkoutViewController.xib */; };
+		DD3C39991B2145FA00D09B2E /* AddExercisesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C39971B2145FA00D09B2E /* AddExercisesViewController.m */; };
+		DD3C399A1B2145FA00D09B2E /* AddExercisesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3C39981B2145FA00D09B2E /* AddExercisesViewController.xib */; };
 		DD8076561B1BA51800A27F00 /* workout1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076501B1BA51800A27F00 /* workout1.jpg */; };
 		DD8076571B1BA51800A27F00 /* workout2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076511B1BA51800A27F00 /* workout2.jpg */; };
 		DD8076581B1BA51800A27F00 /* workout3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076521B1BA51800A27F00 /* workout3.jpg */; };
@@ -197,6 +199,9 @@
 		DD3C39911B201B2B00D09B2E /* ScheduleWorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleWorkoutViewController.h; sourceTree = "<group>"; };
 		DD3C39921B201B2B00D09B2E /* ScheduleWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleWorkoutViewController.m; sourceTree = "<group>"; };
 		DD3C39931B201B2B00D09B2E /* ScheduleWorkoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleWorkoutViewController.xib; sourceTree = "<group>"; };
+		DD3C39961B2145FA00D09B2E /* AddExercisesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExercisesViewController.h; sourceTree = "<group>"; };
+		DD3C39971B2145FA00D09B2E /* AddExercisesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExercisesViewController.m; sourceTree = "<group>"; };
+		DD3C39981B2145FA00D09B2E /* AddExercisesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddExercisesViewController.xib; sourceTree = "<group>"; };
 		DD8076501B1BA51800A27F00 /* workout1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout1.jpg; sourceTree = "<group>"; };
 		DD8076511B1BA51800A27F00 /* workout2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout2.jpg; sourceTree = "<group>"; };
 		DD8076521B1BA51800A27F00 /* workout3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout3.jpg; sourceTree = "<group>"; };
@@ -653,6 +658,9 @@
 				DD3C39911B201B2B00D09B2E /* ScheduleWorkoutViewController.h */,
 				DD3C39921B201B2B00D09B2E /* ScheduleWorkoutViewController.m */,
 				DD3C39931B201B2B00D09B2E /* ScheduleWorkoutViewController.xib */,
+				DD3C39961B2145FA00D09B2E /* AddExercisesViewController.h */,
+				DD3C39971B2145FA00D09B2E /* AddExercisesViewController.m */,
+				DD3C39981B2145FA00D09B2E /* AddExercisesViewController.xib */,
 			);
 			name = WorkoutViews;
 			sourceTree = "<group>";
@@ -790,6 +798,7 @@
 				DD8076561B1BA51800A27F00 /* workout1.jpg in Resources */,
 				049C79D71B204BC100EF3A69 /* ActivityViewController.xib in Resources */,
 				049C79FF1B212DE900EF3A69 /* post_icon.png in Resources */,
+				DD3C399A1B2145FA00D09B2E /* AddExercisesViewController.xib in Resources */,
 				DD80766E1B1BB10800A27F00 /* WorkoutViewController.xib in Resources */,
 				04CF222E1B1D6B2200AB4F99 /* RecipeViewController.xib in Resources */,
 				DD8076631B1BA7F800A27F00 /* MyUITabBarController.xib in Resources */,
@@ -869,6 +878,7 @@
 				DD8076751B1BBF4700A27F00 /* wgerSQLiteDataSource.m in Sources */,
 				DD8076741B1BBF3F00A27F00 /* SQLiteDataSource.m in Sources */,
 				DDF278001B1E9C32003CD7C0 /* UIImage+ColorAtPixel.m in Sources */,
+				DD3C39991B2145FA00D09B2E /* AddExercisesViewController.m in Sources */,
 				DDF278061B1EB3C7003CD7C0 /* ExerciseSelectionViewController.m in Sources */,
 				DD9668CB1B16CD02007D0A98 /* ViewController.m in Sources */,
 				04CF22731B1E97D900AB4F99 /* IngredientsTableViewController.m in Sources */,

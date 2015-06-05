@@ -35,6 +35,8 @@
         
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:parameters options:NSJSONWritingPrettyPrinted error:&parameterParsingError];
         [request setHTTPBody:jsonData];
+        NSString *json = [[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",json);
     }
     if (headers)
     {
