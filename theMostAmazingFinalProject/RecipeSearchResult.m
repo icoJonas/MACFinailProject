@@ -29,4 +29,20 @@
     return self;
 }
 
++(RecipeSearchResult *)buildObjectForRecipe:(Recipe *)recipe
+{
+    RecipeSearchResult *searchResult = [RecipeSearchResult new];
+    searchResult.strSearchYieldNumber = recipe.strRecipeYieldNumber;
+    searchResult.strSearchTitle = recipe.strRecipeTitle;
+    searchResult.strSearchQualityScore = @"";
+    searchResult.strSearchImageURL120 = recipe.strRecipeImageURL120;
+    searchResult.strSearchStarRating = recipe.strRecipeStarRating;
+    searchResult.strSearchRecipeID = recipe.strRecipeID;
+    searchResult.strSearchCategory = recipe.strRecipeCategory;
+    searchResult.strSearchCuisine = recipe.strRecipeCuisine;
+    
+    return searchResult;
+}
+
+
 @end

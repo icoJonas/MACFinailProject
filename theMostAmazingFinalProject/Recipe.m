@@ -92,5 +92,32 @@
     return self;
 }
 
++(Recipe *)buildRecipeObjectForRecipeDict:(NSDictionary *)dictRecipe andIngredientsArray:(NSArray *)arrIngredients
+{
+    Recipe *recipe = [[Recipe alloc] init];
+    
+    recipe.arrRecipeIngredients = arrIngredients;
+    recipe.strRecipeCuisine = [dictRecipe objectForKey:@"cuisine"];
+    recipe.strRecipeStarRating = [dictRecipe objectForKey:@"starRating"];
+    recipe.strRecipeReviewCount = @"";
+    recipe.strRecipePrimaryIngredient = [dictRecipe objectForKey:@"primaryIngredient"];
+    recipe.strRecipeTotalMinutes = [dictRecipe objectForKey:@"totalMinutes"];
+    recipe.strRecipeCategory = [dictRecipe objectForKey:@"category"];
+    recipe.dictRecipeNutrionInfo = @{};
+    recipe.strRecipeYieldNumber = [dictRecipe objectForKey:@"yieldNumber"];
+    recipe.strRecipeWebURL = [dictRecipe objectForKey:@"webURL"];
+    recipe.strRecipeInstructions = [dictRecipe objectForKey:@"instructions"];
+    recipe.strRecipeYieldUnit = [dictRecipe objectForKey:@"yieldUnit"];
+    recipe.strRecipeID = [dictRecipe objectForKey:@"id"];
+    recipe.strRecipeTitle = [dictRecipe objectForKey:@"title"];
+    recipe.strRecipeImageURL = [dictRecipe objectForKey:@"imageURL"];
+    recipe.strRecipePoster = [dictRecipe objectForKey:@"poster"];
+    recipe.strRecipeHeroPhotoURL = [dictRecipe objectForKey:@"heroPhotoURL"];
+    recipe.strRecipeFavoriteCount = [dictRecipe objectForKey:@"favoriteCount"];
+    recipe.strRecipeImageURL120 = [dictRecipe objectForKey:@"imageURL120"];
+    
+    return recipe;
+}
+
 
 @end

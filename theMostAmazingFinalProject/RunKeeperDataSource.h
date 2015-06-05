@@ -24,7 +24,7 @@
 -(void)getFitnessActivities;
 -(void)getUser;
 -(void)getProfile;
--(void)postFitnessActivity:(FitnessActivity *)aFitnessActivity;
+-(void)postFitnessActivity:(FitnessActivityPost *)aFitnessActivityPost;
 -(void)getSleepFeed;
 -(void)getSleepActivity:(NSString *)sleepID;
 -(void)postSleepActivity:(SleepActivityPost *)sleepActivity;

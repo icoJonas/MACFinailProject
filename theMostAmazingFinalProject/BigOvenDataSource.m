@@ -10,7 +10,7 @@
 
 static NSString * const BIGOVEN_RECIPE_REQUEST_URL = @"http://api.bigoven.com/recipe/%d?api_key=dvx0869aFk8U96H9396Ocbux33T0YYM6";
 
-static NSString * const BIGOVER_RECIPE_SEARCH_REQUEST_URL = @"http://api.bigoven.com/recipes/?api_key=dvx0869aFk8U96H9396Ocbux33T0YYM6&pg=1&rpp=25&title_kw=%@";
+static NSString * const BIGOVER_RECIPE_SEARCH_REQUEST_URL = @"http://api.bigoven.com/recipes/?api_key=dvx0869aFk8U96H9396Ocbux33T0YYM6&pg=1&rpp=50&title_kw=%@";
 
 static NSString * const BIGOVEN_RECIPE_FAVORITES_REQUEST_URL = @"http://api.bigoven.com/favorites?api_key=dvx0869aFk8U96H9396Ocbux33T0YYM6&pg=1&rpp=25";
 

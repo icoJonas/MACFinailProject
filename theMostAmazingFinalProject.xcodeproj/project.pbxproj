@@ -8,7 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		04341F331B17D40D0002785A /* WebServiceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04341F321B17D40D0002785A /* WebServiceHandler.m */; };
+		0465436E1B2032E80087ED02 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465436C1B2032E80087ED02 /* FavoritesViewController.m */; };
+		0465436F1B2032E80087ED02 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0465436D1B2032E80087ED02 /* FavoritesViewController.xib */; };
 		046E79D91B1828BF00E23F88 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E79D81B1828BF00E23F88 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		049C79D61B204BC100EF3A69 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049C79D41B204BC100EF3A69 /* ActivityViewController.m */; };
+		049C79D71B204BC100EF3A69 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C79D51B204BC100EF3A69 /* ActivityViewController.xib */; };
+		049C79E91B20B52600EF3A69 /* ActivitySelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049C79E71B20B52600EF3A69 /* ActivitySelectViewController.m */; };
+		049C79EA1B20B52600EF3A69 /* ActivitySelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C79E81B20B52600EF3A69 /* ActivitySelectViewController.xib */; };
+		049C79F11B20B66700EF3A69 /* ViewProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049C79EF1B20B66700EF3A69 /* ViewProgressViewController.m */; };
+		049C79F21B20B66700EF3A69 /* ViewProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C79F01B20B66700EF3A69 /* ViewProgressViewController.xib */; };
+		049C79F61B20EF2900EF3A69 /* PostActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049C79F41B20EF2900EF3A69 /* PostActivityViewController.m */; };
+		049C79F71B20EF2900EF3A69 /* PostActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C79F51B20EF2900EF3A69 /* PostActivityViewController.xib */; };
+		049C79F91B212AB000EF3A69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049C79F81B212AB000EF3A69 /* QuartzCore.framework */; };
+		049C79FF1B212DE900EF3A69 /* post_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 049C79FE1B212DE900EF3A69 /* post_icon.png */; };
+		049C7A011B212DFC00EF3A69 /* progress_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 049C7A001B212DFC00EF3A69 /* progress_icon.png */; };
+		049C7A031B212FBB00EF3A69 /* Plus-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 049C7A021B212FBB00EF3A69 /* Plus-icon.png */; };
+		049C7A051B212FC100EF3A69 /* Plus-icon-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 049C7A041B212FC100EF3A69 /* Plus-icon-2.png */; };
+		049C7A0B1B2133B300EF3A69 /* launch_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 049C7A0A1B2133B300EF3A69 /* launch_image.png */; };
 		04CF1E061B19AB1300AB4F99 /* BigOvenDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E051B19AB1300AB4F99 /* BigOvenDataSource.m */; };
 		04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E091B19CBB800AB4F99 /* Recipe.m */; };
 		04CF1E0E1B1A15CD00AB4F99 /* RecipeSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF1E0D1B1A15CD00AB4F99 /* RecipeSearchResult.m */; };
@@ -97,8 +113,29 @@
 /* Begin PBXFileReference section */
 		04341F311B17D40D0002785A /* WebServiceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceHandler.h; sourceTree = "<group>"; };
 		04341F321B17D40D0002785A /* WebServiceHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceHandler.m; sourceTree = "<group>"; };
+		0465436B1B2032E80087ED02 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		0465436C1B2032E80087ED02 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		0465436D1B2032E80087ED02 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		046E79D71B1828BF00E23F88 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		046E79D81B1828BF00E23F88 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		049C79D31B204BC100EF3A69 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		049C79D41B204BC100EF3A69 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		049C79D51B204BC100EF3A69 /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
+		049C79E61B20B52600EF3A69 /* ActivitySelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectViewController.h; sourceTree = "<group>"; };
+		049C79E71B20B52600EF3A69 /* ActivitySelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySelectViewController.m; sourceTree = "<group>"; };
+		049C79E81B20B52600EF3A69 /* ActivitySelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivitySelectViewController.xib; sourceTree = "<group>"; };
+		049C79EE1B20B66700EF3A69 /* ViewProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewProgressViewController.h; sourceTree = "<group>"; };
+		049C79EF1B20B66700EF3A69 /* ViewProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewProgressViewController.m; sourceTree = "<group>"; };
+		049C79F01B20B66700EF3A69 /* ViewProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewProgressViewController.xib; sourceTree = "<group>"; };
+		049C79F31B20EF2900EF3A69 /* PostActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostActivityViewController.h; sourceTree = "<group>"; };
+		049C79F41B20EF2900EF3A69 /* PostActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostActivityViewController.m; sourceTree = "<group>"; };
+		049C79F51B20EF2900EF3A69 /* PostActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostActivityViewController.xib; sourceTree = "<group>"; };
+		049C79F81B212AB000EF3A69 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		049C79FE1B212DE900EF3A69 /* post_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post_icon.png; sourceTree = "<group>"; };
+		049C7A001B212DFC00EF3A69 /* progress_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progress_icon.png; sourceTree = "<group>"; };
+		049C7A021B212FBB00EF3A69 /* Plus-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus-icon.png"; sourceTree = "<group>"; };
+		049C7A041B212FC100EF3A69 /* Plus-icon-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus-icon-2.png"; sourceTree = "<group>"; };
+		049C7A0A1B2133B300EF3A69 /* launch_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_image.png; sourceTree = "<group>"; };
 		04CF1E041B19AB1300AB4F99 /* BigOvenDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigOvenDataSource.h; sourceTree = "<group>"; };
 		04CF1E051B19AB1300AB4F99 /* BigOvenDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigOvenDataSource.m; sourceTree = "<group>"; };
 		04CF1E081B19CBB800AB4F99 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
@@ -301,6 +338,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049C79F91B212AB000EF3A69 /* QuartzCore.framework in Frameworks */,
 				DDF277AF1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a in Frameworks */,
 				04DBD2908F76F6076DCEC72E /* Pods_theMostAmazingFinalProject.framework in Frameworks */,
 			);
@@ -323,6 +361,25 @@
 				04CF22801B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m */,
 			);
 			name = bigOvenSQLiteDataSource;
+			sourceTree = "<group>";
+		};
+		049C79D21B204BA200EF3A69 /* Activity Views */ = {
+			isa = PBXGroup;
+			children = (
+				049C79D31B204BC100EF3A69 /* ActivityViewController.h */,
+				049C79D41B204BC100EF3A69 /* ActivityViewController.m */,
+				049C79D51B204BC100EF3A69 /* ActivityViewController.xib */,
+				049C79E61B20B52600EF3A69 /* ActivitySelectViewController.h */,
+				049C79E71B20B52600EF3A69 /* ActivitySelectViewController.m */,
+				049C79E81B20B52600EF3A69 /* ActivitySelectViewController.xib */,
+				049C79F31B20EF2900EF3A69 /* PostActivityViewController.h */,
+				049C79F41B20EF2900EF3A69 /* PostActivityViewController.m */,
+				049C79F51B20EF2900EF3A69 /* PostActivityViewController.xib */,
+				049C79EE1B20B66700EF3A69 /* ViewProgressViewController.h */,
+				049C79EF1B20B66700EF3A69 /* ViewProgressViewController.m */,
+				049C79F01B20B66700EF3A69 /* ViewProgressViewController.xib */,
+			);
+			name = "Activity Views";
 			sourceTree = "<group>";
 		};
 		04CF1E031B19AAEA00AB4F99 /* BigOvenDataSource */ = {
@@ -490,6 +547,9 @@
 				04CF227A1B1EC05D00AB4F99 /* WebViewController.h */,
 				04CF227B1B1EC05D00AB4F99 /* WebViewController.m */,
 				04CF227C1B1EC05D00AB4F99 /* WebViewController.xib */,
+				0465436B1B2032E80087ED02 /* FavoritesViewController.h */,
+				0465436C1B2032E80087ED02 /* FavoritesViewController.m */,
+				0465436D1B2032E80087ED02 /* FavoritesViewController.xib */,
 			);
 			name = CookingViews;
 			sourceTree = "<group>";
@@ -497,6 +557,7 @@
 		88CD1549ECC427BCC89A6590 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				049C79F81B212AB000EF3A69 /* QuartzCore.framework */,
 				DDF277AE1B1CFC28003CD7C0 /* libCorePlot-CocoaTouch.a */,
 				17EBF4DAE95EC09746623023 /* Pods_theMostAmazingFinalProject.framework */,
 			);
@@ -545,6 +606,11 @@
 		DD80765C1B1BA52100A27F00 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				049C7A0A1B2133B300EF3A69 /* launch_image.png */,
+				049C7A001B212DFC00EF3A69 /* progress_icon.png */,
+				049C79FE1B212DE900EF3A69 /* post_icon.png */,
+				049C7A021B212FBB00EF3A69 /* Plus-icon.png */,
+				049C7A041B212FC100EF3A69 /* Plus-icon-2.png */,
 				DDF277F51B1E9AD7003CD7C0 /* exercise_icon.png */,
 				DDF277F61B1E9AD7003CD7C0 /* nutrition_icon.png */,
 				DDF277F71B1E9AD7003CD7C0 /* schedule_icon.png */,
@@ -594,23 +660,24 @@
 			children = (
 				DD9668C61B16CD02007D0A98 /* AppDelegate.h */,
 				DD9668C71B16CD02007D0A98 /* AppDelegate.m */,
-				DD8076641B1BA80400A27F00 /* MyUITabBarController */,
 				DD9668C91B16CD02007D0A98 /* ViewController.h */,
 				DD9668CA1B16CD02007D0A98 /* ViewController.m */,
 				DD80765D1B1BA64800A27F00 /* ViewController.xib */,
-				DDF277B01B1D8AA3003CD7C0 /* WorkoutViews */,
 				DD80766F1B1BB12600A27F00 /* LoginViewController.h */,
 				DD8076701B1BB12600A27F00 /* LoginViewController.m */,
 				DD8076711B1BB12600A27F00 /* LoginViewController.xib */,
-				04CF221A1B1D1CD500AB4F99 /* CookingViews */,
 				DD9668CC1B16CD02007D0A98 /* Main.storyboard */,
 				DD9668D11B16CD02007D0A98 /* LaunchScreen.xib */,
-				DDF278021B1E9C6E003CD7C0 /* External */,
-				04CF1E071B19CBA600AB4F99 /* Objects */,
+				DD9668CF1B16CD02007D0A98 /* Images.xcassets */,
+				DD8076641B1BA80400A27F00 /* MyUITabBarController */,
+				049C79D21B204BA200EF3A69 /* Activity Views */,
+				04CF221A1B1D1CD500AB4F99 /* CookingViews */,
+				DDF277B01B1D8AA3003CD7C0 /* WorkoutViews */,
 				DDA9E9191B180B4F00E422DA /* WebServiceDataSource */,
 				DDECCC2F1B1A60B00047BA5C /* SQLiteDataSource */,
+				04CF1E071B19CBA600AB4F99 /* Objects */,
 				DDA9E9201B181D1C00E422DA /* Helpers */,
-				DD9668CF1B16CD02007D0A98 /* Images.xcassets */,
+				DDF278021B1E9C6E003CD7C0 /* External */,
 				DD9668C21B16CD02007D0A98 /* Supporting Files */,
 			);
 			path = theMostAmazingFinalProject;
@@ -847,12 +914,16 @@
 			files = (
 				DDF277F91B1E9AD7003CD7C0 /* nutrition_icon.png in Resources */,
 				DDF277FA1B1E9AD7003CD7C0 /* schedule_icon.png in Resources */,
+				049C79F71B20EF2900EF3A69 /* PostActivityViewController.xib in Resources */,
 				DDF277B51B1D8ADC003CD7C0 /* MusclesTableViewCell.xib in Resources */,
 				04CF22291B1D4D6E00AB4F99 /* SearchResultTableViewCell.xib in Resources */,
+				049C7A0B1B2133B300EF3A69 /* launch_image.png in Resources */,
 				DD80765E1B1BA64800A27F00 /* ViewController.xib in Resources */,
 				04CF22221B1D381600AB4F99 /* RecipeSearchViewController.xib in Resources */,
 				04CF22791B1EB0A300AB4F99 /* DirectionsViewController.xib in Resources */,
+				049C7A011B212DFC00EF3A69 /* progress_icon.png in Resources */,
 				DDA9E9171B17A9EF00E422DA /* finalProject.sqlite in Resources */,
+				0465436F1B2032E80087ED02 /* FavoritesViewController.xib in Resources */,
 				DDF278071B1EB3C7003CD7C0 /* ExerciseSelectionViewController.xib in Resources */,
 				DD8076581B1BA51800A27F00 /* workout3.jpg in Resources */,
 				04CF22191B1D160400AB4F99 /* CookingViewController.xib in Resources */,
@@ -860,6 +931,7 @@
 				04CF227E1B1EC05D00AB4F99 /* WebViewController.xib in Resources */,
 				DD8076591B1BA51800A27F00 /* workout4.jpg in Resources */,
 				DD8076731B1BB12600A27F00 /* LoginViewController.xib in Resources */,
+				049C79F21B20B66700EF3A69 /* ViewProgressViewController.xib in Resources */,
 				04CF22741B1E97D900AB4F99 /* IngredientsTableViewController.xib in Resources */,
 				DD8076691B1BAD1200A27F00 /* workout0.jpg in Resources */,
 				DD80765A1B1BA51800A27F00 /* workout5.png in Resources */,
@@ -868,13 +940,18 @@
 				DD3C39951B201B2B00D09B2E /* ScheduleWorkoutViewController.xib in Resources */,
 				DD8076571B1BA51800A27F00 /* workout2.jpg in Resources */,
 				DD8076561B1BA51800A27F00 /* workout1.jpg in Resources */,
+				049C79D71B204BC100EF3A69 /* ActivityViewController.xib in Resources */,
+				049C79FF1B212DE900EF3A69 /* post_icon.png in Resources */,
 				DD80766E1B1BB10800A27F00 /* WorkoutViewController.xib in Resources */,
 				04CF222E1B1D6B2200AB4F99 /* RecipeViewController.xib in Resources */,
 				DD8076631B1BA7F800A27F00 /* MyUITabBarController.xib in Resources */,
 				DD9668D31B16CD02007D0A98 /* LaunchScreen.xib in Resources */,
+				049C7A051B212FC100EF3A69 /* Plus-icon-2.png in Resources */,
 				DD3C398F1B1FE0F800D09B2E /* ExerciseDetailViewController.xib in Resources */,
 				DDF2780C1B1EB5DE003CD7C0 /* ExerciseTableViewCell.xib in Resources */,
+				049C7A031B212FBB00EF3A69 /* Plus-icon.png in Resources */,
 				DD9668D01B16CD02007D0A98 /* Images.xcassets in Resources */,
+				049C79EA1B20B52600EF3A69 /* ActivitySelectViewController.xib in Resources */,
 				DDF277F41B1E94BF003CD7C0 /* MuscleSelectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -951,15 +1028,18 @@
 				04CF1E1F1B1C305400AB4F99 /* SleepActivity.m in Sources */,
 				04CF1E111B1A955F00AB4F99 /* FitnessActivity.m in Sources */,
 				DDF277F31B1E94BF003CD7C0 /* MuscleSelectionViewController.m in Sources */,
+				049C79F61B20EF2900EF3A69 /* PostActivityViewController.m in Sources */,
 				04CF22281B1D4D6E00AB4F99 /* SearchResultTableViewCell.m in Sources */,
 				04CF22781B1EB0A300AB4F99 /* DirectionsViewController.m in Sources */,
 				04CF22811B1EC74E00AB4F99 /* bigOvenSQLiteDataSource.m in Sources */,
+				049C79E91B20B52600EF3A69 /* ActivitySelectViewController.m in Sources */,
 				DDA9E91C1B180CB900E422DA /* RunKeeperDataSource.m in Sources */,
 				DD8076781B1BC3E800A27F00 /* AnimationHelper.m in Sources */,
 				DD8076721B1BB12600A27F00 /* LoginViewController.m in Sources */,
 				04CF222D1B1D6B2200AB4F99 /* RecipeViewController.m in Sources */,
 				04CF227D1B1EC05D00AB4F99 /* WebViewController.m in Sources */,
 				DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */,
+				049C79D61B204BC100EF3A69 /* ActivityViewController.m in Sources */,
 				DDF2780B1B1EB5DE003CD7C0 /* ExerciseTableViewCell.m in Sources */,
 				DDF277FF1B1E9C32003CD7C0 /* OBShapedButton.m in Sources */,
 				04CF1E171B1B6DEA00AB4F99 /* RunKeeperProfile.m in Sources */,
@@ -976,7 +1056,9 @@
 				04341F331B17D40D0002785A /* WebServiceHandler.m in Sources */,
 				04CF1E0E1B1A15CD00AB4F99 /* RecipeSearchResult.m in Sources */,
 				04CF1E1C1B1BA9BD00AB4F99 /* FitnessActivityPost.m in Sources */,
+				0465436E1B2032E80087ED02 /* FavoritesViewController.m in Sources */,
 				04CF22241B1D3BE000AB4F99 /* CookingViewController.m in Sources */,
+				049C79F11B20B66700EF3A69 /* ViewProgressViewController.m in Sources */,
 				DD8076671B1BA95A00A27F00 /* BackgroundViewHelper.m in Sources */,
 				DDECCC321B1A62620047BA5C /* WorkoutManagerDataSource.m in Sources */,
 				DDECCC3A1B1ACD0C0047BA5C /* ImageHelper.m in Sources */,
@@ -1126,7 +1208,6 @@
 					"\"SCNetworkReachability\"",
 					"-framework",
 					"\"SDWebImage\"",
-					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1156,7 +1237,6 @@
 					"\"SCNetworkReachability\"",
 					"-framework",
 					"\"SDWebImage\"",
-					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
