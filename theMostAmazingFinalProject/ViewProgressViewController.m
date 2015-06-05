@@ -185,6 +185,7 @@ enum{
     if (self.segcntrSelection.selectedSegmentIndex == SC_DURATION)
     {
         lineSeries.title = @"Duration Spent";
+//        lineSeries.style.lineColor = [UIColor colo]
     }
     else if (self.segcntrSelection.selectedSegmentIndex == SC_DISTANCE)
     {
@@ -196,6 +197,7 @@ enum{
     }
     
     lineSeries.style.showFill = YES;    //Sets fill for series
+    lineSeries.style.pointStyle.showPoints = YES;
     
     return lineSeries;
 }
