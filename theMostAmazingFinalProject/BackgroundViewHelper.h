@@ -14,6 +14,7 @@
     UIImageView *animatedImageView;
     NSMutableArray *imageArray;
     NSInteger index;
+    UIView *overlay;
 }
 
 @property UIView *assignedView;

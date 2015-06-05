@@ -67,7 +67,7 @@
 		DD8076591B1BA51800A27F00 /* workout4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076531B1BA51800A27F00 /* workout4.jpg */; };
 		DD80765A1B1BA51800A27F00 /* workout5.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8076541B1BA51800A27F00 /* workout5.png */; };
 		DD80765B1B1BA51800A27F00 /* workout6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD8076551B1BA51800A27F00 /* workout6.jpg */; };
-		DD80765E1B1BA64800A27F00 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD80765D1B1BA64800A27F00 /* ViewController.xib */; };
+		DD80765E1B1BA64800A27F00 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD80765D1B1BA64800A27F00 /* ProfileViewController.xib */; };
 		DD8076621B1BA7F800A27F00 /* MyUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8076601B1BA7F800A27F00 /* MyUITabBarController.m */; };
 		DD8076631B1BA7F800A27F00 /* MyUITabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8076611B1BA7F800A27F00 /* MyUITabBarController.xib */; };
 		DD8076671B1BA95A00A27F00 /* BackgroundViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8076661B1BA95A00A27F00 /* BackgroundViewHelper.m */; };
@@ -81,7 +81,7 @@
 		DD8076781B1BC3E800A27F00 /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8076771B1BC3E800A27F00 /* AnimationHelper.m */; };
 		DD9668C51B16CD02007D0A98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668C41B16CD02007D0A98 /* main.m */; };
 		DD9668C81B16CD02007D0A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668C71B16CD02007D0A98 /* AppDelegate.m */; };
-		DD9668CB1B16CD02007D0A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668CA1B16CD02007D0A98 /* ViewController.m */; };
+		DD9668CB1B16CD02007D0A98 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9668CA1B16CD02007D0A98 /* ProfileViewController.m */; };
 		DD9668CE1B16CD02007D0A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9668CC1B16CD02007D0A98 /* Main.storyboard */; };
 		DD9668D01B16CD02007D0A98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9668CF1B16CD02007D0A98 /* Images.xcassets */; };
 		DD9668D31B16CD02007D0A98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9668D11B16CD02007D0A98 /* LaunchScreen.xib */; };
@@ -208,7 +208,7 @@
 		DD8076531B1BA51800A27F00 /* workout4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout4.jpg; sourceTree = "<group>"; };
 		DD8076541B1BA51800A27F00 /* workout5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout5.png; sourceTree = "<group>"; };
 		DD8076551B1BA51800A27F00 /* workout6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workout6.jpg; sourceTree = "<group>"; };
-		DD80765D1B1BA64800A27F00 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		DD80765D1B1BA64800A27F00 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		DD80765F1B1BA7F800A27F00 /* MyUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUITabBarController.h; sourceTree = "<group>"; };
 		DD8076601B1BA7F800A27F00 /* MyUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUITabBarController.m; sourceTree = "<group>"; };
 		DD8076611B1BA7F800A27F00 /* MyUITabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyUITabBarController.xib; sourceTree = "<group>"; };
@@ -228,8 +228,8 @@
 		DD9668C41B16CD02007D0A98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD9668C61B16CD02007D0A98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DD9668C71B16CD02007D0A98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DD9668C91B16CD02007D0A98 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DD9668CA1B16CD02007D0A98 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DD9668C91B16CD02007D0A98 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		DD9668CA1B16CD02007D0A98 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		DD9668CD1B16CD02007D0A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD9668CF1B16CD02007D0A98 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DD9668D21B16CD02007D0A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -514,9 +514,9 @@
 			children = (
 				DD9668C61B16CD02007D0A98 /* AppDelegate.h */,
 				DD9668C71B16CD02007D0A98 /* AppDelegate.m */,
-				DD9668C91B16CD02007D0A98 /* ViewController.h */,
-				DD9668CA1B16CD02007D0A98 /* ViewController.m */,
-				DD80765D1B1BA64800A27F00 /* ViewController.xib */,
+				DD9668C91B16CD02007D0A98 /* ProfileViewController.h */,
+				DD9668CA1B16CD02007D0A98 /* ProfileViewController.m */,
+				DD80765D1B1BA64800A27F00 /* ProfileViewController.xib */,
 				DD80766F1B1BB12600A27F00 /* LoginViewController.h */,
 				DD8076701B1BB12600A27F00 /* LoginViewController.m */,
 				DD8076711B1BB12600A27F00 /* LoginViewController.xib */,
@@ -774,7 +774,7 @@
 				DDF277B51B1D8ADC003CD7C0 /* MusclesTableViewCell.xib in Resources */,
 				04CF22291B1D4D6E00AB4F99 /* SearchResultTableViewCell.xib in Resources */,
 				049C7A0B1B2133B300EF3A69 /* launch_image.png in Resources */,
-				DD80765E1B1BA64800A27F00 /* ViewController.xib in Resources */,
+				DD80765E1B1BA64800A27F00 /* ProfileViewController.xib in Resources */,
 				04CF22221B1D381600AB4F99 /* RecipeSearchViewController.xib in Resources */,
 				04CF22791B1EB0A300AB4F99 /* DirectionsViewController.xib in Resources */,
 				049C7A011B212DFC00EF3A69 /* progress_icon.png in Resources */,
@@ -880,7 +880,7 @@
 				DDF278001B1E9C32003CD7C0 /* UIImage+ColorAtPixel.m in Sources */,
 				DD3C39991B2145FA00D09B2E /* AddExercisesViewController.m in Sources */,
 				DDF278061B1EB3C7003CD7C0 /* ExerciseSelectionViewController.m in Sources */,
-				DD9668CB1B16CD02007D0A98 /* ViewController.m in Sources */,
+				DD9668CB1B16CD02007D0A98 /* ProfileViewController.m in Sources */,
 				04CF22731B1E97D900AB4F99 /* IngredientsTableViewController.m in Sources */,
 				04CF1E0A1B19CBB900AB4F99 /* Recipe.m in Sources */,
 				04CF1E1F1B1C305400AB4F99 /* SleepActivity.m in Sources */,

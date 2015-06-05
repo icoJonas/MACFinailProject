@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "KeychainHelper.h"
-#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +20,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     //create the view controller for the first tab
-    self.firstViewController = [[ViewController alloc] initWithNibName:nil bundle:NULL];
+    self.firstViewController = [[ProfileViewController alloc] initWithNibName:nil bundle:NULL];
     self.secondViewController = [[WorkoutViewController alloc] initWithNibName:nil bundle:NULL];
     self.thirdViewController = [[CookingViewController alloc] initWithNibName:nil bundle:NULL];
     self.fourthViewController = [[ActivityViewController alloc] initWithNibName:nil bundle:nil];
@@ -80,10 +78,6 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-//    if (![KeychainHelper getToken]) {
-//        LoginViewController *lvc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-//        [self.window.rootViewController presentViewController:lvc animated:YES completion:nil];
-//    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

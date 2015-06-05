@@ -6,22 +6,24 @@
 //  Copyright (c) 2015 MAC. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ProfileViewController.h"
 #import "BackgroundViewHelper.h"
 #import "LoginViewController.h"
+#import "KeychainHelper.h"
+#import "LoginViewController.h"
 
-@interface ViewController ()
+@interface ProfileViewController ()
 @property(strong,nonatomic) RunKeeperDataSource *runKeeperDataSource;
 @property(strong,nonatomic) BigOvenDataSource *bigOvenDataSource;
 @end
 
 
-@implementation ViewController
+@implementation ProfileViewController
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"main tab";
+        self.title = @"Profile";
     }
     return self;
 }
@@ -48,6 +50,14 @@
     [super viewWillAppear:animated];
     [BackgroundViewHelper getSharedInstance].assignedView = self.view;
     [[BackgroundViewHelper getSharedInstance] start];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if (![KeychainHelper getToken]) {
+        LoginViewController *lvc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+        [self presentViewController:lvc animated:YES completion:nil];
+    }
 }
 
 -(IBAction)buttonPressed:(id)sender{

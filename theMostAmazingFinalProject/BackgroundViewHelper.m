@@ -27,8 +27,12 @@ static BackgroundViewHelper *sharedInstance = nil;
         }
         animatedImageView=[[UIImageView alloc] initWithFrame:self.bounds];
         [animatedImageView setImage:[imageArray objectAtIndex:index]];
+        overlay = [[UIView alloc] initWithFrame:animatedImageView.bounds];
+        [overlay setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.4]];
+        
         index++;
         [self addSubview:animatedImageView];
+        [self addSubview:overlay];
     }
     return self;
 }
@@ -92,6 +96,7 @@ static BackgroundViewHelper *sharedInstance = nil;
     animatedImageView.alpha = 0;
     [AnimationHelper fadeIn:prevImage withDuration:0.8 andWait:0.8];
     [self bringSubviewToFront:animatedImageView];
+    [self bringSubviewToFront:overlay];
 }
 
 

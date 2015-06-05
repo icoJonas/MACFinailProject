@@ -10,7 +10,7 @@
 #import "RunKeeperDataSource.h"
 #import "BigOvenDataSource.h"
 
-@interface ViewController : UIViewController{
+@interface ProfileViewController : UIViewController{
 }
 
 @end

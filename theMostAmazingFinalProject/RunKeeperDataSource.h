@@ -17,6 +17,8 @@
 
 @protocol RunKeeperDataSourceDelegate <NSObject>
 
+@optional
+-(void)tokenObtained;
 -(void)returnFitnessActivities:(NSArray*)arrFitnessActivities;
 
 @end

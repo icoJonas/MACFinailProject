@@ -7,8 +7,9 @@
 //
 
 #import "LoginViewController.h"
+#import "BackgroundViewHelper.h"
 
-@interface LoginViewController ()<UIWebViewDelegate>
+@interface LoginViewController ()<UIWebViewDelegate, RunKeeperDataSourceDelegate>
 @property(strong,nonatomic) RunKeeperDataSource *runKeeperDataSource;
 @property (strong, nonatomic) IBOutlet UIWebView *wvWebView;
 
@@ -34,6 +35,12 @@ static NSString * const AUTH_REQUEST_URL = @"https://runkeeper.com/apps/authoriz
 {
     //Comment out to disable RunKeeper authorization page from showing
     [self.wvWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:AUTH_REQUEST_URL]]];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [BackgroundViewHelper getSharedInstance].assignedView = self.view;
+    [[BackgroundViewHelper getSharedInstance] start];
 }
 
 /*
@@ -62,13 +69,18 @@ static NSString * const AUTH_REQUEST_URL = @"https://runkeeper.com/apps/authoriz
         NSRange needleRange = NSMakeRange(prefix.length, haystack.length - prefix.length - suffix.length);
         
         NSString *code = [haystack substringWithRange:needleRange];
-        //        [self.runKeeperDataSource getToken:code];
+        self.runKeeperDataSource.delegate = self;
+        [self.runKeeperDataSource getToken:code];
         //        [self.runKeeperDataSource getFitnessActivities];
         //        [self.runKeeperDataSource getUser];
-        [self.runKeeperDataSource getProfile];
+//        [self.runKeeperDataSource getProfile];
         
         [webView removeFromSuperview];
     }
+}
+
+-(void)tokenObtained{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

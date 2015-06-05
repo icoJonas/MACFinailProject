@@ -56,8 +56,8 @@ enum OPERATIONS {
     currentOperation = GET_FITNESS_ACTIVITIES;
     
 #warning Using hardcoded value for atuhorization token.
-    //    NSString * AUTH_TOKEN = [KeychainHelper getToken];
-    NSString * AUTH_TOKEN = @"3205693701f44eab893db341ae9e2f44";
+    NSString * AUTH_TOKEN = [KeychainHelper getToken];
+//    NSString * AUTH_TOKEN = @"3205693701f44eab893db341ae9e2f44";
     NSLog(@"The retrieved token is %@", AUTH_TOKEN);
     
     //Form the header
@@ -186,6 +186,7 @@ enum OPERATIONS {
         [KeychainHelper storeTheToken:ACCESS_TOKEN];
         
         NSLog(@"The token is: %@", [KeychainHelper getToken]);
+        [self.delegate tokenObtained];
     }
     else if (currentOperation == GET_FITNESS_ACTIVITIES)
     {

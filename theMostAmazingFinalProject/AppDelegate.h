@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MyUITabBarController.h"
-#import "ViewController.h"
+#import "ProfileViewController.h"
 #import "WorkoutViewController.h"
 #import "LoginViewController.h"
 #import "CookingViewController.h"
@@ -19,7 +19,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) MyUITabBarController *tabBarController;
 
-@property (strong, nonatomic) ViewController *firstViewController;
+@property (strong, nonatomic) ProfileViewController *firstViewController;
 @property (strong, nonatomic) WorkoutViewController *secondViewController;
 @property (strong, nonatomic) CookingViewController *thirdViewController;
 @property (strong, nonatomic) ActivityViewController *fourthViewController;
