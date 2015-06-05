@@ -55,6 +55,10 @@
          }
          else
          {
+             if (data) {
+                 NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                 NSLog(@"%@",json);
+             }
              [delegate webServiceCallError:error];
          }
      }];

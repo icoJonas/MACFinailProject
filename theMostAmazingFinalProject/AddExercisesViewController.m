@@ -62,19 +62,10 @@
     [[BackgroundViewHelper getSharedInstance] start];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 #pragma mark - User Interaction methods
 
 - (IBAction)addExercise:(id)sender {
+    
     NSMutableDictionary *set = [[NSMutableDictionary alloc] initWithDictionary:self.workout];
     [set setObject:[NSNumber numberWithInt:1] forKey:@"order"];
     [set setObject:[NSNumber numberWithInt:1] forKey:@"sets"];
