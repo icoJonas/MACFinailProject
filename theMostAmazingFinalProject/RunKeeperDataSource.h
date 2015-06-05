@@ -19,6 +19,7 @@
 
 @optional
 -(void)tokenObtained;
+-(void)returnRunKeeperProfile:(RunKeeperProfile *)rkProfile;
 -(void)returnFitnessActivities:(NSArray*)arrFitnessActivities;
 
 @end

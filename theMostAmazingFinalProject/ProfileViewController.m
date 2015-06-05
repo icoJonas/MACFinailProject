@@ -11,10 +11,17 @@
 #import "LoginViewController.h"
 #import "KeychainHelper.h"
 #import "LoginViewController.h"
+#import "RunKeeperProfile.h"
+#import "ImageHelper.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController () <RunKeeperDataSourceDelegate>
+
 @property(strong,nonatomic) RunKeeperDataSource *runKeeperDataSource;
-@property(strong,nonatomic) BigOvenDataSource *bigOvenDataSource;
+@property (strong, nonatomic) IBOutlet UIImageView *imgProfilePicture;
+@property (strong, nonatomic) IBOutlet UILabel *lblName;
+@property (strong, nonatomic) IBOutlet UILabel *lblBirthday;
+@property (strong, nonatomic) IBOutlet UILabel *lblLocation;
+
 @end
 
 
@@ -31,14 +38,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.lblBirthday.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    self.lblLocation.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
+    self.lblName.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     
     self.runKeeperDataSource = [RunKeeperDataSource new];
-    self.bigOvenDataSource = [BigOvenDataSource new];
+    self.runKeeperDataSource.delegate = self;
     
-//    int recipeNumber = 466985; //recipeNumber will come from user input
-//    [self.bigOvenDataSource getRecipe:recipeNumber];
-    
-//    [self.bigOvenData Source getRecipeSearch:@"shrimp"];
+    [self.runKeeperDataSource getProfile];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,10 +67,14 @@
     }
 }
 
--(IBAction)buttonPressed:(id)sender{
-//    LoginViewController *controller = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-//    [self.navigationController pushViewController:controller animated:YES];
+#pragma mark - RunKeeper delegate methods
+-(void)returnRunKeeperProfile:(RunKeeperProfile *)rkProfile
+{
+    self.lblBirthday.text = rkProfile.strBirthday;
+    self.lblLocation.text = rkProfile.strLocation;
+    self.lblName.text = rkProfile.strName;
+    
+    [ImageHelper setImage:self.imgProfilePicture FromPath:rkProfile.strNormalPicture];
 }
-
 
 @end
