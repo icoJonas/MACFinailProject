@@ -37,10 +37,6 @@ enum{
     RunKeeperDataSource *rkds = [[RunKeeperDataSource alloc] init];
     rkds.delegate = self;
     [rkds getFitnessActivities];
-
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [rkds getFitnessActivities];
-//    });
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -182,22 +178,45 @@ enum{
 -(SChartSeries *)sChart:(ShinobiChart *)chart seriesAtIndex:(NSInteger)index {
     SChartLineSeries *lineSeries = [SChartLineSeries new];
     
+    lineSeries.selectionMode = SChartSelectionPoint;
+    
+    lineSeries.animationEnabled = YES;
+    
+    SChartLineSeriesStyle *style = [SChartLineSeriesStyle new];
+    style.pointStyle = [SChartPointStyle new];
+    style.pointStyle.showPoints = YES;
+    style.pointStyle.radius = @(5);
+    
+    style.selectedPointStyle = [SChartPointStyle new];
+    style.selectedPointStyle.showPoints = YES;
+    style.selectedPointStyle.color = [UIColor orangeColor];
+    style.selectedPointStyle.radius = @(15);
+    
+    style.showFill = YES;
+    
+    SChartAnimation *animation = [SChartAnimation fadeAnimation];
+    
     if (self.segcntrSelection.selectedSegmentIndex == SC_DURATION)
     {
         lineSeries.title = @"Duration Spent";
-//        lineSeries.style.lineColor = [UIColor colo]
+        style.lineColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.5];
+        animation = [SChartAnimation televisionAnimation];
     }
     else if (self.segcntrSelection.selectedSegmentIndex == SC_DISTANCE)
     {
         lineSeries.title = @"Distance Traveled";
+        style.lineColor = [UIColor colorWithRed:0 green:1 blue:0 alpha:0.5];
+        animation = [SChartAnimation growAnimation];
     }
     else if (self.segcntrSelection.selectedSegmentIndex == SC_CALORIES)
     {
         lineSeries.title = @"Calories Burned";
+        style.lineColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5];
+        animation = [SChartAnimation fadeAnimation];
     }
-    
-    lineSeries.style.showFill = YES;    //Sets fill for series
-    lineSeries.style.pointStyle.showPoints = YES;
+
+    lineSeries.entryAnimation = animation;
+    [lineSeries setStyle:style];
     
     return lineSeries;
 }
@@ -218,4 +237,5 @@ enum{
     
     return datapoint;
 }
+
 @end

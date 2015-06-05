@@ -39,7 +39,6 @@ enum OPERATIONS {
     // Do any additional setup after loading the view from its nib.
     self.searchResultsArray = [NSMutableArray new];
     
-//    self.tableSearchResults = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height-300) style:UITableViewStylePlain];
     [self.tableSearchResults registerNib:[UINib nibWithNibName:@"SearchResultTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.tableSearchResults setHidden:true];
     
@@ -67,9 +66,6 @@ enum OPERATIONS {
     
     //Dismiss the keyboard
     [searchBar resignFirstResponder];
-    
-    //Animate the searchbar to the bottom of the screen
-//    [AnimationHelper transitionView:searchBar toRect:CGRectMake(searchBar.frame.origin.x, self.view.frame.size.height-searchBar.frame.size.height, searchBar.frame.size.width, searchBar.frame.size.height) WithSpringWithDamping:1.8 andVelocity:0.5 andTransitionTime:1.0 andWaitTime:0.0];
     
     if (self.searchParameter == SEARCH_LOCAL)
     {
@@ -203,12 +199,6 @@ enum OPERATIONS {
     cell.lblTitle.text = aSearchResult.strSearchTitle;
     cell.lblYield.text = [NSString stringWithFormat:@"%@ servings", aSearchResult.strSearchYieldNumber];
     [ImageHelper setImage:cell.imgRecipeImage120 FromPath:aSearchResult.strSearchImageURL120];
-    
-//    dispatch_async(self.myQueue, ^{
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            cell.imgRecipeImage120.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:aSearchResult.strSearchImageURL120]]];
-//        });
-//    });
 
     NSLog(@"Completed a cell object");
     return cell;
