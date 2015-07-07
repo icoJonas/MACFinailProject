@@ -2,7 +2,7 @@
 //  wgerSQLiteDataSource.m
 //  theMostAmazingFinalProject
 //
-//  Created by Luis Jonathan Godoy Marín on 30/05/15.
+//  Created by Samuel Fanfan on 30/05/15.
 //  Copyright (c) 2015 MAC. All rights reserved.
 //
 
