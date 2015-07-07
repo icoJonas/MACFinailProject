@@ -227,7 +227,7 @@
 		DD8076711B1BB12600A27F00 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		DD8076761B1BC3E800A27F00 /* AnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHelper.h; sourceTree = "<group>"; };
 		DD8076771B1BC3E800A27F00 /* AnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationHelper.m; sourceTree = "<group>"; };
-		DD9668BF1B16CD02007D0A98 /* theMostAmazingFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theMostAmazingFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9668BF1B16CD02007D0A98 /* iFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9668C31B16CD02007D0A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD9668C41B16CD02007D0A98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD9668C61B16CD02007D0A98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 		DD9668CD1B16CD02007D0A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD9668CF1B16CD02007D0A98 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DD9668D21B16CD02007D0A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		DD9668D81B16CD02007D0A98 /* theMostAmazingFinalProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = theMostAmazingFinalProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9668D81B16CD02007D0A98 /* iFitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iFitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9668DD1B16CD02007D0A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD9668DE1B16CD02007D0A98 /* theMostAmazingFinalProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = theMostAmazingFinalProjectTests.m; sourceTree = "<group>"; };
 		DDA9E9161B17A9EF00E422DA /* finalProject.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = finalProject.sqlite; sourceTree = "<group>"; };
@@ -498,8 +498,8 @@
 		DD9668B61B16CD01007D0A98 = {
 			isa = PBXGroup;
 			children = (
-				DD9668C11B16CD02007D0A98 /* theMostAmazingFinalProject */,
-				DD9668DB1B16CD02007D0A98 /* theMostAmazingFinalProjectTests */,
+				DD9668C11B16CD02007D0A98 /* iFit */,
+				DD9668DB1B16CD02007D0A98 /* iFitTests */,
 				DD9668C01B16CD02007D0A98 /* Products */,
 				AF392EAC894D05AA4EF8115F /* Pods */,
 				88CD1549ECC427BCC89A6590 /* Frameworks */,
@@ -509,13 +509,13 @@
 		DD9668C01B16CD02007D0A98 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD9668BF1B16CD02007D0A98 /* theMostAmazingFinalProject.app */,
-				DD9668D81B16CD02007D0A98 /* theMostAmazingFinalProjectTests.xctest */,
+				DD9668BF1B16CD02007D0A98 /* iFit.app */,
+				DD9668D81B16CD02007D0A98 /* iFitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DD9668C11B16CD02007D0A98 /* theMostAmazingFinalProject */ = {
+		DD9668C11B16CD02007D0A98 /* iFit */ = {
 			isa = PBXGroup;
 			children = (
 				DD9668C61B16CD02007D0A98 /* AppDelegate.h */,
@@ -540,6 +540,7 @@
 				DDF278021B1E9C6E003CD7C0 /* External */,
 				DD9668C21B16CD02007D0A98 /* Supporting Files */,
 			);
+			name = iFit;
 			path = theMostAmazingFinalProject;
 			sourceTree = "<group>";
 		};
@@ -554,12 +555,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DD9668DB1B16CD02007D0A98 /* theMostAmazingFinalProjectTests */ = {
+		DD9668DB1B16CD02007D0A98 /* iFitTests */ = {
 			isa = PBXGroup;
 			children = (
 				DD9668DE1B16CD02007D0A98 /* theMostAmazingFinalProjectTests.m */,
 				DD9668DC1B16CD02007D0A98 /* Supporting Files */,
 			);
+			name = iFitTests;
 			path = theMostAmazingFinalProjectTests;
 			sourceTree = "<group>";
 		};
@@ -693,9 +695,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD9668BE1B16CD02007D0A98 /* theMostAmazingFinalProject */ = {
+		DD9668BE1B16CD02007D0A98 /* iFit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD9668E21B16CD02007D0A98 /* Build configuration list for PBXNativeTarget "theMostAmazingFinalProject" */;
+			buildConfigurationList = DD9668E21B16CD02007D0A98 /* Build configuration list for PBXNativeTarget "iFit" */;
 			buildPhases = (
 				F28F4E52BBC5EDD65F935410 /* Check Pods Manifest.lock */,
 				DD9668BB1B16CD02007D0A98 /* Sources */,
@@ -708,14 +710,14 @@
 			);
 			dependencies = (
 			);
-			name = theMostAmazingFinalProject;
+			name = iFit;
 			productName = theMostAmazingFinalProject;
-			productReference = DD9668BF1B16CD02007D0A98 /* theMostAmazingFinalProject.app */;
+			productReference = DD9668BF1B16CD02007D0A98 /* iFit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DD9668D71B16CD02007D0A98 /* theMostAmazingFinalProjectTests */ = {
+		DD9668D71B16CD02007D0A98 /* iFitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD9668E51B16CD02007D0A98 /* Build configuration list for PBXNativeTarget "theMostAmazingFinalProjectTests" */;
+			buildConfigurationList = DD9668E51B16CD02007D0A98 /* Build configuration list for PBXNativeTarget "iFitTests" */;
 			buildPhases = (
 				DD9668D41B16CD02007D0A98 /* Sources */,
 				DD9668D51B16CD02007D0A98 /* Frameworks */,
@@ -726,9 +728,9 @@
 			dependencies = (
 				DD9668DA1B16CD02007D0A98 /* PBXTargetDependency */,
 			);
-			name = theMostAmazingFinalProjectTests;
+			name = iFitTests;
 			productName = theMostAmazingFinalProjectTests;
-			productReference = DD9668D81B16CD02007D0A98 /* theMostAmazingFinalProjectTests.xctest */;
+			productReference = DD9668D81B16CD02007D0A98 /* iFitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -749,7 +751,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DD9668BA1B16CD02007D0A98 /* Build configuration list for PBXProject "theMostAmazingFinalProject" */;
+			buildConfigurationList = DD9668BA1B16CD02007D0A98 /* Build configuration list for PBXProject "iFit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -763,8 +765,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD9668BE1B16CD02007D0A98 /* theMostAmazingFinalProject */,
-				DD9668D71B16CD02007D0A98 /* theMostAmazingFinalProjectTests */,
+				DD9668BE1B16CD02007D0A98 /* iFit */,
+				DD9668D71B16CD02007D0A98 /* iFitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -946,7 +948,7 @@
 /* Begin PBXTargetDependency section */
 		DD9668DA1B16CD02007D0A98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DD9668BE1B16CD02007D0A98 /* theMostAmazingFinalProject */;
+			target = DD9668BE1B16CD02007D0A98 /* iFit */;
 			targetProxy = DD9668D91B16CD02007D0A98 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1081,7 +1083,7 @@
 					"\"SDWebImage\"",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iFit;
 			};
 			name = Debug;
 		};
@@ -1115,7 +1117,7 @@
 					"\"SDWebImage\"",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iFit;
 			};
 			name = Release;
 		};
@@ -1133,7 +1135,7 @@
 				);
 				INFOPLIST_FILE = theMostAmazingFinalProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iFitTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/theMostAmazingFinalProject.app/theMostAmazingFinalProject";
 			};
 			name = Debug;
@@ -1148,7 +1150,7 @@
 				);
 				INFOPLIST_FILE = theMostAmazingFinalProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iFitTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/theMostAmazingFinalProject.app/theMostAmazingFinalProject";
 			};
 			name = Release;
@@ -1156,7 +1158,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD9668BA1B16CD02007D0A98 /* Build configuration list for PBXProject "theMostAmazingFinalProject" */ = {
+		DD9668BA1B16CD02007D0A98 /* Build configuration list for PBXProject "iFit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD9668E01B16CD02007D0A98 /* Debug */,
@@ -1165,7 +1167,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD9668E21B16CD02007D0A98 /* Build configuration list for PBXNativeTarget "theMostAmazingFinalProject" */ = {
+		DD9668E21B16CD02007D0A98 /* Build configuration list for PBXNativeTarget "iFit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD9668E31B16CD02007D0A98 /* Debug */,
@@ -1174,7 +1176,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD9668E51B16CD02007D0A98 /* Build configuration list for PBXNativeTarget "theMostAmazingFinalProjectTests" */ = {
+		DD9668E51B16CD02007D0A98 /* Build configuration list for PBXNativeTarget "iFitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD9668E61B16CD02007D0A98 /* Debug */,
